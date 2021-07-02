@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ercling/google-ads-go/ads"
-	"github.com/ercling/google-ads-go/auth"
+	"github.com/felicson/google-ads-go/ads"
+	"github.com/felicson/google-ads-go/auth"
 )
 
 var (
