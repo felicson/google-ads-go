@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -66,7 +66,7 @@ func NewMediaFileServiceClient(cc grpc.ClientConnInterface) MediaFileServiceClie
 
 func (c *mediaFileServiceClient) GetMediaFile(ctx context.Context, in *GetMediaFileRequest, opts ...grpc.CallOption) (*resources.MediaFile, error) {
 	out := new(resources.MediaFile)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.MediaFileService/GetMediaFile", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.MediaFileService/GetMediaFile", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +75,7 @@ func (c *mediaFileServiceClient) GetMediaFile(ctx context.Context, in *GetMediaF
 
 func (c *mediaFileServiceClient) MutateMediaFiles(ctx context.Context, in *MutateMediaFilesRequest, opts ...grpc.CallOption) (*MutateMediaFilesResponse, error) {
 	out := new(MutateMediaFilesResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.MediaFileService/MutateMediaFiles", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.MediaFileService/MutateMediaFiles", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -157,7 +157,7 @@ func _MediaFileService_GetMediaFile_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.MediaFileService/GetMediaFile",
+		FullMethod: "/google.ads.googleads.v8.services.MediaFileService/GetMediaFile",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MediaFileServiceServer).GetMediaFile(ctx, req.(*GetMediaFileRequest))
@@ -175,7 +175,7 @@ func _MediaFileService_MutateMediaFiles_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.MediaFileService/MutateMediaFiles",
+		FullMethod: "/google.ads.googleads.v8.services.MediaFileService/MutateMediaFiles",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MediaFileServiceServer).MutateMediaFiles(ctx, req.(*MutateMediaFilesRequest))
@@ -187,7 +187,7 @@ func _MediaFileService_MutateMediaFiles_Handler(srv interface{}, ctx context.Con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MediaFileService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.MediaFileService",
+	ServiceName: "google.ads.googleads.v8.services.MediaFileService",
 	HandlerType: (*MediaFileServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -200,5 +200,5 @@ var MediaFileService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/media_file_service.proto",
+	Metadata: "google/ads/googleads/v8/services/media_file_service.proto",
 }

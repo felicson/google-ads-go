@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -73,7 +73,7 @@ func NewCampaignExtensionSettingServiceClient(cc grpc.ClientConnInterface) Campa
 
 func (c *campaignExtensionSettingServiceClient) GetCampaignExtensionSetting(ctx context.Context, in *GetCampaignExtensionSettingRequest, opts ...grpc.CallOption) (*resources.CampaignExtensionSetting, error) {
 	out := new(resources.CampaignExtensionSetting)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExtensionSettingService/GetCampaignExtensionSetting", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExtensionSettingService/GetCampaignExtensionSetting", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -82,7 +82,7 @@ func (c *campaignExtensionSettingServiceClient) GetCampaignExtensionSetting(ctx 
 
 func (c *campaignExtensionSettingServiceClient) MutateCampaignExtensionSettings(ctx context.Context, in *MutateCampaignExtensionSettingsRequest, opts ...grpc.CallOption) (*MutateCampaignExtensionSettingsResponse, error) {
 	out := new(MutateCampaignExtensionSettingsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExtensionSettingService/MutateCampaignExtensionSettings", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExtensionSettingService/MutateCampaignExtensionSettings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -172,7 +172,7 @@ func _CampaignExtensionSettingService_GetCampaignExtensionSetting_Handler(srv in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExtensionSettingService/GetCampaignExtensionSetting",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExtensionSettingService/GetCampaignExtensionSetting",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExtensionSettingServiceServer).GetCampaignExtensionSetting(ctx, req.(*GetCampaignExtensionSettingRequest))
@@ -190,7 +190,7 @@ func _CampaignExtensionSettingService_MutateCampaignExtensionSettings_Handler(sr
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExtensionSettingService/MutateCampaignExtensionSettings",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExtensionSettingService/MutateCampaignExtensionSettings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExtensionSettingServiceServer).MutateCampaignExtensionSettings(ctx, req.(*MutateCampaignExtensionSettingsRequest))
@@ -202,7 +202,7 @@ func _CampaignExtensionSettingService_MutateCampaignExtensionSettings_Handler(sr
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignExtensionSettingService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CampaignExtensionSettingService",
+	ServiceName: "google.ads.googleads.v8.services.CampaignExtensionSettingService",
 	HandlerType: (*CampaignExtensionSettingServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -215,5 +215,5 @@ var CampaignExtensionSettingService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/campaign_extension_setting_service.proto",
+	Metadata: "google/ads/googleads/v8/services/campaign_extension_setting_service.proto",
 }

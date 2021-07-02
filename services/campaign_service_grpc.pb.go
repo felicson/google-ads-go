@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -80,7 +80,7 @@ func NewCampaignServiceClient(cc grpc.ClientConnInterface) CampaignServiceClient
 
 func (c *campaignServiceClient) GetCampaign(ctx context.Context, in *GetCampaignRequest, opts ...grpc.CallOption) (*resources.Campaign, error) {
 	out := new(resources.Campaign)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignService/GetCampaign", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignService/GetCampaign", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -89,7 +89,7 @@ func (c *campaignServiceClient) GetCampaign(ctx context.Context, in *GetCampaign
 
 func (c *campaignServiceClient) MutateCampaigns(ctx context.Context, in *MutateCampaignsRequest, opts ...grpc.CallOption) (*MutateCampaignsResponse, error) {
 	out := new(MutateCampaignsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignService/MutateCampaigns", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignService/MutateCampaigns", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -185,7 +185,7 @@ func _CampaignService_GetCampaign_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignService/GetCampaign",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignService/GetCampaign",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignServiceServer).GetCampaign(ctx, req.(*GetCampaignRequest))
@@ -203,7 +203,7 @@ func _CampaignService_MutateCampaigns_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignService/MutateCampaigns",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignService/MutateCampaigns",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignServiceServer).MutateCampaigns(ctx, req.(*MutateCampaignsRequest))
@@ -215,7 +215,7 @@ func _CampaignService_MutateCampaigns_Handler(srv interface{}, ctx context.Conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CampaignService",
+	ServiceName: "google.ads.googleads.v8.services.CampaignService",
 	HandlerType: (*CampaignServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -228,5 +228,5 @@ var CampaignService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/campaign_service.proto",
+	Metadata: "google/ads/googleads/v8/services/campaign_service.proto",
 }

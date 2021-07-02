@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewClickViewServiceClient(cc grpc.ClientConnInterface) ClickViewServiceClie
 
 func (c *clickViewServiceClient) GetClickView(ctx context.Context, in *GetClickViewRequest, opts ...grpc.CallOption) (*resources.ClickView, error) {
 	out := new(resources.ClickView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.ClickViewService/GetClickView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ClickViewService/GetClickView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _ClickViewService_GetClickView_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.ClickViewService/GetClickView",
+		FullMethod: "/google.ads.googleads.v8.services.ClickViewService/GetClickView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ClickViewServiceServer).GetClickView(ctx, req.(*GetClickViewRequest))
@@ -107,7 +107,7 @@ func _ClickViewService_GetClickView_Handler(srv interface{}, ctx context.Context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ClickViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.ClickViewService",
+	ServiceName: "google.ads.googleads.v8.services.ClickViewService",
 	HandlerType: (*ClickViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var ClickViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/click_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/click_view_service.proto",
 }

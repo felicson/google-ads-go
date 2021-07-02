@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewCustomerClientServiceClient(cc grpc.ClientConnInterface) CustomerClientS
 
 func (c *customerClientServiceClient) GetCustomerClient(ctx context.Context, in *GetCustomerClientRequest, opts ...grpc.CallOption) (*resources.CustomerClient, error) {
 	out := new(resources.CustomerClient)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CustomerClientService/GetCustomerClient", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerClientService/GetCustomerClient", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _CustomerClientService_GetCustomerClient_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CustomerClientService/GetCustomerClient",
+		FullMethod: "/google.ads.googleads.v8.services.CustomerClientService/GetCustomerClient",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerClientServiceServer).GetCustomerClient(ctx, req.(*GetCustomerClientRequest))
@@ -107,7 +107,7 @@ func _CustomerClientService_GetCustomerClient_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CustomerClientService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CustomerClientService",
+	ServiceName: "google.ads.googleads.v8.services.CustomerClientService",
 	HandlerType: (*CustomerClientServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var CustomerClientService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/customer_client_service.proto",
+	Metadata: "google/ads/googleads/v8/services/customer_client_service.proto",
 }

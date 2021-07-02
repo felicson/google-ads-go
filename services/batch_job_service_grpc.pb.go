@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	longrunning "google.golang.org/genproto/googleapis/longrunning"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -92,7 +92,7 @@ func NewBatchJobServiceClient(cc grpc.ClientConnInterface) BatchJobServiceClient
 
 func (c *batchJobServiceClient) MutateBatchJob(ctx context.Context, in *MutateBatchJobRequest, opts ...grpc.CallOption) (*MutateBatchJobResponse, error) {
 	out := new(MutateBatchJobResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.BatchJobService/MutateBatchJob", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BatchJobService/MutateBatchJob", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -101,7 +101,7 @@ func (c *batchJobServiceClient) MutateBatchJob(ctx context.Context, in *MutateBa
 
 func (c *batchJobServiceClient) GetBatchJob(ctx context.Context, in *GetBatchJobRequest, opts ...grpc.CallOption) (*resources.BatchJob, error) {
 	out := new(resources.BatchJob)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.BatchJobService/GetBatchJob", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BatchJobService/GetBatchJob", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -110,7 +110,7 @@ func (c *batchJobServiceClient) GetBatchJob(ctx context.Context, in *GetBatchJob
 
 func (c *batchJobServiceClient) ListBatchJobResults(ctx context.Context, in *ListBatchJobResultsRequest, opts ...grpc.CallOption) (*ListBatchJobResultsResponse, error) {
 	out := new(ListBatchJobResultsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.BatchJobService/ListBatchJobResults", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BatchJobService/ListBatchJobResults", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -119,7 +119,7 @@ func (c *batchJobServiceClient) ListBatchJobResults(ctx context.Context, in *Lis
 
 func (c *batchJobServiceClient) RunBatchJob(ctx context.Context, in *RunBatchJobRequest, opts ...grpc.CallOption) (*longrunning.Operation, error) {
 	out := new(longrunning.Operation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.BatchJobService/RunBatchJob", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BatchJobService/RunBatchJob", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -128,7 +128,7 @@ func (c *batchJobServiceClient) RunBatchJob(ctx context.Context, in *RunBatchJob
 
 func (c *batchJobServiceClient) AddBatchJobOperations(ctx context.Context, in *AddBatchJobOperationsRequest, opts ...grpc.CallOption) (*AddBatchJobOperationsResponse, error) {
 	out := new(AddBatchJobOperationsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.BatchJobService/AddBatchJobOperations", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BatchJobService/AddBatchJobOperations", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -244,7 +244,7 @@ func _BatchJobService_MutateBatchJob_Handler(srv interface{}, ctx context.Contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.BatchJobService/MutateBatchJob",
+		FullMethod: "/google.ads.googleads.v8.services.BatchJobService/MutateBatchJob",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BatchJobServiceServer).MutateBatchJob(ctx, req.(*MutateBatchJobRequest))
@@ -262,7 +262,7 @@ func _BatchJobService_GetBatchJob_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.BatchJobService/GetBatchJob",
+		FullMethod: "/google.ads.googleads.v8.services.BatchJobService/GetBatchJob",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BatchJobServiceServer).GetBatchJob(ctx, req.(*GetBatchJobRequest))
@@ -280,7 +280,7 @@ func _BatchJobService_ListBatchJobResults_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.BatchJobService/ListBatchJobResults",
+		FullMethod: "/google.ads.googleads.v8.services.BatchJobService/ListBatchJobResults",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BatchJobServiceServer).ListBatchJobResults(ctx, req.(*ListBatchJobResultsRequest))
@@ -298,7 +298,7 @@ func _BatchJobService_RunBatchJob_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.BatchJobService/RunBatchJob",
+		FullMethod: "/google.ads.googleads.v8.services.BatchJobService/RunBatchJob",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BatchJobServiceServer).RunBatchJob(ctx, req.(*RunBatchJobRequest))
@@ -316,7 +316,7 @@ func _BatchJobService_AddBatchJobOperations_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.BatchJobService/AddBatchJobOperations",
+		FullMethod: "/google.ads.googleads.v8.services.BatchJobService/AddBatchJobOperations",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BatchJobServiceServer).AddBatchJobOperations(ctx, req.(*AddBatchJobOperationsRequest))
@@ -328,7 +328,7 @@ func _BatchJobService_AddBatchJobOperations_Handler(srv interface{}, ctx context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var BatchJobService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.BatchJobService",
+	ServiceName: "google.ads.googleads.v8.services.BatchJobService",
 	HandlerType: (*BatchJobServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -353,5 +353,5 @@ var BatchJobService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/batch_job_service.proto",
+	Metadata: "google/ads/googleads/v8/services/batch_job_service.proto",
 }

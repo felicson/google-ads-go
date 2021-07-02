@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -68,7 +68,7 @@ func NewCustomerFeedServiceClient(cc grpc.ClientConnInterface) CustomerFeedServi
 
 func (c *customerFeedServiceClient) GetCustomerFeed(ctx context.Context, in *GetCustomerFeedRequest, opts ...grpc.CallOption) (*resources.CustomerFeed, error) {
 	out := new(resources.CustomerFeed)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CustomerFeedService/GetCustomerFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerFeedService/GetCustomerFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,7 +77,7 @@ func (c *customerFeedServiceClient) GetCustomerFeed(ctx context.Context, in *Get
 
 func (c *customerFeedServiceClient) MutateCustomerFeeds(ctx context.Context, in *MutateCustomerFeedsRequest, opts ...grpc.CallOption) (*MutateCustomerFeedsResponse, error) {
 	out := new(MutateCustomerFeedsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CustomerFeedService/MutateCustomerFeeds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerFeedService/MutateCustomerFeeds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -161,7 +161,7 @@ func _CustomerFeedService_GetCustomerFeed_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CustomerFeedService/GetCustomerFeed",
+		FullMethod: "/google.ads.googleads.v8.services.CustomerFeedService/GetCustomerFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerFeedServiceServer).GetCustomerFeed(ctx, req.(*GetCustomerFeedRequest))
@@ -179,7 +179,7 @@ func _CustomerFeedService_MutateCustomerFeeds_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CustomerFeedService/MutateCustomerFeeds",
+		FullMethod: "/google.ads.googleads.v8.services.CustomerFeedService/MutateCustomerFeeds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerFeedServiceServer).MutateCustomerFeeds(ctx, req.(*MutateCustomerFeedsRequest))
@@ -191,7 +191,7 @@ func _CustomerFeedService_MutateCustomerFeeds_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CustomerFeedService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CustomerFeedService",
+	ServiceName: "google.ads.googleads.v8.services.CustomerFeedService",
 	HandlerType: (*CustomerFeedServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -204,5 +204,5 @@ var CustomerFeedService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/customer_feed_service.proto",
+	Metadata: "google/ads/googleads/v8/services/customer_feed_service.proto",
 }

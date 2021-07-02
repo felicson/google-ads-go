@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -33,7 +33,7 @@ func NewCampaignSimulationServiceClient(cc grpc.ClientConnInterface) CampaignSim
 
 func (c *campaignSimulationServiceClient) GetCampaignSimulation(ctx context.Context, in *GetCampaignSimulationRequest, opts ...grpc.CallOption) (*resources.CampaignSimulation, error) {
 	out := new(resources.CampaignSimulation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignSimulationService/GetCampaignSimulation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignSimulationService/GetCampaignSimulation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _CampaignSimulationService_GetCampaignSimulation_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignSimulationService/GetCampaignSimulation",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignSimulationService/GetCampaignSimulation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignSimulationServiceServer).GetCampaignSimulation(ctx, req.(*GetCampaignSimulationRequest))
@@ -92,7 +92,7 @@ func _CampaignSimulationService_GetCampaignSimulation_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignSimulationService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CampaignSimulationService",
+	ServiceName: "google.ads.googleads.v8.services.CampaignSimulationService",
 	HandlerType: (*CampaignSimulationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var CampaignSimulationService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/campaign_simulation_service.proto",
+	Metadata: "google/ads/googleads/v8/services/campaign_simulation_service.proto",
 }

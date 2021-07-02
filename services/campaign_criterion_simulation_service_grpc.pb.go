@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewCampaignCriterionSimulationServiceClient(cc grpc.ClientConnInterface) Ca
 
 func (c *campaignCriterionSimulationServiceClient) GetCampaignCriterionSimulation(ctx context.Context, in *GetCampaignCriterionSimulationRequest, opts ...grpc.CallOption) (*resources.CampaignCriterionSimulation, error) {
 	out := new(resources.CampaignCriterionSimulation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignCriterionSimulationService/GetCampaignCriterionSimulation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignCriterionSimulationService/GetCampaignCriterionSimulation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _CampaignCriterionSimulationService_GetCampaignCriterionSimulation_Handler(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignCriterionSimulationService/GetCampaignCriterionSimulation",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignCriterionSimulationService/GetCampaignCriterionSimulation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignCriterionSimulationServiceServer).GetCampaignCriterionSimulation(ctx, req.(*GetCampaignCriterionSimulationRequest))
@@ -108,7 +108,7 @@ func _CampaignCriterionSimulationService_GetCampaignCriterionSimulation_Handler(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignCriterionSimulationService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CampaignCriterionSimulationService",
+	ServiceName: "google.ads.googleads.v8.services.CampaignCriterionSimulationService",
 	HandlerType: (*CampaignCriterionSimulationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var CampaignCriterionSimulationService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/campaign_criterion_simulation_service.proto",
+	Metadata: "google/ads/googleads/v8/services/campaign_criterion_simulation_service.proto",
 }

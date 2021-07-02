@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -56,7 +56,7 @@ func NewCustomInterestServiceClient(cc grpc.ClientConnInterface) CustomInterestS
 
 func (c *customInterestServiceClient) GetCustomInterest(ctx context.Context, in *GetCustomInterestRequest, opts ...grpc.CallOption) (*resources.CustomInterest, error) {
 	out := new(resources.CustomInterest)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CustomInterestService/GetCustomInterest", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomInterestService/GetCustomInterest", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -65,7 +65,7 @@ func (c *customInterestServiceClient) GetCustomInterest(ctx context.Context, in 
 
 func (c *customInterestServiceClient) MutateCustomInterests(ctx context.Context, in *MutateCustomInterestsRequest, opts ...grpc.CallOption) (*MutateCustomInterestsResponse, error) {
 	out := new(MutateCustomInterestsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CustomInterestService/MutateCustomInterests", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomInterestService/MutateCustomInterests", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -137,7 +137,7 @@ func _CustomInterestService_GetCustomInterest_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CustomInterestService/GetCustomInterest",
+		FullMethod: "/google.ads.googleads.v8.services.CustomInterestService/GetCustomInterest",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomInterestServiceServer).GetCustomInterest(ctx, req.(*GetCustomInterestRequest))
@@ -155,7 +155,7 @@ func _CustomInterestService_MutateCustomInterests_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CustomInterestService/MutateCustomInterests",
+		FullMethod: "/google.ads.googleads.v8.services.CustomInterestService/MutateCustomInterests",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomInterestServiceServer).MutateCustomInterests(ctx, req.(*MutateCustomInterestsRequest))
@@ -167,7 +167,7 @@ func _CustomInterestService_MutateCustomInterests_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CustomInterestService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CustomInterestService",
+	ServiceName: "google.ads.googleads.v8.services.CustomInterestService",
 	HandlerType: (*CustomInterestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -180,5 +180,5 @@ var CustomInterestService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/custom_interest_service.proto",
+	Metadata: "google/ads/googleads/v8/services/custom_interest_service.proto",
 }

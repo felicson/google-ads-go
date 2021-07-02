@@ -4,12 +4,12 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	empty "github.com/golang/protobuf/ptypes/empty"
+	resources "github.com/felicson/google-ads-go/resources"
 	longrunning "google.golang.org/genproto/googleapis/longrunning"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -107,7 +107,7 @@ type CampaignExperimentServiceClient interface {
 	//   [InternalError]()
 	//   [QuotaError]()
 	//   [RequestError]()
-	EndCampaignExperiment(ctx context.Context, in *EndCampaignExperimentRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	EndCampaignExperiment(ctx context.Context, in *EndCampaignExperimentRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	// Returns all errors that occurred during CampaignExperiment create or
 	// promote (whichever occurred last).
 	// Supports standard list paging.
@@ -132,7 +132,7 @@ func NewCampaignExperimentServiceClient(cc grpc.ClientConnInterface) CampaignExp
 
 func (c *campaignExperimentServiceClient) GetCampaignExperiment(ctx context.Context, in *GetCampaignExperimentRequest, opts ...grpc.CallOption) (*resources.CampaignExperiment, error) {
 	out := new(resources.CampaignExperiment)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/GetCampaignExperiment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/GetCampaignExperiment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -141,7 +141,7 @@ func (c *campaignExperimentServiceClient) GetCampaignExperiment(ctx context.Cont
 
 func (c *campaignExperimentServiceClient) CreateCampaignExperiment(ctx context.Context, in *CreateCampaignExperimentRequest, opts ...grpc.CallOption) (*longrunning.Operation, error) {
 	out := new(longrunning.Operation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/CreateCampaignExperiment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/CreateCampaignExperiment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -150,7 +150,7 @@ func (c *campaignExperimentServiceClient) CreateCampaignExperiment(ctx context.C
 
 func (c *campaignExperimentServiceClient) MutateCampaignExperiments(ctx context.Context, in *MutateCampaignExperimentsRequest, opts ...grpc.CallOption) (*MutateCampaignExperimentsResponse, error) {
 	out := new(MutateCampaignExperimentsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/MutateCampaignExperiments", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/MutateCampaignExperiments", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -159,7 +159,7 @@ func (c *campaignExperimentServiceClient) MutateCampaignExperiments(ctx context.
 
 func (c *campaignExperimentServiceClient) GraduateCampaignExperiment(ctx context.Context, in *GraduateCampaignExperimentRequest, opts ...grpc.CallOption) (*GraduateCampaignExperimentResponse, error) {
 	out := new(GraduateCampaignExperimentResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/GraduateCampaignExperiment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/GraduateCampaignExperiment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -168,16 +168,16 @@ func (c *campaignExperimentServiceClient) GraduateCampaignExperiment(ctx context
 
 func (c *campaignExperimentServiceClient) PromoteCampaignExperiment(ctx context.Context, in *PromoteCampaignExperimentRequest, opts ...grpc.CallOption) (*longrunning.Operation, error) {
 	out := new(longrunning.Operation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/PromoteCampaignExperiment", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/PromoteCampaignExperiment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *campaignExperimentServiceClient) EndCampaignExperiment(ctx context.Context, in *EndCampaignExperimentRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
-	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/EndCampaignExperiment", in, out, opts...)
+func (c *campaignExperimentServiceClient) EndCampaignExperiment(ctx context.Context, in *EndCampaignExperimentRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/EndCampaignExperiment", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -186,7 +186,7 @@ func (c *campaignExperimentServiceClient) EndCampaignExperiment(ctx context.Cont
 
 func (c *campaignExperimentServiceClient) ListCampaignExperimentAsyncErrors(ctx context.Context, in *ListCampaignExperimentAsyncErrorsRequest, opts ...grpc.CallOption) (*ListCampaignExperimentAsyncErrorsResponse, error) {
 	out := new(ListCampaignExperimentAsyncErrorsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignExperimentService/ListCampaignExperimentAsyncErrors", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignExperimentService/ListCampaignExperimentAsyncErrors", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -283,7 +283,7 @@ type CampaignExperimentServiceServer interface {
 	//   [InternalError]()
 	//   [QuotaError]()
 	//   [RequestError]()
-	EndCampaignExperiment(context.Context, *EndCampaignExperimentRequest) (*emptypb.Empty, error)
+	EndCampaignExperiment(context.Context, *EndCampaignExperimentRequest) (*empty.Empty, error)
 	// Returns all errors that occurred during CampaignExperiment create or
 	// promote (whichever occurred last).
 	// Supports standard list paging.
@@ -318,7 +318,7 @@ func (UnimplementedCampaignExperimentServiceServer) GraduateCampaignExperiment(c
 func (UnimplementedCampaignExperimentServiceServer) PromoteCampaignExperiment(context.Context, *PromoteCampaignExperimentRequest) (*longrunning.Operation, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PromoteCampaignExperiment not implemented")
 }
-func (UnimplementedCampaignExperimentServiceServer) EndCampaignExperiment(context.Context, *EndCampaignExperimentRequest) (*emptypb.Empty, error) {
+func (UnimplementedCampaignExperimentServiceServer) EndCampaignExperiment(context.Context, *EndCampaignExperimentRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method EndCampaignExperiment not implemented")
 }
 func (UnimplementedCampaignExperimentServiceServer) ListCampaignExperimentAsyncErrors(context.Context, *ListCampaignExperimentAsyncErrorsRequest) (*ListCampaignExperimentAsyncErrorsResponse, error) {
@@ -348,7 +348,7 @@ func _CampaignExperimentService_GetCampaignExperiment_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/GetCampaignExperiment",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/GetCampaignExperiment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).GetCampaignExperiment(ctx, req.(*GetCampaignExperimentRequest))
@@ -366,7 +366,7 @@ func _CampaignExperimentService_CreateCampaignExperiment_Handler(srv interface{}
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/CreateCampaignExperiment",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/CreateCampaignExperiment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).CreateCampaignExperiment(ctx, req.(*CreateCampaignExperimentRequest))
@@ -384,7 +384,7 @@ func _CampaignExperimentService_MutateCampaignExperiments_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/MutateCampaignExperiments",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/MutateCampaignExperiments",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).MutateCampaignExperiments(ctx, req.(*MutateCampaignExperimentsRequest))
@@ -402,7 +402,7 @@ func _CampaignExperimentService_GraduateCampaignExperiment_Handler(srv interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/GraduateCampaignExperiment",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/GraduateCampaignExperiment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).GraduateCampaignExperiment(ctx, req.(*GraduateCampaignExperimentRequest))
@@ -420,7 +420,7 @@ func _CampaignExperimentService_PromoteCampaignExperiment_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/PromoteCampaignExperiment",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/PromoteCampaignExperiment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).PromoteCampaignExperiment(ctx, req.(*PromoteCampaignExperimentRequest))
@@ -438,7 +438,7 @@ func _CampaignExperimentService_EndCampaignExperiment_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/EndCampaignExperiment",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/EndCampaignExperiment",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).EndCampaignExperiment(ctx, req.(*EndCampaignExperimentRequest))
@@ -456,7 +456,7 @@ func _CampaignExperimentService_ListCampaignExperimentAsyncErrors_Handler(srv in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignExperimentService/ListCampaignExperimentAsyncErrors",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignExperimentService/ListCampaignExperimentAsyncErrors",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignExperimentServiceServer).ListCampaignExperimentAsyncErrors(ctx, req.(*ListCampaignExperimentAsyncErrorsRequest))
@@ -468,7 +468,7 @@ func _CampaignExperimentService_ListCampaignExperimentAsyncErrors_Handler(srv in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignExperimentService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CampaignExperimentService",
+	ServiceName: "google.ads.googleads.v8.services.CampaignExperimentService",
 	HandlerType: (*CampaignExperimentServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -501,5 +501,5 @@ var CampaignExperimentService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/campaign_experiment_service.proto",
+	Metadata: "google/ads/googleads/v8/services/campaign_experiment_service.proto",
 }

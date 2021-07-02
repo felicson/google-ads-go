@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -65,7 +65,7 @@ func NewSharedCriterionServiceClient(cc grpc.ClientConnInterface) SharedCriterio
 
 func (c *sharedCriterionServiceClient) GetSharedCriterion(ctx context.Context, in *GetSharedCriterionRequest, opts ...grpc.CallOption) (*resources.SharedCriterion, error) {
 	out := new(resources.SharedCriterion)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.SharedCriterionService/GetSharedCriterion", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SharedCriterionService/GetSharedCriterion", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -74,7 +74,7 @@ func (c *sharedCriterionServiceClient) GetSharedCriterion(ctx context.Context, i
 
 func (c *sharedCriterionServiceClient) MutateSharedCriteria(ctx context.Context, in *MutateSharedCriteriaRequest, opts ...grpc.CallOption) (*MutateSharedCriteriaResponse, error) {
 	out := new(MutateSharedCriteriaResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.SharedCriterionService/MutateSharedCriteria", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SharedCriterionService/MutateSharedCriteria", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -156,7 +156,7 @@ func _SharedCriterionService_GetSharedCriterion_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.SharedCriterionService/GetSharedCriterion",
+		FullMethod: "/google.ads.googleads.v8.services.SharedCriterionService/GetSharedCriterion",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SharedCriterionServiceServer).GetSharedCriterion(ctx, req.(*GetSharedCriterionRequest))
@@ -174,7 +174,7 @@ func _SharedCriterionService_MutateSharedCriteria_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.SharedCriterionService/MutateSharedCriteria",
+		FullMethod: "/google.ads.googleads.v8.services.SharedCriterionService/MutateSharedCriteria",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SharedCriterionServiceServer).MutateSharedCriteria(ctx, req.(*MutateSharedCriteriaRequest))
@@ -186,7 +186,7 @@ func _SharedCriterionService_MutateSharedCriteria_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SharedCriterionService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.SharedCriterionService",
+	ServiceName: "google.ads.googleads.v8.services.SharedCriterionService",
 	HandlerType: (*SharedCriterionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -199,5 +199,5 @@ var SharedCriterionService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/shared_criterion_service.proto",
+	Metadata: "google/ads/googleads/v8/services/shared_criterion_service.proto",
 }

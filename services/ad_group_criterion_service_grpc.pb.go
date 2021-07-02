@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -78,7 +78,7 @@ func NewAdGroupCriterionServiceClient(cc grpc.ClientConnInterface) AdGroupCriter
 
 func (c *adGroupCriterionServiceClient) GetAdGroupCriterion(ctx context.Context, in *GetAdGroupCriterionRequest, opts ...grpc.CallOption) (*resources.AdGroupCriterion, error) {
 	out := new(resources.AdGroupCriterion)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupCriterionService/GetAdGroupCriterion", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupCriterionService/GetAdGroupCriterion", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -87,7 +87,7 @@ func (c *adGroupCriterionServiceClient) GetAdGroupCriterion(ctx context.Context,
 
 func (c *adGroupCriterionServiceClient) MutateAdGroupCriteria(ctx context.Context, in *MutateAdGroupCriteriaRequest, opts ...grpc.CallOption) (*MutateAdGroupCriteriaResponse, error) {
 	out := new(MutateAdGroupCriteriaResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupCriterionService/MutateAdGroupCriteria", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupCriterionService/MutateAdGroupCriteria", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -182,7 +182,7 @@ func _AdGroupCriterionService_GetAdGroupCriterion_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupCriterionService/GetAdGroupCriterion",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupCriterionService/GetAdGroupCriterion",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupCriterionServiceServer).GetAdGroupCriterion(ctx, req.(*GetAdGroupCriterionRequest))
@@ -200,7 +200,7 @@ func _AdGroupCriterionService_MutateAdGroupCriteria_Handler(srv interface{}, ctx
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupCriterionService/MutateAdGroupCriteria",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupCriterionService/MutateAdGroupCriteria",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupCriterionServiceServer).MutateAdGroupCriteria(ctx, req.(*MutateAdGroupCriteriaRequest))
@@ -212,7 +212,7 @@ func _AdGroupCriterionService_MutateAdGroupCriteria_Handler(srv interface{}, ctx
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupCriterionService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AdGroupCriterionService",
+	ServiceName: "google.ads.googleads.v8.services.AdGroupCriterionService",
 	HandlerType: (*AdGroupCriterionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -225,5 +225,5 @@ var AdGroupCriterionService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/ad_group_criterion_service.proto",
+	Metadata: "google/ads/googleads/v8/services/ad_group_criterion_service.proto",
 }

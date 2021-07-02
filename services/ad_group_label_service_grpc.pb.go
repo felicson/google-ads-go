@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -57,7 +57,7 @@ func NewAdGroupLabelServiceClient(cc grpc.ClientConnInterface) AdGroupLabelServi
 
 func (c *adGroupLabelServiceClient) GetAdGroupLabel(ctx context.Context, in *GetAdGroupLabelRequest, opts ...grpc.CallOption) (*resources.AdGroupLabel, error) {
 	out := new(resources.AdGroupLabel)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupLabelService/GetAdGroupLabel", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupLabelService/GetAdGroupLabel", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -66,7 +66,7 @@ func (c *adGroupLabelServiceClient) GetAdGroupLabel(ctx context.Context, in *Get
 
 func (c *adGroupLabelServiceClient) MutateAdGroupLabels(ctx context.Context, in *MutateAdGroupLabelsRequest, opts ...grpc.CallOption) (*MutateAdGroupLabelsResponse, error) {
 	out := new(MutateAdGroupLabelsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupLabelService/MutateAdGroupLabels", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupLabelService/MutateAdGroupLabels", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -139,7 +139,7 @@ func _AdGroupLabelService_GetAdGroupLabel_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupLabelService/GetAdGroupLabel",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupLabelService/GetAdGroupLabel",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupLabelServiceServer).GetAdGroupLabel(ctx, req.(*GetAdGroupLabelRequest))
@@ -157,7 +157,7 @@ func _AdGroupLabelService_MutateAdGroupLabels_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupLabelService/MutateAdGroupLabels",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupLabelService/MutateAdGroupLabels",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupLabelServiceServer).MutateAdGroupLabels(ctx, req.(*MutateAdGroupLabelsRequest))
@@ -169,7 +169,7 @@ func _AdGroupLabelService_MutateAdGroupLabels_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupLabelService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AdGroupLabelService",
+	ServiceName: "google.ads.googleads.v8.services.AdGroupLabelService",
 	HandlerType: (*AdGroupLabelServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -182,5 +182,5 @@ var AdGroupLabelService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/ad_group_label_service.proto",
+	Metadata: "google/ads/googleads/v8/services/ad_group_label_service.proto",
 }

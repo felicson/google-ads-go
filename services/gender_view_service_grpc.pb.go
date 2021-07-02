@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewGenderViewServiceClient(cc grpc.ClientConnInterface) GenderViewServiceCl
 
 func (c *genderViewServiceClient) GetGenderView(ctx context.Context, in *GetGenderViewRequest, opts ...grpc.CallOption) (*resources.GenderView, error) {
 	out := new(resources.GenderView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.GenderViewService/GetGenderView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.GenderViewService/GetGenderView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _GenderViewService_GetGenderView_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.GenderViewService/GetGenderView",
+		FullMethod: "/google.ads.googleads.v8.services.GenderViewService/GetGenderView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GenderViewServiceServer).GetGenderView(ctx, req.(*GetGenderViewRequest))
@@ -107,7 +107,7 @@ func _GenderViewService_GetGenderView_Handler(srv interface{}, ctx context.Conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var GenderViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.GenderViewService",
+	ServiceName: "google.ads.googleads.v8.services.GenderViewService",
 	HandlerType: (*GenderViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var GenderViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/gender_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/gender_view_service.proto",
 }

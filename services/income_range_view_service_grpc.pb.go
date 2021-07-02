@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewIncomeRangeViewServiceClient(cc grpc.ClientConnInterface) IncomeRangeVie
 
 func (c *incomeRangeViewServiceClient) GetIncomeRangeView(ctx context.Context, in *GetIncomeRangeViewRequest, opts ...grpc.CallOption) (*resources.IncomeRangeView, error) {
 	out := new(resources.IncomeRangeView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.IncomeRangeViewService/GetIncomeRangeView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.IncomeRangeViewService/GetIncomeRangeView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _IncomeRangeViewService_GetIncomeRangeView_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.IncomeRangeViewService/GetIncomeRangeView",
+		FullMethod: "/google.ads.googleads.v8.services.IncomeRangeViewService/GetIncomeRangeView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(IncomeRangeViewServiceServer).GetIncomeRangeView(ctx, req.(*GetIncomeRangeViewRequest))
@@ -108,7 +108,7 @@ func _IncomeRangeViewService_GetIncomeRangeView_Handler(srv interface{}, ctx con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var IncomeRangeViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.IncomeRangeViewService",
+	ServiceName: "google.ads.googleads.v8.services.IncomeRangeViewService",
 	HandlerType: (*IncomeRangeViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var IncomeRangeViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/income_range_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/income_range_view_service.proto",
 }

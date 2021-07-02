@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewShoppingPerformanceViewServiceClient(cc grpc.ClientConnInterface) Shoppi
 
 func (c *shoppingPerformanceViewServiceClient) GetShoppingPerformanceView(ctx context.Context, in *GetShoppingPerformanceViewRequest, opts ...grpc.CallOption) (*resources.ShoppingPerformanceView, error) {
 	out := new(resources.ShoppingPerformanceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.ShoppingPerformanceViewService/GetShoppingPerformanceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ShoppingPerformanceViewService/GetShoppingPerformanceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _ShoppingPerformanceViewService_GetShoppingPerformanceView_Handler(srv inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.ShoppingPerformanceViewService/GetShoppingPerformanceView",
+		FullMethod: "/google.ads.googleads.v8.services.ShoppingPerformanceViewService/GetShoppingPerformanceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ShoppingPerformanceViewServiceServer).GetShoppingPerformanceView(ctx, req.(*GetShoppingPerformanceViewRequest))
@@ -108,7 +108,7 @@ func _ShoppingPerformanceViewService_GetShoppingPerformanceView_Handler(srv inte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ShoppingPerformanceViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.ShoppingPerformanceViewService",
+	ServiceName: "google.ads.googleads.v8.services.ShoppingPerformanceViewService",
 	HandlerType: (*ShoppingPerformanceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var ShoppingPerformanceViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/shopping_performance_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/shopping_performance_view_service.proto",
 }

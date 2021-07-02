@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -33,7 +33,7 @@ func NewLifeEventServiceClient(cc grpc.ClientConnInterface) LifeEventServiceClie
 
 func (c *lifeEventServiceClient) GetLifeEvent(ctx context.Context, in *GetLifeEventRequest, opts ...grpc.CallOption) (*resources.LifeEvent, error) {
 	out := new(resources.LifeEvent)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.LifeEventService/GetLifeEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.LifeEventService/GetLifeEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -79,7 +79,7 @@ func _LifeEventService_GetLifeEvent_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.LifeEventService/GetLifeEvent",
+		FullMethod: "/google.ads.googleads.v8.services.LifeEventService/GetLifeEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LifeEventServiceServer).GetLifeEvent(ctx, req.(*GetLifeEventRequest))
@@ -91,7 +91,7 @@ func _LifeEventService_GetLifeEvent_Handler(srv interface{}, ctx context.Context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LifeEventService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.LifeEventService",
+	ServiceName: "google.ads.googleads.v8.services.LifeEventService",
 	HandlerType: (*LifeEventServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -100,5 +100,5 @@ var LifeEventService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/life_event_service.proto",
+	Metadata: "google/ads/googleads/v8/services/life_event_service.proto",
 }

@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -57,7 +57,7 @@ func NewAdGroupAssetServiceClient(cc grpc.ClientConnInterface) AdGroupAssetServi
 
 func (c *adGroupAssetServiceClient) GetAdGroupAsset(ctx context.Context, in *GetAdGroupAssetRequest, opts ...grpc.CallOption) (*resources.AdGroupAsset, error) {
 	out := new(resources.AdGroupAsset)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupAssetService/GetAdGroupAsset", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupAssetService/GetAdGroupAsset", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -66,7 +66,7 @@ func (c *adGroupAssetServiceClient) GetAdGroupAsset(ctx context.Context, in *Get
 
 func (c *adGroupAssetServiceClient) MutateAdGroupAssets(ctx context.Context, in *MutateAdGroupAssetsRequest, opts ...grpc.CallOption) (*MutateAdGroupAssetsResponse, error) {
 	out := new(MutateAdGroupAssetsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupAssetService/MutateAdGroupAssets", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupAssetService/MutateAdGroupAssets", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -139,7 +139,7 @@ func _AdGroupAssetService_GetAdGroupAsset_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupAssetService/GetAdGroupAsset",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupAssetService/GetAdGroupAsset",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupAssetServiceServer).GetAdGroupAsset(ctx, req.(*GetAdGroupAssetRequest))
@@ -157,7 +157,7 @@ func _AdGroupAssetService_MutateAdGroupAssets_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupAssetService/MutateAdGroupAssets",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupAssetService/MutateAdGroupAssets",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupAssetServiceServer).MutateAdGroupAssets(ctx, req.(*MutateAdGroupAssetsRequest))
@@ -169,7 +169,7 @@ func _AdGroupAssetService_MutateAdGroupAssets_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupAssetService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AdGroupAssetService",
+	ServiceName: "google.ads.googleads.v8.services.AdGroupAssetService",
 	HandlerType: (*AdGroupAssetServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -182,5 +182,5 @@ var AdGroupAssetService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/ad_group_asset_service.proto",
+	Metadata: "google/ads/googleads/v8/services/ad_group_asset_service.proto",
 }

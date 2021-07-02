@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewDynamicSearchAdsSearchTermViewServiceClient(cc grpc.ClientConnInterface)
 
 func (c *dynamicSearchAdsSearchTermViewServiceClient) GetDynamicSearchAdsSearchTermView(ctx context.Context, in *GetDynamicSearchAdsSearchTermViewRequest, opts ...grpc.CallOption) (*resources.DynamicSearchAdsSearchTermView, error) {
 	out := new(resources.DynamicSearchAdsSearchTermView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.DynamicSearchAdsSearchTermViewService/GetDynamicSearchAdsSearchTermView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.DynamicSearchAdsSearchTermViewService/GetDynamicSearchAdsSearchTermView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _DynamicSearchAdsSearchTermViewService_GetDynamicSearchAdsSearchTermView_Ha
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.DynamicSearchAdsSearchTermViewService/GetDynamicSearchAdsSearchTermView",
+		FullMethod: "/google.ads.googleads.v8.services.DynamicSearchAdsSearchTermViewService/GetDynamicSearchAdsSearchTermView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DynamicSearchAdsSearchTermViewServiceServer).GetDynamicSearchAdsSearchTermView(ctx, req.(*GetDynamicSearchAdsSearchTermViewRequest))
@@ -108,7 +108,7 @@ func _DynamicSearchAdsSearchTermViewService_GetDynamicSearchAdsSearchTermView_Ha
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var DynamicSearchAdsSearchTermViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.DynamicSearchAdsSearchTermViewService",
+	ServiceName: "google.ads.googleads.v8.services.DynamicSearchAdsSearchTermViewService",
 	HandlerType: (*DynamicSearchAdsSearchTermViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var DynamicSearchAdsSearchTermViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/dynamic_search_ads_search_term_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/dynamic_search_ads_search_term_view_service.proto",
 }

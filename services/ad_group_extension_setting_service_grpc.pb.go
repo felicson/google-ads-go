@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -74,7 +74,7 @@ func NewAdGroupExtensionSettingServiceClient(cc grpc.ClientConnInterface) AdGrou
 
 func (c *adGroupExtensionSettingServiceClient) GetAdGroupExtensionSetting(ctx context.Context, in *GetAdGroupExtensionSettingRequest, opts ...grpc.CallOption) (*resources.AdGroupExtensionSetting, error) {
 	out := new(resources.AdGroupExtensionSetting)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupExtensionSettingService/GetAdGroupExtensionSetting", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupExtensionSettingService/GetAdGroupExtensionSetting", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -83,7 +83,7 @@ func (c *adGroupExtensionSettingServiceClient) GetAdGroupExtensionSetting(ctx co
 
 func (c *adGroupExtensionSettingServiceClient) MutateAdGroupExtensionSettings(ctx context.Context, in *MutateAdGroupExtensionSettingsRequest, opts ...grpc.CallOption) (*MutateAdGroupExtensionSettingsResponse, error) {
 	out := new(MutateAdGroupExtensionSettingsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupExtensionSettingService/MutateAdGroupExtensionSettings", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupExtensionSettingService/MutateAdGroupExtensionSettings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -174,7 +174,7 @@ func _AdGroupExtensionSettingService_GetAdGroupExtensionSetting_Handler(srv inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupExtensionSettingService/GetAdGroupExtensionSetting",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupExtensionSettingService/GetAdGroupExtensionSetting",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupExtensionSettingServiceServer).GetAdGroupExtensionSetting(ctx, req.(*GetAdGroupExtensionSettingRequest))
@@ -192,7 +192,7 @@ func _AdGroupExtensionSettingService_MutateAdGroupExtensionSettings_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupExtensionSettingService/MutateAdGroupExtensionSettings",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupExtensionSettingService/MutateAdGroupExtensionSettings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupExtensionSettingServiceServer).MutateAdGroupExtensionSettings(ctx, req.(*MutateAdGroupExtensionSettingsRequest))
@@ -204,7 +204,7 @@ func _AdGroupExtensionSettingService_MutateAdGroupExtensionSettings_Handler(srv 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupExtensionSettingService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AdGroupExtensionSettingService",
+	ServiceName: "google.ads.googleads.v8.services.AdGroupExtensionSettingService",
 	HandlerType: (*AdGroupExtensionSettingServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -217,5 +217,5 @@ var AdGroupExtensionSettingService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/ad_group_extension_setting_service.proto",
+	Metadata: "google/ads/googleads/v8/services/ad_group_extension_setting_service.proto",
 }

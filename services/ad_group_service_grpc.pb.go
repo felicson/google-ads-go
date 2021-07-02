@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -76,7 +76,7 @@ func NewAdGroupServiceClient(cc grpc.ClientConnInterface) AdGroupServiceClient {
 
 func (c *adGroupServiceClient) GetAdGroup(ctx context.Context, in *GetAdGroupRequest, opts ...grpc.CallOption) (*resources.AdGroup, error) {
 	out := new(resources.AdGroup)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupService/GetAdGroup", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupService/GetAdGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -85,7 +85,7 @@ func (c *adGroupServiceClient) GetAdGroup(ctx context.Context, in *GetAdGroupReq
 
 func (c *adGroupServiceClient) MutateAdGroups(ctx context.Context, in *MutateAdGroupsRequest, opts ...grpc.CallOption) (*MutateAdGroupsResponse, error) {
 	out := new(MutateAdGroupsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdGroupService/MutateAdGroups", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupService/MutateAdGroups", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -177,7 +177,7 @@ func _AdGroupService_GetAdGroup_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupService/GetAdGroup",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupService/GetAdGroup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupServiceServer).GetAdGroup(ctx, req.(*GetAdGroupRequest))
@@ -195,7 +195,7 @@ func _AdGroupService_MutateAdGroups_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdGroupService/MutateAdGroups",
+		FullMethod: "/google.ads.googleads.v8.services.AdGroupService/MutateAdGroups",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupServiceServer).MutateAdGroups(ctx, req.(*MutateAdGroupsRequest))
@@ -207,7 +207,7 @@ func _AdGroupService_MutateAdGroups_Handler(srv interface{}, ctx context.Context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AdGroupService",
+	ServiceName: "google.ads.googleads.v8.services.AdGroupService",
 	HandlerType: (*AdGroupServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -220,5 +220,5 @@ var AdGroupService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/ad_group_service.proto",
+	Metadata: "google/ads/googleads/v8/services/ad_group_service.proto",
 }

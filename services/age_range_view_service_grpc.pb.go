@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewAgeRangeViewServiceClient(cc grpc.ClientConnInterface) AgeRangeViewServi
 
 func (c *ageRangeViewServiceClient) GetAgeRangeView(ctx context.Context, in *GetAgeRangeViewRequest, opts ...grpc.CallOption) (*resources.AgeRangeView, error) {
 	out := new(resources.AgeRangeView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AgeRangeViewService/GetAgeRangeView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AgeRangeViewService/GetAgeRangeView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _AgeRangeViewService_GetAgeRangeView_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AgeRangeViewService/GetAgeRangeView",
+		FullMethod: "/google.ads.googleads.v8.services.AgeRangeViewService/GetAgeRangeView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AgeRangeViewServiceServer).GetAgeRangeView(ctx, req.(*GetAgeRangeViewRequest))
@@ -107,7 +107,7 @@ func _AgeRangeViewService_GetAgeRangeView_Handler(srv interface{}, ctx context.C
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AgeRangeViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AgeRangeViewService",
+	ServiceName: "google.ads.googleads.v8.services.AgeRangeViewService",
 	HandlerType: (*AgeRangeViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var AgeRangeViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/age_range_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/age_range_view_service.proto",
 }

@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -68,7 +68,7 @@ func NewCampaignBidModifierServiceClient(cc grpc.ClientConnInterface) CampaignBi
 
 func (c *campaignBidModifierServiceClient) GetCampaignBidModifier(ctx context.Context, in *GetCampaignBidModifierRequest, opts ...grpc.CallOption) (*resources.CampaignBidModifier, error) {
 	out := new(resources.CampaignBidModifier)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignBidModifierService/GetCampaignBidModifier", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignBidModifierService/GetCampaignBidModifier", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,7 +77,7 @@ func (c *campaignBidModifierServiceClient) GetCampaignBidModifier(ctx context.Co
 
 func (c *campaignBidModifierServiceClient) MutateCampaignBidModifiers(ctx context.Context, in *MutateCampaignBidModifiersRequest, opts ...grpc.CallOption) (*MutateCampaignBidModifiersResponse, error) {
 	out := new(MutateCampaignBidModifiersResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.CampaignBidModifierService/MutateCampaignBidModifiers", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignBidModifierService/MutateCampaignBidModifiers", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -162,7 +162,7 @@ func _CampaignBidModifierService_GetCampaignBidModifier_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignBidModifierService/GetCampaignBidModifier",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignBidModifierService/GetCampaignBidModifier",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignBidModifierServiceServer).GetCampaignBidModifier(ctx, req.(*GetCampaignBidModifierRequest))
@@ -180,7 +180,7 @@ func _CampaignBidModifierService_MutateCampaignBidModifiers_Handler(srv interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.CampaignBidModifierService/MutateCampaignBidModifiers",
+		FullMethod: "/google.ads.googleads.v8.services.CampaignBidModifierService/MutateCampaignBidModifiers",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignBidModifierServiceServer).MutateCampaignBidModifiers(ctx, req.(*MutateCampaignBidModifiersRequest))
@@ -192,7 +192,7 @@ func _CampaignBidModifierService_MutateCampaignBidModifiers_Handler(srv interfac
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignBidModifierService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.CampaignBidModifierService",
+	ServiceName: "google.ads.googleads.v8.services.CampaignBidModifierService",
 	HandlerType: (*CampaignBidModifierServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -205,5 +205,5 @@ var CampaignBidModifierService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/campaign_bid_modifier_service.proto",
+	Metadata: "google/ads/googleads/v8/services/campaign_bid_modifier_service.proto",
 }

@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -33,7 +33,7 @@ func NewWebpageViewServiceClient(cc grpc.ClientConnInterface) WebpageViewService
 
 func (c *webpageViewServiceClient) GetWebpageView(ctx context.Context, in *GetWebpageViewRequest, opts ...grpc.CallOption) (*resources.WebpageView, error) {
 	out := new(resources.WebpageView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.WebpageViewService/GetWebpageView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.WebpageViewService/GetWebpageView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -79,7 +79,7 @@ func _WebpageViewService_GetWebpageView_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.WebpageViewService/GetWebpageView",
+		FullMethod: "/google.ads.googleads.v8.services.WebpageViewService/GetWebpageView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WebpageViewServiceServer).GetWebpageView(ctx, req.(*GetWebpageViewRequest))
@@ -91,7 +91,7 @@ func _WebpageViewService_GetWebpageView_Handler(srv interface{}, ctx context.Con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var WebpageViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.WebpageViewService",
+	ServiceName: "google.ads.googleads.v8.services.WebpageViewService",
 	HandlerType: (*WebpageViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -100,5 +100,5 @@ var WebpageViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/webpage_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/webpage_view_service.proto",
 }

@@ -1,10 +1,13 @@
-ADS_VERSION=v7
+ADS_VERSION=v8
 PROTO_ROOT_DIR=googleapis/
-PROTO_SRC_DIR=/google/ads/googleads/$(ADS_VERSION)/**/*.proto
-# PROTO_OUT_DIR=$$GOPATH/src/github.com/kritzware/google-ads-go/
-PROTO_OUT_DIR=/home/ercling/workspace/tempp/google-ads-go/
+PROTO_SRC_DIR=/google/ads/googleads/$(ADS_VERSION)/
+PROTO_OUT_DIR:=$(shell mktemp -d)
 PKG_PATH=paths=source_relative
 PROTOC_GO_ARGS=--go_out=$(PROTO_OUT_DIR) --go_opt=paths=source_relative --go-grpc_out=$(PROTO_OUT_DIR) --go-grpc_opt=paths=source_relative
+GITHUB_USER=felicson
+
+MATCH=google.golang.org/genproto/googleapis/ads/googleads/$(ADS_VERSION)/
+REPLACE=github.com/$(GITHUB_USER)/google-ads-go/
 
 ENTRY=main.go
 BIN=gads
@@ -23,13 +26,16 @@ test:
 
 .SILENT protos: clean-protos clean-gen-protos
 	echo "converting protos for version $(ADS_VERSION)"
-	for file in $(PROTO_ROOT_DIR)$(PROTO_SRC_DIR); do \
+	for file in $(PROTO_ROOT_DIR)$(PROTO_SRC_DIR)/**/*.proto; do \
 		echo "converting proto $$(basename $$file)"; \
-		protoc --proto_path=$(PROTO_ROOT_DIR) $(PROTOC_GO_ARGS) $$file; \
+		protoc -I /usr/include --proto_path=$(PROTO_ROOT_DIR) $(PROTOC_GO_ARGS) $$file; \
 	done; \
-	sh ./fix-package-paths.sh; \
-	rm -rf google/
-	@echo "built proto files to $$(basename $(PROTO_OUT_DIR))"
+	for file in ${PROTO_OUT_DIR}$(PROTO_SRC_DIR)/**/*.pb.go; do \
+		sed -i "s|$(MATCH)|$(REPLACE)|g" $$file; \
+	done; \
+	mv $(PROTO_OUT_DIR)$(PROTO_SRC_DIR)/* ./
+	rm -rf ${PROTO_OUT_DIR}
+	echo "built proto files to $$(basename $(PROTO_OUT_DIR))"
 
 clean-protos:
 	rm -rf common/

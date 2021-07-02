@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -59,7 +59,7 @@ func NewAccountBudgetProposalServiceClient(cc grpc.ClientConnInterface) AccountB
 
 func (c *accountBudgetProposalServiceClient) GetAccountBudgetProposal(ctx context.Context, in *GetAccountBudgetProposalRequest, opts ...grpc.CallOption) (*resources.AccountBudgetProposal, error) {
 	out := new(resources.AccountBudgetProposal)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AccountBudgetProposalService/GetAccountBudgetProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AccountBudgetProposalService/GetAccountBudgetProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -68,7 +68,7 @@ func (c *accountBudgetProposalServiceClient) GetAccountBudgetProposal(ctx contex
 
 func (c *accountBudgetProposalServiceClient) MutateAccountBudgetProposal(ctx context.Context, in *MutateAccountBudgetProposalRequest, opts ...grpc.CallOption) (*MutateAccountBudgetProposalResponse, error) {
 	out := new(MutateAccountBudgetProposalResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AccountBudgetProposalService/MutateAccountBudgetProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AccountBudgetProposalService/MutateAccountBudgetProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -144,7 +144,7 @@ func _AccountBudgetProposalService_GetAccountBudgetProposal_Handler(srv interfac
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AccountBudgetProposalService/GetAccountBudgetProposal",
+		FullMethod: "/google.ads.googleads.v8.services.AccountBudgetProposalService/GetAccountBudgetProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccountBudgetProposalServiceServer).GetAccountBudgetProposal(ctx, req.(*GetAccountBudgetProposalRequest))
@@ -162,7 +162,7 @@ func _AccountBudgetProposalService_MutateAccountBudgetProposal_Handler(srv inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AccountBudgetProposalService/MutateAccountBudgetProposal",
+		FullMethod: "/google.ads.googleads.v8.services.AccountBudgetProposalService/MutateAccountBudgetProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccountBudgetProposalServiceServer).MutateAccountBudgetProposal(ctx, req.(*MutateAccountBudgetProposalRequest))
@@ -174,7 +174,7 @@ func _AccountBudgetProposalService_MutateAccountBudgetProposal_Handler(srv inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AccountBudgetProposalService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AccountBudgetProposalService",
+	ServiceName: "google.ads.googleads.v8.services.AccountBudgetProposalService",
 	HandlerType: (*AccountBudgetProposalServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -187,5 +187,5 @@ var AccountBudgetProposalService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/account_budget_proposal_service.proto",
+	Metadata: "google/ads/googleads/v8/services/account_budget_proposal_service.proto",
 }

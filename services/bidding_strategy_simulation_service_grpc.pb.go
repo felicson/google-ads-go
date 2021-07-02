@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -33,7 +33,7 @@ func NewBiddingStrategySimulationServiceClient(cc grpc.ClientConnInterface) Bidd
 
 func (c *biddingStrategySimulationServiceClient) GetBiddingStrategySimulation(ctx context.Context, in *GetBiddingStrategySimulationRequest, opts ...grpc.CallOption) (*resources.BiddingStrategySimulation, error) {
 	out := new(resources.BiddingStrategySimulation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.BiddingStrategySimulationService/GetBiddingStrategySimulation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BiddingStrategySimulationService/GetBiddingStrategySimulation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _BiddingStrategySimulationService_GetBiddingStrategySimulation_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.BiddingStrategySimulationService/GetBiddingStrategySimulation",
+		FullMethod: "/google.ads.googleads.v8.services.BiddingStrategySimulationService/GetBiddingStrategySimulation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BiddingStrategySimulationServiceServer).GetBiddingStrategySimulation(ctx, req.(*GetBiddingStrategySimulationRequest))
@@ -92,7 +92,7 @@ func _BiddingStrategySimulationService_GetBiddingStrategySimulation_Handler(srv 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var BiddingStrategySimulationService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.BiddingStrategySimulationService",
+	ServiceName: "google.ads.googleads.v8.services.BiddingStrategySimulationService",
 	HandlerType: (*BiddingStrategySimulationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var BiddingStrategySimulationService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/bidding_strategy_simulation_service.proto",
+	Metadata: "google/ads/googleads/v8/services/bidding_strategy_simulation_service.proto",
 }

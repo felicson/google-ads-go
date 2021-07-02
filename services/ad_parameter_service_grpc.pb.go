@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -58,7 +58,7 @@ func NewAdParameterServiceClient(cc grpc.ClientConnInterface) AdParameterService
 
 func (c *adParameterServiceClient) GetAdParameter(ctx context.Context, in *GetAdParameterRequest, opts ...grpc.CallOption) (*resources.AdParameter, error) {
 	out := new(resources.AdParameter)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdParameterService/GetAdParameter", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdParameterService/GetAdParameter", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -67,7 +67,7 @@ func (c *adParameterServiceClient) GetAdParameter(ctx context.Context, in *GetAd
 
 func (c *adParameterServiceClient) MutateAdParameters(ctx context.Context, in *MutateAdParametersRequest, opts ...grpc.CallOption) (*MutateAdParametersResponse, error) {
 	out := new(MutateAdParametersResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.AdParameterService/MutateAdParameters", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdParameterService/MutateAdParameters", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -141,7 +141,7 @@ func _AdParameterService_GetAdParameter_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdParameterService/GetAdParameter",
+		FullMethod: "/google.ads.googleads.v8.services.AdParameterService/GetAdParameter",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdParameterServiceServer).GetAdParameter(ctx, req.(*GetAdParameterRequest))
@@ -159,7 +159,7 @@ func _AdParameterService_MutateAdParameters_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.AdParameterService/MutateAdParameters",
+		FullMethod: "/google.ads.googleads.v8.services.AdParameterService/MutateAdParameters",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdParameterServiceServer).MutateAdParameters(ctx, req.(*MutateAdParametersRequest))
@@ -171,7 +171,7 @@ func _AdParameterService_MutateAdParameters_Handler(srv interface{}, ctx context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdParameterService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.AdParameterService",
+	ServiceName: "google.ads.googleads.v8.services.AdParameterService",
 	HandlerType: (*AdParameterServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -184,5 +184,5 @@ var AdParameterService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/ad_parameter_service.proto",
+	Metadata: "google/ads/googleads/v8/services/ad_parameter_service.proto",
 }

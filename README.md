@@ -101,6 +101,7 @@ Building `.pb.go` files from the original `googleads` protos should only be done
 
 Requirements:
 - [protoc](https://github.com/protocolbuffers/protobuf)
+- protoc version 3.15 or higher for working with optional attr in proto files
 
 Build `.pb.go` protos:
 ```bash

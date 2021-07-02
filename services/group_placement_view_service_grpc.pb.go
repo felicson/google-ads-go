@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewGroupPlacementViewServiceClient(cc grpc.ClientConnInterface) GroupPlacem
 
 func (c *groupPlacementViewServiceClient) GetGroupPlacementView(ctx context.Context, in *GetGroupPlacementViewRequest, opts ...grpc.CallOption) (*resources.GroupPlacementView, error) {
 	out := new(resources.GroupPlacementView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.GroupPlacementViewService/GetGroupPlacementView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.GroupPlacementViewService/GetGroupPlacementView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _GroupPlacementViewService_GetGroupPlacementView_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.GroupPlacementViewService/GetGroupPlacementView",
+		FullMethod: "/google.ads.googleads.v8.services.GroupPlacementViewService/GetGroupPlacementView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GroupPlacementViewServiceServer).GetGroupPlacementView(ctx, req.(*GetGroupPlacementViewRequest))
@@ -108,7 +108,7 @@ func _GroupPlacementViewService_GetGroupPlacementView_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var GroupPlacementViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.GroupPlacementViewService",
+	ServiceName: "google.ads.googleads.v8.services.GroupPlacementViewService",
 	HandlerType: (*GroupPlacementViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var GroupPlacementViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/group_placement_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/group_placement_view_service.proto",
 }

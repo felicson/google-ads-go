@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewTopicConstantServiceClient(cc grpc.ClientConnInterface) TopicConstantSer
 
 func (c *topicConstantServiceClient) GetTopicConstant(ctx context.Context, in *GetTopicConstantRequest, opts ...grpc.CallOption) (*resources.TopicConstant, error) {
 	out := new(resources.TopicConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.TopicConstantService/GetTopicConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.TopicConstantService/GetTopicConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _TopicConstantService_GetTopicConstant_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.TopicConstantService/GetTopicConstant",
+		FullMethod: "/google.ads.googleads.v8.services.TopicConstantService/GetTopicConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TopicConstantServiceServer).GetTopicConstant(ctx, req.(*GetTopicConstantRequest))
@@ -107,7 +107,7 @@ func _TopicConstantService_GetTopicConstant_Handler(srv interface{}, ctx context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TopicConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.TopicConstantService",
+	ServiceName: "google.ads.googleads.v8.services.TopicConstantService",
 	HandlerType: (*TopicConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var TopicConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/topic_constant_service.proto",
+	Metadata: "google/ads/googleads/v8/services/topic_constant_service.proto",
 }

@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -68,7 +68,7 @@ func NewSharedSetServiceClient(cc grpc.ClientConnInterface) SharedSetServiceClie
 
 func (c *sharedSetServiceClient) GetSharedSet(ctx context.Context, in *GetSharedSetRequest, opts ...grpc.CallOption) (*resources.SharedSet, error) {
 	out := new(resources.SharedSet)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.SharedSetService/GetSharedSet", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SharedSetService/GetSharedSet", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,7 +77,7 @@ func (c *sharedSetServiceClient) GetSharedSet(ctx context.Context, in *GetShared
 
 func (c *sharedSetServiceClient) MutateSharedSets(ctx context.Context, in *MutateSharedSetsRequest, opts ...grpc.CallOption) (*MutateSharedSetsResponse, error) {
 	out := new(MutateSharedSetsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.SharedSetService/MutateSharedSets", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SharedSetService/MutateSharedSets", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -161,7 +161,7 @@ func _SharedSetService_GetSharedSet_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.SharedSetService/GetSharedSet",
+		FullMethod: "/google.ads.googleads.v8.services.SharedSetService/GetSharedSet",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SharedSetServiceServer).GetSharedSet(ctx, req.(*GetSharedSetRequest))
@@ -179,7 +179,7 @@ func _SharedSetService_MutateSharedSets_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.SharedSetService/MutateSharedSets",
+		FullMethod: "/google.ads.googleads.v8.services.SharedSetService/MutateSharedSets",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SharedSetServiceServer).MutateSharedSets(ctx, req.(*MutateSharedSetsRequest))
@@ -191,7 +191,7 @@ func _SharedSetService_MutateSharedSets_Handler(srv interface{}, ctx context.Con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SharedSetService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.SharedSetService",
+	ServiceName: "google.ads.googleads.v8.services.SharedSetService",
 	HandlerType: (*SharedSetServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -204,5 +204,5 @@ var SharedSetService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/shared_set_service.proto",
+	Metadata: "google/ads/googleads/v8/services/shared_set_service.proto",
 }

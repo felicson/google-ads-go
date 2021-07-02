@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewUserLocationViewServiceClient(cc grpc.ClientConnInterface) UserLocationV
 
 func (c *userLocationViewServiceClient) GetUserLocationView(ctx context.Context, in *GetUserLocationViewRequest, opts ...grpc.CallOption) (*resources.UserLocationView, error) {
 	out := new(resources.UserLocationView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.UserLocationViewService/GetUserLocationView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.UserLocationViewService/GetUserLocationView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _UserLocationViewService_GetUserLocationView_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.UserLocationViewService/GetUserLocationView",
+		FullMethod: "/google.ads.googleads.v8.services.UserLocationViewService/GetUserLocationView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserLocationViewServiceServer).GetUserLocationView(ctx, req.(*GetUserLocationViewRequest))
@@ -108,7 +108,7 @@ func _UserLocationViewService_GetUserLocationView_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UserLocationViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.UserLocationViewService",
+	ServiceName: "google.ads.googleads.v8.services.UserLocationViewService",
 	HandlerType: (*UserLocationViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var UserLocationViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/user_location_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/user_location_view_service.proto",
 }

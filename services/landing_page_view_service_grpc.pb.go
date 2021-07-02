@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewLandingPageViewServiceClient(cc grpc.ClientConnInterface) LandingPageVie
 
 func (c *landingPageViewServiceClient) GetLandingPageView(ctx context.Context, in *GetLandingPageViewRequest, opts ...grpc.CallOption) (*resources.LandingPageView, error) {
 	out := new(resources.LandingPageView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.LandingPageViewService/GetLandingPageView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.LandingPageViewService/GetLandingPageView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _LandingPageViewService_GetLandingPageView_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.LandingPageViewService/GetLandingPageView",
+		FullMethod: "/google.ads.googleads.v8.services.LandingPageViewService/GetLandingPageView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LandingPageViewServiceServer).GetLandingPageView(ctx, req.(*GetLandingPageViewRequest))
@@ -108,7 +108,7 @@ func _LandingPageViewService_GetLandingPageView_Handler(srv interface{}, ctx con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LandingPageViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.LandingPageViewService",
+	ServiceName: "google.ads.googleads.v8.services.LandingPageViewService",
 	HandlerType: (*LandingPageViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var LandingPageViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/landing_page_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/landing_page_view_service.proto",
 }

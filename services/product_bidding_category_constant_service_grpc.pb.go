@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewProductBiddingCategoryConstantServiceClient(cc grpc.ClientConnInterface)
 
 func (c *productBiddingCategoryConstantServiceClient) GetProductBiddingCategoryConstant(ctx context.Context, in *GetProductBiddingCategoryConstantRequest, opts ...grpc.CallOption) (*resources.ProductBiddingCategoryConstant, error) {
 	out := new(resources.ProductBiddingCategoryConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.ProductBiddingCategoryConstantService/GetProductBiddingCategoryConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ProductBiddingCategoryConstantService/GetProductBiddingCategoryConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _ProductBiddingCategoryConstantService_GetProductBiddingCategoryConstant_Ha
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.ProductBiddingCategoryConstantService/GetProductBiddingCategoryConstant",
+		FullMethod: "/google.ads.googleads.v8.services.ProductBiddingCategoryConstantService/GetProductBiddingCategoryConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProductBiddingCategoryConstantServiceServer).GetProductBiddingCategoryConstant(ctx, req.(*GetProductBiddingCategoryConstantRequest))
@@ -108,7 +108,7 @@ func _ProductBiddingCategoryConstantService_GetProductBiddingCategoryConstant_Ha
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ProductBiddingCategoryConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.ProductBiddingCategoryConstantService",
+	ServiceName: "google.ads.googleads.v8.services.ProductBiddingCategoryConstantService",
 	HandlerType: (*ProductBiddingCategoryConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var ProductBiddingCategoryConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/product_bidding_category_constant_service.proto",
+	Metadata: "google/ads/googleads/v8/services/product_bidding_category_constant_service.proto",
 }

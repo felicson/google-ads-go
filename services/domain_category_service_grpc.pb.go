@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewDomainCategoryServiceClient(cc grpc.ClientConnInterface) DomainCategoryS
 
 func (c *domainCategoryServiceClient) GetDomainCategory(ctx context.Context, in *GetDomainCategoryRequest, opts ...grpc.CallOption) (*resources.DomainCategory, error) {
 	out := new(resources.DomainCategory)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.DomainCategoryService/GetDomainCategory", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.DomainCategoryService/GetDomainCategory", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _DomainCategoryService_GetDomainCategory_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.DomainCategoryService/GetDomainCategory",
+		FullMethod: "/google.ads.googleads.v8.services.DomainCategoryService/GetDomainCategory",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DomainCategoryServiceServer).GetDomainCategory(ctx, req.(*GetDomainCategoryRequest))
@@ -107,7 +107,7 @@ func _DomainCategoryService_GetDomainCategory_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var DomainCategoryService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.DomainCategoryService",
+	ServiceName: "google.ads.googleads.v8.services.DomainCategoryService",
 	HandlerType: (*DomainCategoryServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var DomainCategoryService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/domain_category_service.proto",
+	Metadata: "google/ads/googleads/v8/services/domain_category_service.proto",
 }

@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewManagedPlacementViewServiceClient(cc grpc.ClientConnInterface) ManagedPl
 
 func (c *managedPlacementViewServiceClient) GetManagedPlacementView(ctx context.Context, in *GetManagedPlacementViewRequest, opts ...grpc.CallOption) (*resources.ManagedPlacementView, error) {
 	out := new(resources.ManagedPlacementView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.ManagedPlacementViewService/GetManagedPlacementView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ManagedPlacementViewService/GetManagedPlacementView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _ManagedPlacementViewService_GetManagedPlacementView_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.ManagedPlacementViewService/GetManagedPlacementView",
+		FullMethod: "/google.ads.googleads.v8.services.ManagedPlacementViewService/GetManagedPlacementView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ManagedPlacementViewServiceServer).GetManagedPlacementView(ctx, req.(*GetManagedPlacementViewRequest))
@@ -108,7 +108,7 @@ func _ManagedPlacementViewService_GetManagedPlacementView_Handler(srv interface{
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ManagedPlacementViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.ManagedPlacementViewService",
+	ServiceName: "google.ads.googleads.v8.services.ManagedPlacementViewService",
 	HandlerType: (*ManagedPlacementViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var ManagedPlacementViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/managed_placement_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/managed_placement_view_service.proto",
 }

@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -69,7 +69,7 @@ func NewExtensionFeedItemServiceClient(cc grpc.ClientConnInterface) ExtensionFee
 
 func (c *extensionFeedItemServiceClient) GetExtensionFeedItem(ctx context.Context, in *GetExtensionFeedItemRequest, opts ...grpc.CallOption) (*resources.ExtensionFeedItem, error) {
 	out := new(resources.ExtensionFeedItem)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.ExtensionFeedItemService/GetExtensionFeedItem", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ExtensionFeedItemService/GetExtensionFeedItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -78,7 +78,7 @@ func (c *extensionFeedItemServiceClient) GetExtensionFeedItem(ctx context.Contex
 
 func (c *extensionFeedItemServiceClient) MutateExtensionFeedItems(ctx context.Context, in *MutateExtensionFeedItemsRequest, opts ...grpc.CallOption) (*MutateExtensionFeedItemsResponse, error) {
 	out := new(MutateExtensionFeedItemsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.ExtensionFeedItemService/MutateExtensionFeedItems", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ExtensionFeedItemService/MutateExtensionFeedItems", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -164,7 +164,7 @@ func _ExtensionFeedItemService_GetExtensionFeedItem_Handler(srv interface{}, ctx
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.ExtensionFeedItemService/GetExtensionFeedItem",
+		FullMethod: "/google.ads.googleads.v8.services.ExtensionFeedItemService/GetExtensionFeedItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ExtensionFeedItemServiceServer).GetExtensionFeedItem(ctx, req.(*GetExtensionFeedItemRequest))
@@ -182,7 +182,7 @@ func _ExtensionFeedItemService_MutateExtensionFeedItems_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.ExtensionFeedItemService/MutateExtensionFeedItems",
+		FullMethod: "/google.ads.googleads.v8.services.ExtensionFeedItemService/MutateExtensionFeedItems",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ExtensionFeedItemServiceServer).MutateExtensionFeedItems(ctx, req.(*MutateExtensionFeedItemsRequest))
@@ -194,7 +194,7 @@ func _ExtensionFeedItemService_MutateExtensionFeedItems_Handler(srv interface{},
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ExtensionFeedItemService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.ExtensionFeedItemService",
+	ServiceName: "google.ads.googleads.v8.services.ExtensionFeedItemService",
 	HandlerType: (*ExtensionFeedItemServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -207,5 +207,5 @@ var ExtensionFeedItemService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/extension_feed_item_service.proto",
+	Metadata: "google/ads/googleads/v8/services/extension_feed_item_service.proto",
 }

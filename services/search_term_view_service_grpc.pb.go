@@ -4,7 +4,7 @@ package services
 
 import (
 	context "context"
-	resources "github.com/ercling/google-ads-go/resources"
+	resources "github.com/felicson/google-ads-go/resources"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -41,7 +41,7 @@ func NewSearchTermViewServiceClient(cc grpc.ClientConnInterface) SearchTermViewS
 
 func (c *searchTermViewServiceClient) GetSearchTermView(ctx context.Context, in *GetSearchTermViewRequest, opts ...grpc.CallOption) (*resources.SearchTermView, error) {
 	out := new(resources.SearchTermView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v7.services.SearchTermViewService/GetSearchTermView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SearchTermViewService/GetSearchTermView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _SearchTermViewService_GetSearchTermView_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v7.services.SearchTermViewService/GetSearchTermView",
+		FullMethod: "/google.ads.googleads.v8.services.SearchTermViewService/GetSearchTermView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SearchTermViewServiceServer).GetSearchTermView(ctx, req.(*GetSearchTermViewRequest))
@@ -107,7 +107,7 @@ func _SearchTermViewService_GetSearchTermView_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SearchTermViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v7.services.SearchTermViewService",
+	ServiceName: "google.ads.googleads.v8.services.SearchTermViewService",
 	HandlerType: (*SearchTermViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var SearchTermViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v7/services/search_term_view_service.proto",
+	Metadata: "google/ads/googleads/v8/services/search_term_view_service.proto",
 }
