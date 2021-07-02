@@ -1,6 +1,6 @@
 # google-ads-go
 
-| Google Ads API version 	| [`v7.0`](https://developers.google.com/google-ads/api/docs/release-notes#v70_2021-04-28) |
+| Google Ads API version 	| [`v8.0`](https://developers.google.com/google-ads/api/docs/release-notes#v80_2021-06-09) |
 |-|:-:|
 | Build | [![CircleCI](https://circleci.com/gh/kritzware/google-ads-go.svg?style=shield)](https://circleci.com/gh/kritzware/google-ads-go) |
 | Release | ![Release](https://img.shields.io/github/release/kritzware/google-ads-go.svg) |
@@ -62,7 +62,8 @@ When using the `NewGoogleAdsClientFromStorage` method, you must provide a path t
     "client_id": "YOUR_CLIENT_ID",
     "client_secret": "YOUR_CLIENT_SECRET",
     "refresh_token": "YOUR_REFRESH_TOKEN",
-    "developer_token": "YOUR_DEVELOPER_TOKEN"
+    "developer_token": "YOUR_DEVELOPER_TOKEN",
+    "login_customer_id": "YOUR_CUSTOMER_ID"
 }
 
 ```
@@ -100,8 +101,7 @@ To see the changes between Google Ads API versions, take a look at the official 
 Building `.pb.go` files from the original `googleads` protos should only be done when updating to a new Google Ads version.
 
 Requirements:
-- [protoc](https://github.com/protocolbuffers/protobuf)
-- protoc version 3.15 or higher for working with optional attr in proto files
+- [protoc version 3.15 or higher for working with optional attr in proto files](https://github.com/protocolbuffers/protobuf)
 
 Build `.pb.go` protos:
 ```bash
