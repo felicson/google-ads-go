@@ -9,7 +9,7 @@ GITHUB_USER=felicson
 MATCH=google.golang.org/genproto/googleapis/ads/googleads/$(ADS_VERSION)/
 REPLACE=github.com/$(GITHUB_USER)/google-ads-go/
 
-ENTRY=main.go
+ENTRY=cmd/main.go
 BIN=gads
 
 build:
