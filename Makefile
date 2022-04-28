@@ -29,6 +29,8 @@ test:
 	echo "converting protos for version $(ADS_VERSION)"
 	for file in $(PROTO_ROOT_DIR)$(PROTO_SRC_DIR)/**/*.proto; do \
 		echo "converting proto $$(basename $$file)"; \
+		# https://groups.google.com/g/adwords-api/c/Tti9vvDPdK4/m/6a86kM18AAAJ
+		# 'golang bug' in v10
 		sed -i "s|experiment_arm\.proto|experiment_arm0.proto|g" $$file; \
 		protoc -I /usr/include --proto_path=$(PROTO_ROOT_DIR) --proto_path=$(PROTO_CORE_DIR) $(PROTOC_GO_ARGS) $$file; \
 	done; \
