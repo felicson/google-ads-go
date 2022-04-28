@@ -1,6 +1,6 @@
 ADS_VERSION=v9
 PROTO_ROOT_DIR=googleapis/
-PROTO_PROTOBUF_DIR=protobuf/src
+PROTO_CORE_DIR=protobuf/src
 PROTO_SRC_DIR=/google/ads/googleads/$(ADS_VERSION)/
 PROTO_OUT_DIR:=$(shell mktemp -d)
 PKG_PATH=paths=source_relative
@@ -30,7 +30,7 @@ test:
 	for file in $(PROTO_ROOT_DIR)$(PROTO_SRC_DIR)/**/*.proto; do \
 		echo "converting proto $$(basename $$file)"; \
 		sed -i "s|experiment_arm\.proto|experiment_arm0.proto|g" $$file; \
-		protoc -I /usr/include --proto_path=$(PROTO_ROOT_DIR) --proto_path=$(PROTO_PROTOBUF_DIR) $(PROTOC_GO_ARGS) $$file; \
+		protoc -I /usr/include --proto_path=$(PROTO_ROOT_DIR) --proto_path=$(PROTO_CORE_DIR) $(PROTOC_GO_ARGS) $$file; \
 	done; \
 	for file in ${PROTO_OUT_DIR}$(PROTO_SRC_DIR)/**/*.pb.go; do \
 		sed -i "s|$(MATCH)|$(REPLACE)|g" $$file; \
@@ -54,16 +54,16 @@ clone-googleapis:
 	cd $(PROTO_ROOT_DIR)
 	git submodule update --init --recursive
 
-clone-protobuf:
-	cd $(PROTO_PROTOBUF_DIR)
+clone-protocore:
+	cd $(PROTO_CORE_DIR)
 	git submodule update --init --recursive
 
 update-googleapis:
 	cd $(PROTO_ROOT_DIR)
 	git submodule update --recursive --remote
 
-update-protobuf:
-	cd $(PROTO_PROTOBUF_DIR)
+update-protocore:
+	cd $(PROTO_CORE_DIR)
 	git submodule update --recursive --remote
 
 .PHONY: protos clone-googleapis update-googleapis
