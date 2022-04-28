@@ -41,7 +41,7 @@ func NewExpandedLandingPageViewServiceClient(cc grpc.ClientConnInterface) Expand
 
 func (c *expandedLandingPageViewServiceClient) GetExpandedLandingPageView(ctx context.Context, in *GetExpandedLandingPageViewRequest, opts ...grpc.CallOption) (*resources.ExpandedLandingPageView, error) {
 	out := new(resources.ExpandedLandingPageView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ExpandedLandingPageViewService/GetExpandedLandingPageView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ExpandedLandingPageViewService/GetExpandedLandingPageView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _ExpandedLandingPageViewService_GetExpandedLandingPageView_Handler(srv inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.ExpandedLandingPageViewService/GetExpandedLandingPageView",
+		FullMethod: "/google.ads.googleads.v9.services.ExpandedLandingPageViewService/GetExpandedLandingPageView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ExpandedLandingPageViewServiceServer).GetExpandedLandingPageView(ctx, req.(*GetExpandedLandingPageViewRequest))
@@ -108,7 +108,7 @@ func _ExpandedLandingPageViewService_GetExpandedLandingPageView_Handler(srv inte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ExpandedLandingPageViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.ExpandedLandingPageViewService",
+	ServiceName: "google.ads.googleads.v9.services.ExpandedLandingPageViewService",
 	HandlerType: (*ExpandedLandingPageViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var ExpandedLandingPageViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/expanded_landing_page_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/expanded_landing_page_view_service.proto",
 }

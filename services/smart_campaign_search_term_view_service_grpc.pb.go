@@ -41,7 +41,7 @@ func NewSmartCampaignSearchTermViewServiceClient(cc grpc.ClientConnInterface) Sm
 
 func (c *smartCampaignSearchTermViewServiceClient) GetSmartCampaignSearchTermView(ctx context.Context, in *GetSmartCampaignSearchTermViewRequest, opts ...grpc.CallOption) (*resources.SmartCampaignSearchTermView, error) {
 	out := new(resources.SmartCampaignSearchTermView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SmartCampaignSearchTermViewService/GetSmartCampaignSearchTermView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.SmartCampaignSearchTermViewService/GetSmartCampaignSearchTermView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _SmartCampaignSearchTermViewService_GetSmartCampaignSearchTermView_Handler(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.SmartCampaignSearchTermViewService/GetSmartCampaignSearchTermView",
+		FullMethod: "/google.ads.googleads.v9.services.SmartCampaignSearchTermViewService/GetSmartCampaignSearchTermView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SmartCampaignSearchTermViewServiceServer).GetSmartCampaignSearchTermView(ctx, req.(*GetSmartCampaignSearchTermViewRequest))
@@ -108,7 +108,7 @@ func _SmartCampaignSearchTermViewService_GetSmartCampaignSearchTermView_Handler(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SmartCampaignSearchTermViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.SmartCampaignSearchTermViewService",
+	ServiceName: "google.ads.googleads.v9.services.SmartCampaignSearchTermViewService",
 	HandlerType: (*SmartCampaignSearchTermViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var SmartCampaignSearchTermViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/smart_campaign_search_term_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/smart_campaign_search_term_view_service.proto",
 }

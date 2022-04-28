@@ -41,7 +41,7 @@ func NewMobileAppCategoryConstantServiceClient(cc grpc.ClientConnInterface) Mobi
 
 func (c *mobileAppCategoryConstantServiceClient) GetMobileAppCategoryConstant(ctx context.Context, in *GetMobileAppCategoryConstantRequest, opts ...grpc.CallOption) (*resources.MobileAppCategoryConstant, error) {
 	out := new(resources.MobileAppCategoryConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _MobileAppCategoryConstantService_GetMobileAppCategoryConstant_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant",
+		FullMethod: "/google.ads.googleads.v9.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MobileAppCategoryConstantServiceServer).GetMobileAppCategoryConstant(ctx, req.(*GetMobileAppCategoryConstantRequest))
@@ -108,7 +108,7 @@ func _MobileAppCategoryConstantService_GetMobileAppCategoryConstant_Handler(srv 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MobileAppCategoryConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.MobileAppCategoryConstantService",
+	ServiceName: "google.ads.googleads.v9.services.MobileAppCategoryConstantService",
 	HandlerType: (*MobileAppCategoryConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var MobileAppCategoryConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/mobile_app_category_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/mobile_app_category_constant_service.proto",
 }

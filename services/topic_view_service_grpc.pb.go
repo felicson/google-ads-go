@@ -41,7 +41,7 @@ func NewTopicViewServiceClient(cc grpc.ClientConnInterface) TopicViewServiceClie
 
 func (c *topicViewServiceClient) GetTopicView(ctx context.Context, in *GetTopicViewRequest, opts ...grpc.CallOption) (*resources.TopicView, error) {
 	out := new(resources.TopicView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.TopicViewService/GetTopicView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.TopicViewService/GetTopicView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _TopicViewService_GetTopicView_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.TopicViewService/GetTopicView",
+		FullMethod: "/google.ads.googleads.v9.services.TopicViewService/GetTopicView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TopicViewServiceServer).GetTopicView(ctx, req.(*GetTopicViewRequest))
@@ -107,7 +107,7 @@ func _TopicViewService_GetTopicView_Handler(srv interface{}, ctx context.Context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TopicViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.TopicViewService",
+	ServiceName: "google.ads.googleads.v9.services.TopicViewService",
 	HandlerType: (*TopicViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var TopicViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/topic_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/topic_view_service.proto",
 }

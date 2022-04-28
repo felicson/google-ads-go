@@ -41,7 +41,7 @@ func NewPaidOrganicSearchTermViewServiceClient(cc grpc.ClientConnInterface) Paid
 
 func (c *paidOrganicSearchTermViewServiceClient) GetPaidOrganicSearchTermView(ctx context.Context, in *GetPaidOrganicSearchTermViewRequest, opts ...grpc.CallOption) (*resources.PaidOrganicSearchTermView, error) {
 	out := new(resources.PaidOrganicSearchTermView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.PaidOrganicSearchTermViewService/GetPaidOrganicSearchTermView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.PaidOrganicSearchTermViewService/GetPaidOrganicSearchTermView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _PaidOrganicSearchTermViewService_GetPaidOrganicSearchTermView_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.PaidOrganicSearchTermViewService/GetPaidOrganicSearchTermView",
+		FullMethod: "/google.ads.googleads.v9.services.PaidOrganicSearchTermViewService/GetPaidOrganicSearchTermView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PaidOrganicSearchTermViewServiceServer).GetPaidOrganicSearchTermView(ctx, req.(*GetPaidOrganicSearchTermViewRequest))
@@ -108,7 +108,7 @@ func _PaidOrganicSearchTermViewService_GetPaidOrganicSearchTermView_Handler(srv 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var PaidOrganicSearchTermViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.PaidOrganicSearchTermViewService",
+	ServiceName: "google.ads.googleads.v9.services.PaidOrganicSearchTermViewService",
 	HandlerType: (*PaidOrganicSearchTermViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var PaidOrganicSearchTermViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/paid_organic_search_term_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/paid_organic_search_term_view_service.proto",
 }

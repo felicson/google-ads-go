@@ -55,7 +55,7 @@ func NewBillingSetupServiceClient(cc grpc.ClientConnInterface) BillingSetupServi
 
 func (c *billingSetupServiceClient) GetBillingSetup(ctx context.Context, in *GetBillingSetupRequest, opts ...grpc.CallOption) (*resources.BillingSetup, error) {
 	out := new(resources.BillingSetup)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BillingSetupService/GetBillingSetup", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.BillingSetupService/GetBillingSetup", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,7 @@ func (c *billingSetupServiceClient) GetBillingSetup(ctx context.Context, in *Get
 
 func (c *billingSetupServiceClient) MutateBillingSetup(ctx context.Context, in *MutateBillingSetupRequest, opts ...grpc.CallOption) (*MutateBillingSetupResponse, error) {
 	out := new(MutateBillingSetupResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BillingSetupService/MutateBillingSetup", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.BillingSetupService/MutateBillingSetup", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -135,7 +135,7 @@ func _BillingSetupService_GetBillingSetup_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.BillingSetupService/GetBillingSetup",
+		FullMethod: "/google.ads.googleads.v9.services.BillingSetupService/GetBillingSetup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BillingSetupServiceServer).GetBillingSetup(ctx, req.(*GetBillingSetupRequest))
@@ -153,7 +153,7 @@ func _BillingSetupService_MutateBillingSetup_Handler(srv interface{}, ctx contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.BillingSetupService/MutateBillingSetup",
+		FullMethod: "/google.ads.googleads.v9.services.BillingSetupService/MutateBillingSetup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BillingSetupServiceServer).MutateBillingSetup(ctx, req.(*MutateBillingSetupRequest))
@@ -165,7 +165,7 @@ func _BillingSetupService_MutateBillingSetup_Handler(srv interface{}, ctx contex
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var BillingSetupService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.BillingSetupService",
+	ServiceName: "google.ads.googleads.v9.services.BillingSetupService",
 	HandlerType: (*BillingSetupServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -178,5 +178,5 @@ var BillingSetupService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/billing_setup_service.proto",
+	Metadata: "google/ads/googleads/v9/services/billing_setup_service.proto",
 }

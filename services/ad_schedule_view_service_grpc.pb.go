@@ -41,7 +41,7 @@ func NewAdScheduleViewServiceClient(cc grpc.ClientConnInterface) AdScheduleViewS
 
 func (c *adScheduleViewServiceClient) GetAdScheduleView(ctx context.Context, in *GetAdScheduleViewRequest, opts ...grpc.CallOption) (*resources.AdScheduleView, error) {
 	out := new(resources.AdScheduleView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdScheduleViewService/GetAdScheduleView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdScheduleViewService/GetAdScheduleView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _AdScheduleViewService_GetAdScheduleView_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.AdScheduleViewService/GetAdScheduleView",
+		FullMethod: "/google.ads.googleads.v9.services.AdScheduleViewService/GetAdScheduleView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdScheduleViewServiceServer).GetAdScheduleView(ctx, req.(*GetAdScheduleViewRequest))
@@ -107,7 +107,7 @@ func _AdScheduleViewService_GetAdScheduleView_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdScheduleViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.AdScheduleViewService",
+	ServiceName: "google.ads.googleads.v9.services.AdScheduleViewService",
 	HandlerType: (*AdScheduleViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var AdScheduleViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/ad_schedule_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/ad_schedule_view_service.proto",
 }

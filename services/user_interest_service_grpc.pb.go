@@ -41,7 +41,7 @@ func NewUserInterestServiceClient(cc grpc.ClientConnInterface) UserInterestServi
 
 func (c *userInterestServiceClient) GetUserInterest(ctx context.Context, in *GetUserInterestRequest, opts ...grpc.CallOption) (*resources.UserInterest, error) {
 	out := new(resources.UserInterest)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.UserInterestService/GetUserInterest", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.UserInterestService/GetUserInterest", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _UserInterestService_GetUserInterest_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.UserInterestService/GetUserInterest",
+		FullMethod: "/google.ads.googleads.v9.services.UserInterestService/GetUserInterest",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserInterestServiceServer).GetUserInterest(ctx, req.(*GetUserInterestRequest))
@@ -107,7 +107,7 @@ func _UserInterestService_GetUserInterest_Handler(srv interface{}, ctx context.C
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UserInterestService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.UserInterestService",
+	ServiceName: "google.ads.googleads.v9.services.UserInterestService",
 	HandlerType: (*UserInterestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var UserInterestService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/user_interest_service.proto",
+	Metadata: "google/ads/googleads/v9/services/user_interest_service.proto",
 }

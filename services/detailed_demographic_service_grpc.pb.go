@@ -33,7 +33,7 @@ func NewDetailedDemographicServiceClient(cc grpc.ClientConnInterface) DetailedDe
 
 func (c *detailedDemographicServiceClient) GetDetailedDemographic(ctx context.Context, in *GetDetailedDemographicRequest, opts ...grpc.CallOption) (*resources.DetailedDemographic, error) {
 	out := new(resources.DetailedDemographic)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.DetailedDemographicService/GetDetailedDemographic", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.DetailedDemographicService/GetDetailedDemographic", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _DetailedDemographicService_GetDetailedDemographic_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.DetailedDemographicService/GetDetailedDemographic",
+		FullMethod: "/google.ads.googleads.v9.services.DetailedDemographicService/GetDetailedDemographic",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DetailedDemographicServiceServer).GetDetailedDemographic(ctx, req.(*GetDetailedDemographicRequest))
@@ -92,7 +92,7 @@ func _DetailedDemographicService_GetDetailedDemographic_Handler(srv interface{},
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var DetailedDemographicService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.DetailedDemographicService",
+	ServiceName: "google.ads.googleads.v9.services.DetailedDemographicService",
 	HandlerType: (*DetailedDemographicServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var DetailedDemographicService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/detailed_demographic_service.proto",
+	Metadata: "google/ads/googleads/v9/services/detailed_demographic_service.proto",
 }

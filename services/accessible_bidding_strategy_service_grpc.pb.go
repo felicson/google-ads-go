@@ -33,7 +33,7 @@ func NewAccessibleBiddingStrategyServiceClient(cc grpc.ClientConnInterface) Acce
 
 func (c *accessibleBiddingStrategyServiceClient) GetAccessibleBiddingStrategy(ctx context.Context, in *GetAccessibleBiddingStrategyRequest, opts ...grpc.CallOption) (*resources.AccessibleBiddingStrategy, error) {
 	out := new(resources.AccessibleBiddingStrategy)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AccessibleBiddingStrategyService/GetAccessibleBiddingStrategy", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AccessibleBiddingStrategyService/GetAccessibleBiddingStrategy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _AccessibleBiddingStrategyService_GetAccessibleBiddingStrategy_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.AccessibleBiddingStrategyService/GetAccessibleBiddingStrategy",
+		FullMethod: "/google.ads.googleads.v9.services.AccessibleBiddingStrategyService/GetAccessibleBiddingStrategy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccessibleBiddingStrategyServiceServer).GetAccessibleBiddingStrategy(ctx, req.(*GetAccessibleBiddingStrategyRequest))
@@ -92,7 +92,7 @@ func _AccessibleBiddingStrategyService_GetAccessibleBiddingStrategy_Handler(srv 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AccessibleBiddingStrategyService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.AccessibleBiddingStrategyService",
+	ServiceName: "google.ads.googleads.v9.services.AccessibleBiddingStrategyService",
 	HandlerType: (*AccessibleBiddingStrategyServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var AccessibleBiddingStrategyService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/accessible_bidding_strategy_service.proto",
+	Metadata: "google/ads/googleads/v9/services/accessible_bidding_strategy_service.proto",
 }

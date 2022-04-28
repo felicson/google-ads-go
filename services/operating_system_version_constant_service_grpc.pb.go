@@ -41,7 +41,7 @@ func NewOperatingSystemVersionConstantServiceClient(cc grpc.ClientConnInterface)
 
 func (c *operatingSystemVersionConstantServiceClient) GetOperatingSystemVersionConstant(ctx context.Context, in *GetOperatingSystemVersionConstantRequest, opts ...grpc.CallOption) (*resources.OperatingSystemVersionConstant, error) {
 	out := new(resources.OperatingSystemVersionConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _OperatingSystemVersionConstantService_GetOperatingSystemVersionConstant_Ha
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant",
+		FullMethod: "/google.ads.googleads.v9.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(OperatingSystemVersionConstantServiceServer).GetOperatingSystemVersionConstant(ctx, req.(*GetOperatingSystemVersionConstantRequest))
@@ -108,7 +108,7 @@ func _OperatingSystemVersionConstantService_GetOperatingSystemVersionConstant_Ha
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var OperatingSystemVersionConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.OperatingSystemVersionConstantService",
+	ServiceName: "google.ads.googleads.v9.services.OperatingSystemVersionConstantService",
 	HandlerType: (*OperatingSystemVersionConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var OperatingSystemVersionConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/operating_system_version_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/operating_system_version_constant_service.proto",
 }

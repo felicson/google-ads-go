@@ -16,7 +16,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.15.8
-// source: google/ads/googleads/v8/services/keyword_plan_campaign_keyword_service.proto
+// source: google/ads/googleads/v9/services/keyword_plan_campaign_keyword_service.proto
 
 package services
 
@@ -24,9 +24,9 @@ import (
 	resources "github.com/felicson/google-ads-go/resources"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	status "google.golang.org/genproto/googleapis/rpc/status"
-	field_mask "google.golang.org/genproto/protobuf/field_mask"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	fieldmaskpb "google.golang.org/protobuf/types/known/fieldmaskpb"
 	reflect "reflect"
 	sync "sync"
 )
@@ -39,7 +39,7 @@ const (
 )
 
 // Request message for
-// [KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword][google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword].
+// [KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword][google.ads.googleads.v9.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword].
 type GetKeywordPlanCampaignKeywordRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -52,7 +52,7 @@ type GetKeywordPlanCampaignKeywordRequest struct {
 func (x *GetKeywordPlanCampaignKeywordRequest) Reset() {
 	*x = GetKeywordPlanCampaignKeywordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[0]
+		mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -65,7 +65,7 @@ func (x *GetKeywordPlanCampaignKeywordRequest) String() string {
 func (*GetKeywordPlanCampaignKeywordRequest) ProtoMessage() {}
 
 func (x *GetKeywordPlanCampaignKeywordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[0]
+	mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -78,7 +78,7 @@ func (x *GetKeywordPlanCampaignKeywordRequest) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use GetKeywordPlanCampaignKeywordRequest.ProtoReflect.Descriptor instead.
 func (*GetKeywordPlanCampaignKeywordRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{0}
+	return file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GetKeywordPlanCampaignKeywordRequest) GetResourceName() string {
@@ -89,7 +89,7 @@ func (x *GetKeywordPlanCampaignKeywordRequest) GetResourceName() string {
 }
 
 // Request message for
-// [KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords][google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords].
+// [KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords][google.ads.googleads.v9.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords].
 type MutateKeywordPlanCampaignKeywordsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -113,7 +113,7 @@ type MutateKeywordPlanCampaignKeywordsRequest struct {
 func (x *MutateKeywordPlanCampaignKeywordsRequest) Reset() {
 	*x = MutateKeywordPlanCampaignKeywordsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[1]
+		mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -126,7 +126,7 @@ func (x *MutateKeywordPlanCampaignKeywordsRequest) String() string {
 func (*MutateKeywordPlanCampaignKeywordsRequest) ProtoMessage() {}
 
 func (x *MutateKeywordPlanCampaignKeywordsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[1]
+	mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -139,7 +139,7 @@ func (x *MutateKeywordPlanCampaignKeywordsRequest) ProtoReflect() protoreflect.M
 
 // Deprecated: Use MutateKeywordPlanCampaignKeywordsRequest.ProtoReflect.Descriptor instead.
 func (*MutateKeywordPlanCampaignKeywordsRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{1}
+	return file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *MutateKeywordPlanCampaignKeywordsRequest) GetCustomerId() string {
@@ -179,7 +179,7 @@ type KeywordPlanCampaignKeywordOperation struct {
 
 	// The FieldMask that determines which resource fields are modified in an
 	// update.
-	UpdateMask *field_mask.FieldMask `protobuf:"bytes,4,opt,name=update_mask,json=updateMask,proto3" json:"update_mask,omitempty"`
+	UpdateMask *fieldmaskpb.FieldMask `protobuf:"bytes,4,opt,name=update_mask,json=updateMask,proto3" json:"update_mask,omitempty"`
 	// The mutate operation.
 	//
 	// Types that are assignable to Operation:
@@ -192,7 +192,7 @@ type KeywordPlanCampaignKeywordOperation struct {
 func (x *KeywordPlanCampaignKeywordOperation) Reset() {
 	*x = KeywordPlanCampaignKeywordOperation{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2]
+		mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -205,7 +205,7 @@ func (x *KeywordPlanCampaignKeywordOperation) String() string {
 func (*KeywordPlanCampaignKeywordOperation) ProtoMessage() {}
 
 func (x *KeywordPlanCampaignKeywordOperation) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2]
+	mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -218,10 +218,10 @@ func (x *KeywordPlanCampaignKeywordOperation) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use KeywordPlanCampaignKeywordOperation.ProtoReflect.Descriptor instead.
 func (*KeywordPlanCampaignKeywordOperation) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{2}
+	return file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *KeywordPlanCampaignKeywordOperation) GetUpdateMask() *field_mask.FieldMask {
+func (x *KeywordPlanCampaignKeywordOperation) GetUpdateMask() *fieldmaskpb.FieldMask {
 	if x != nil {
 		return x.UpdateMask
 	}
@@ -307,7 +307,7 @@ type MutateKeywordPlanCampaignKeywordsResponse struct {
 func (x *MutateKeywordPlanCampaignKeywordsResponse) Reset() {
 	*x = MutateKeywordPlanCampaignKeywordsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[3]
+		mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -320,7 +320,7 @@ func (x *MutateKeywordPlanCampaignKeywordsResponse) String() string {
 func (*MutateKeywordPlanCampaignKeywordsResponse) ProtoMessage() {}
 
 func (x *MutateKeywordPlanCampaignKeywordsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[3]
+	mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -333,7 +333,7 @@ func (x *MutateKeywordPlanCampaignKeywordsResponse) ProtoReflect() protoreflect.
 
 // Deprecated: Use MutateKeywordPlanCampaignKeywordsResponse.ProtoReflect.Descriptor instead.
 func (*MutateKeywordPlanCampaignKeywordsResponse) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{3}
+	return file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *MutateKeywordPlanCampaignKeywordsResponse) GetPartialFailureError() *status.Status {
@@ -363,7 +363,7 @@ type MutateKeywordPlanCampaignKeywordResult struct {
 func (x *MutateKeywordPlanCampaignKeywordResult) Reset() {
 	*x = MutateKeywordPlanCampaignKeywordResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[4]
+		mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -376,7 +376,7 @@ func (x *MutateKeywordPlanCampaignKeywordResult) String() string {
 func (*MutateKeywordPlanCampaignKeywordResult) ProtoMessage() {}
 
 func (x *MutateKeywordPlanCampaignKeywordResult) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[4]
+	mi := &file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -389,7 +389,7 @@ func (x *MutateKeywordPlanCampaignKeywordResult) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use MutateKeywordPlanCampaignKeywordResult.ProtoReflect.Descriptor instead.
 func (*MutateKeywordPlanCampaignKeywordResult) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{4}
+	return file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *MutateKeywordPlanCampaignKeywordResult) GetResourceName() string {
@@ -399,18 +399,18 @@ func (x *MutateKeywordPlanCampaignKeywordResult) GetResourceName() string {
 	return ""
 }
 
-var File_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto protoreflect.FileDescriptor
+var File_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto protoreflect.FileDescriptor
 
-var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDesc = []byte{
+var file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDesc = []byte{
 	0x0a, 0x4c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
 	0x65, 0x73, 0x2f, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x5f, 0x70, 0x6c, 0x61, 0x6e, 0x5f,
 	0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64,
 	0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x20,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
 	0x1a, 0x45, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
 	0x63, 0x65, 0x73, 0x2f, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x5f, 0x70, 0x6c, 0x61, 0x6e,
 	0x5f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72,
 	0x64, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f,
@@ -441,7 +441,7 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0x72, 0x49, 0x64, 0x12, 0x6a, 0x0a, 0x0a, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e,
 	0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x45, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76,
-	0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4b, 0x65, 0x79, 0x77, 0x6f,
+	0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4b, 0x65, 0x79, 0x77, 0x6f,
 	0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65,
 	0x79, 0x77, 0x6f, 0x72, 0x64, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x03,
 	0xe0, 0x41, 0x02, 0x52, 0x0a, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12,
@@ -458,13 +458,13 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0x6c, 0x64, 0x4d, 0x61, 0x73, 0x6b, 0x52, 0x0a, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x61,
 	0x73, 0x6b, 0x12, 0x57, 0x0a, 0x06, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x0b, 0x32, 0x3d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73,
 	0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c,
 	0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72,
 	0x64, 0x48, 0x00, 0x52, 0x06, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x12, 0x57, 0x0a, 0x06, 0x75,
 	0x70, 0x64, 0x61, 0x74, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x3d, 0x2e, 0x67, 0x6f,
 	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61,
-	0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e,
+	0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e,
 	0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61,
 	0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x48, 0x00, 0x52, 0x06, 0x75, 0x70,
 	0x64, 0x61, 0x74, 0x65, 0x12, 0x52, 0x0a, 0x06, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x18, 0x03,
@@ -483,7 +483,7 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0x61, 0x69, 0x6c, 0x75, 0x72, 0x65, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x12, 0x62, 0x0a, 0x07, 0x72,
 	0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x48, 0x2e, 0x67,
 	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
-	0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e,
+	0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e,
 	0x4d, 0x75, 0x74, 0x61, 0x74, 0x65, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61,
 	0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64,
 	0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x52, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x22,
@@ -497,15 +497,15 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0x76, 0x69, 0x63, 0x65, 0x12, 0xfd, 0x01, 0x0a, 0x1d, 0x47, 0x65, 0x74, 0x4b, 0x65, 0x79, 0x77,
 	0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b,
 	0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x46, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
-	0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38,
+	0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39,
 	0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x47, 0x65, 0x74, 0x4b, 0x65, 0x79,
 	0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e,
 	0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x3d,
 	0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
-	0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
+	0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
 	0x65, 0x73, 0x2e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61,
 	0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x55, 0x82,
-	0xd3, 0xe4, 0x93, 0x02, 0x3f, 0x12, 0x3d, 0x2f, 0x76, 0x38, 0x2f, 0x7b, 0x72, 0x65, 0x73, 0x6f,
+	0xd3, 0xe4, 0x93, 0x02, 0x3f, 0x12, 0x3d, 0x2f, 0x76, 0x39, 0x2f, 0x7b, 0x72, 0x65, 0x73, 0x6f,
 	0x75, 0x72, 0x63, 0x65, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x3d, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
 	0x65, 0x72, 0x73, 0x2f, 0x2a, 0x2f, 0x6b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61,
 	0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64,
@@ -514,15 +514,15 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69,
 	0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x73, 0x12, 0x4a, 0x2e, 0x67, 0x6f, 0x6f,
 	0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64,
-	0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75,
+	0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75,
 	0x74, 0x61, 0x74, 0x65, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43,
 	0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x73, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x4b, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
-	0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38,
+	0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39,
 	0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74, 0x61, 0x74, 0x65,
 	0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61,
 	0x69, 0x67, 0x6e, 0x4b, 0x65, 0x79, 0x77, 0x6f, 0x72, 0x64, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x64, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x45, 0x22, 0x40, 0x2f, 0x76, 0x38,
+	0x6e, 0x73, 0x65, 0x22, 0x64, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x45, 0x22, 0x40, 0x2f, 0x76, 0x39,
 	0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x7b, 0x63, 0x75, 0x73, 0x74,
 	0x6f, 0x6d, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x3d, 0x2a, 0x7d, 0x2f, 0x6b, 0x65, 0x79, 0x77, 0x6f,
 	0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65,
@@ -534,59 +534,59 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0x2f, 0x77, 0x77, 0x77, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x70, 0x69, 0x73, 0x2e,
 	0x63, 0x6f, 0x6d, 0x2f, 0x61, 0x75, 0x74, 0x68, 0x2f, 0x61, 0x64, 0x77, 0x6f, 0x72, 0x64, 0x73,
 	0x42, 0x8d, 0x02, 0x0a, 0x24, 0x63, 0x6f, 0x6d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
-	0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38,
+	0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39,
 	0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x42, 0x26, 0x4b, 0x65, 0x79, 0x77, 0x6f,
 	0x72, 0x64, 0x50, 0x6c, 0x61, 0x6e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x4b, 0x65,
 	0x79, 0x77, 0x6f, 0x72, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74,
 	0x6f, 0x50, 0x01, 0x5a, 0x48, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x67, 0x6f, 0x6c, 0x61,
 	0x6e, 0x67, 0x2e, 0x6f, 0x72, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67,
-	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f, 0x73, 0x65, 0x72, 0x76,
+	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f, 0x73, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x73, 0x3b, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xa2, 0x02, 0x03,
 	0x47, 0x41, 0x41, 0xaa, 0x02, 0x20, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x41, 0x64, 0x73,
-	0x2e, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x2e, 0x56, 0x38, 0x2e, 0x53, 0x65,
+	0x2e, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x2e, 0x56, 0x39, 0x2e, 0x53, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xca, 0x02, 0x20, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x5c,
-	0x41, 0x64, 0x73, 0x5c, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x5c, 0x56, 0x38,
+	0x41, 0x64, 0x73, 0x5c, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x5c, 0x56, 0x39,
 	0x5c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xea, 0x02, 0x24, 0x47, 0x6f, 0x6f, 0x67,
 	0x6c, 0x65, 0x3a, 0x3a, 0x41, 0x64, 0x73, 0x3a, 0x3a, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41,
-	0x64, 0x73, 0x3a, 0x3a, 0x56, 0x38, 0x3a, 0x3a, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x64, 0x73, 0x3a, 0x3a, 0x56, 0x39, 0x3a, 0x3a, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
 	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescOnce sync.Once
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescData = file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDesc
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescOnce sync.Once
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescData = file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDesc
 )
 
-func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP() []byte {
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescOnce.Do(func() {
-		file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescData)
+func file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescGZIP() []byte {
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescOnce.Do(func() {
+		file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescData)
 	})
-	return file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDescData
+	return file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDescData
 }
 
-var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_goTypes = []interface{}{
-	(*GetKeywordPlanCampaignKeywordRequest)(nil),      // 0: google.ads.googleads.v8.services.GetKeywordPlanCampaignKeywordRequest
-	(*MutateKeywordPlanCampaignKeywordsRequest)(nil),  // 1: google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsRequest
-	(*KeywordPlanCampaignKeywordOperation)(nil),       // 2: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordOperation
-	(*MutateKeywordPlanCampaignKeywordsResponse)(nil), // 3: google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsResponse
-	(*MutateKeywordPlanCampaignKeywordResult)(nil),    // 4: google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordResult
-	(*field_mask.FieldMask)(nil),                      // 5: google.protobuf.FieldMask
-	(*resources.KeywordPlanCampaignKeyword)(nil),      // 6: google.ads.googleads.v8.resources.KeywordPlanCampaignKeyword
+var file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_goTypes = []interface{}{
+	(*GetKeywordPlanCampaignKeywordRequest)(nil),      // 0: google.ads.googleads.v9.services.GetKeywordPlanCampaignKeywordRequest
+	(*MutateKeywordPlanCampaignKeywordsRequest)(nil),  // 1: google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsRequest
+	(*KeywordPlanCampaignKeywordOperation)(nil),       // 2: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordOperation
+	(*MutateKeywordPlanCampaignKeywordsResponse)(nil), // 3: google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsResponse
+	(*MutateKeywordPlanCampaignKeywordResult)(nil),    // 4: google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordResult
+	(*fieldmaskpb.FieldMask)(nil),                     // 5: google.protobuf.FieldMask
+	(*resources.KeywordPlanCampaignKeyword)(nil),      // 6: google.ads.googleads.v9.resources.KeywordPlanCampaignKeyword
 	(*status.Status)(nil),                             // 7: google.rpc.Status
 }
-var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_depIdxs = []int32{
-	2, // 0: google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsRequest.operations:type_name -> google.ads.googleads.v8.services.KeywordPlanCampaignKeywordOperation
-	5, // 1: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordOperation.update_mask:type_name -> google.protobuf.FieldMask
-	6, // 2: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordOperation.create:type_name -> google.ads.googleads.v8.resources.KeywordPlanCampaignKeyword
-	6, // 3: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordOperation.update:type_name -> google.ads.googleads.v8.resources.KeywordPlanCampaignKeyword
-	7, // 4: google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsResponse.partial_failure_error:type_name -> google.rpc.Status
-	4, // 5: google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsResponse.results:type_name -> google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordResult
-	0, // 6: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword:input_type -> google.ads.googleads.v8.services.GetKeywordPlanCampaignKeywordRequest
-	1, // 7: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords:input_type -> google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsRequest
-	6, // 8: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword:output_type -> google.ads.googleads.v8.resources.KeywordPlanCampaignKeyword
-	3, // 9: google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords:output_type -> google.ads.googleads.v8.services.MutateKeywordPlanCampaignKeywordsResponse
+var file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_depIdxs = []int32{
+	2, // 0: google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsRequest.operations:type_name -> google.ads.googleads.v9.services.KeywordPlanCampaignKeywordOperation
+	5, // 1: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordOperation.update_mask:type_name -> google.protobuf.FieldMask
+	6, // 2: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordOperation.create:type_name -> google.ads.googleads.v9.resources.KeywordPlanCampaignKeyword
+	6, // 3: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordOperation.update:type_name -> google.ads.googleads.v9.resources.KeywordPlanCampaignKeyword
+	7, // 4: google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsResponse.partial_failure_error:type_name -> google.rpc.Status
+	4, // 5: google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsResponse.results:type_name -> google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordResult
+	0, // 6: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword:input_type -> google.ads.googleads.v9.services.GetKeywordPlanCampaignKeywordRequest
+	1, // 7: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords:input_type -> google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsRequest
+	6, // 8: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword:output_type -> google.ads.googleads.v9.resources.KeywordPlanCampaignKeyword
+	3, // 9: google.ads.googleads.v9.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords:output_type -> google.ads.googleads.v9.services.MutateKeywordPlanCampaignKeywordsResponse
 	8, // [8:10] is the sub-list for method output_type
 	6, // [6:8] is the sub-list for method input_type
 	6, // [6:6] is the sub-list for extension type_name
@@ -594,13 +594,13 @@ var file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_
 	0, // [0:6] is the sub-list for field type_name
 }
 
-func init() { file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_init() }
-func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_init() {
-	if File_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto != nil {
+func init() { file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_init() }
+func file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_init() {
+	if File_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetKeywordPlanCampaignKeywordRequest); i {
 			case 0:
 				return &v.state
@@ -612,7 +612,7 @@ func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateKeywordPlanCampaignKeywordsRequest); i {
 			case 0:
 				return &v.state
@@ -624,7 +624,7 @@ func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KeywordPlanCampaignKeywordOperation); i {
 			case 0:
 				return &v.state
@@ -636,7 +636,7 @@ func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateKeywordPlanCampaignKeywordsResponse); i {
 			case 0:
 				return &v.state
@@ -648,7 +648,7 @@ func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateKeywordPlanCampaignKeywordResult); i {
 			case 0:
 				return &v.state
@@ -661,7 +661,7 @@ func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service
 			}
 		}
 	}
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2].OneofWrappers = []interface{}{
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes[2].OneofWrappers = []interface{}{
 		(*KeywordPlanCampaignKeywordOperation_Create)(nil),
 		(*KeywordPlanCampaignKeywordOperation_Update)(nil),
 		(*KeywordPlanCampaignKeywordOperation_Remove)(nil),
@@ -670,18 +670,18 @@ func file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDesc,
+			RawDescriptor: file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_goTypes,
-		DependencyIndexes: file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_depIdxs,
-		MessageInfos:      file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_msgTypes,
+		GoTypes:           file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_goTypes,
+		DependencyIndexes: file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_depIdxs,
+		MessageInfos:      file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_msgTypes,
 	}.Build()
-	File_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto = out.File
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_rawDesc = nil
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_goTypes = nil
-	file_google_ads_googleads_v8_services_keyword_plan_campaign_keyword_service_proto_depIdxs = nil
+	File_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto = out.File
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_rawDesc = nil
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_goTypes = nil
+	file_google_ads_googleads_v9_services_keyword_plan_campaign_keyword_service_proto_depIdxs = nil
 }

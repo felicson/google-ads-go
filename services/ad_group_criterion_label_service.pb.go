@@ -16,7 +16,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.15.8
-// source: google/ads/googleads/v8/services/ad_group_criterion_label_service.proto
+// source: google/ads/googleads/v9/services/ad_group_criterion_label_service.proto
 
 package services
 
@@ -38,7 +38,7 @@ const (
 )
 
 // Request message for
-// [AdGroupCriterionLabelService.GetAdGroupCriterionLabel][google.ads.googleads.v8.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel].
+// [AdGroupCriterionLabelService.GetAdGroupCriterionLabel][google.ads.googleads.v9.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel].
 type GetAdGroupCriterionLabelRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -51,7 +51,7 @@ type GetAdGroupCriterionLabelRequest struct {
 func (x *GetAdGroupCriterionLabelRequest) Reset() {
 	*x = GetAdGroupCriterionLabelRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[0]
+		mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -64,7 +64,7 @@ func (x *GetAdGroupCriterionLabelRequest) String() string {
 func (*GetAdGroupCriterionLabelRequest) ProtoMessage() {}
 
 func (x *GetAdGroupCriterionLabelRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[0]
+	mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -77,7 +77,7 @@ func (x *GetAdGroupCriterionLabelRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetAdGroupCriterionLabelRequest.ProtoReflect.Descriptor instead.
 func (*GetAdGroupCriterionLabelRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{0}
+	return file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GetAdGroupCriterionLabelRequest) GetResourceName() string {
@@ -88,7 +88,7 @@ func (x *GetAdGroupCriterionLabelRequest) GetResourceName() string {
 }
 
 // Request message for
-// [AdGroupCriterionLabelService.MutateAdGroupCriterionLabels][google.ads.googleads.v8.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels].
+// [AdGroupCriterionLabelService.MutateAdGroupCriterionLabels][google.ads.googleads.v9.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels].
 type MutateAdGroupCriterionLabelsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -111,7 +111,7 @@ type MutateAdGroupCriterionLabelsRequest struct {
 func (x *MutateAdGroupCriterionLabelsRequest) Reset() {
 	*x = MutateAdGroupCriterionLabelsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[1]
+		mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -124,7 +124,7 @@ func (x *MutateAdGroupCriterionLabelsRequest) String() string {
 func (*MutateAdGroupCriterionLabelsRequest) ProtoMessage() {}
 
 func (x *MutateAdGroupCriterionLabelsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[1]
+	mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -137,7 +137,7 @@ func (x *MutateAdGroupCriterionLabelsRequest) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use MutateAdGroupCriterionLabelsRequest.ProtoReflect.Descriptor instead.
 func (*MutateAdGroupCriterionLabelsRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{1}
+	return file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *MutateAdGroupCriterionLabelsRequest) GetCustomerId() string {
@@ -185,7 +185,7 @@ type AdGroupCriterionLabelOperation struct {
 func (x *AdGroupCriterionLabelOperation) Reset() {
 	*x = AdGroupCriterionLabelOperation{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[2]
+		mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -198,7 +198,7 @@ func (x *AdGroupCriterionLabelOperation) String() string {
 func (*AdGroupCriterionLabelOperation) ProtoMessage() {}
 
 func (x *AdGroupCriterionLabelOperation) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[2]
+	mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -211,7 +211,7 @@ func (x *AdGroupCriterionLabelOperation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AdGroupCriterionLabelOperation.ProtoReflect.Descriptor instead.
 func (*AdGroupCriterionLabelOperation) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{2}
+	return file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{2}
 }
 
 func (m *AdGroupCriterionLabelOperation) GetOperation() isAdGroupCriterionLabelOperation_Operation {
@@ -275,7 +275,7 @@ type MutateAdGroupCriterionLabelsResponse struct {
 func (x *MutateAdGroupCriterionLabelsResponse) Reset() {
 	*x = MutateAdGroupCriterionLabelsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[3]
+		mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -288,7 +288,7 @@ func (x *MutateAdGroupCriterionLabelsResponse) String() string {
 func (*MutateAdGroupCriterionLabelsResponse) ProtoMessage() {}
 
 func (x *MutateAdGroupCriterionLabelsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[3]
+	mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -301,7 +301,7 @@ func (x *MutateAdGroupCriterionLabelsResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use MutateAdGroupCriterionLabelsResponse.ProtoReflect.Descriptor instead.
 func (*MutateAdGroupCriterionLabelsResponse) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{3}
+	return file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *MutateAdGroupCriterionLabelsResponse) GetPartialFailureError() *status.Status {
@@ -331,7 +331,7 @@ type MutateAdGroupCriterionLabelResult struct {
 func (x *MutateAdGroupCriterionLabelResult) Reset() {
 	*x = MutateAdGroupCriterionLabelResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[4]
+		mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -344,7 +344,7 @@ func (x *MutateAdGroupCriterionLabelResult) String() string {
 func (*MutateAdGroupCriterionLabelResult) ProtoMessage() {}
 
 func (x *MutateAdGroupCriterionLabelResult) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[4]
+	mi := &file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -357,7 +357,7 @@ func (x *MutateAdGroupCriterionLabelResult) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use MutateAdGroupCriterionLabelResult.ProtoReflect.Descriptor instead.
 func (*MutateAdGroupCriterionLabelResult) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{4}
+	return file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *MutateAdGroupCriterionLabelResult) GetResourceName() string {
@@ -367,18 +367,18 @@ func (x *MutateAdGroupCriterionLabelResult) GetResourceName() string {
 	return ""
 }
 
-var File_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto protoreflect.FileDescriptor
+var File_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto protoreflect.FileDescriptor
 
-var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDesc = []byte{
+var file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDesc = []byte{
 	0x0a, 0x47, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
 	0x65, 0x73, 0x2f, 0x61, 0x64, 0x5f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x5f, 0x63, 0x72, 0x69, 0x74,
 	0x65, 0x72, 0x69, 0x6f, 0x6e, 0x5f, 0x6c, 0x61, 0x62, 0x65, 0x6c, 0x5f, 0x73, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x20, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
 	0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e,
-	0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x1a, 0x40, 0x67, 0x6f, 0x6f,
+	0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x1a, 0x40, 0x67, 0x6f, 0x6f,
 	0x67, 0x6c, 0x65, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64,
-	0x73, 0x2f, 0x76, 0x38, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2f, 0x61,
+	0x73, 0x2f, 0x76, 0x39, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2f, 0x61,
 	0x64, 0x5f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x5f, 0x63, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f,
 	0x6e, 0x5f, 0x6c, 0x61, 0x62, 0x65, 0x6c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1c, 0x67,
 	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61,
@@ -405,7 +405,7 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x12, 0x65, 0x0a, 0x0a, 0x6f, 0x70, 0x65, 0x72, 0x61,
 	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x40, 0x2e, 0x67, 0x6f,
 	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61,
-	0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x41,
+	0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x41,
 	0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c,
 	0x61, 0x62, 0x65, 0x6c, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x03, 0xe0,
 	0x41, 0x02, 0x52, 0x0a, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x27,
@@ -418,7 +418,7 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
 	0x52, 0x0a, 0x06, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
 	0x38, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
 	0x63, 0x65, 0x73, 0x2e, 0x41, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65,
 	0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x48, 0x00, 0x52, 0x06, 0x63, 0x72, 0x65,
 	0x61, 0x74, 0x65, 0x12, 0x18, 0x0a, 0x06, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x18, 0x02, 0x20,
@@ -433,7 +433,7 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0x61, 0x69, 0x6c, 0x75, 0x72, 0x65, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x12, 0x5d, 0x0a, 0x07, 0x72,
 	0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x43, 0x2e, 0x67,
 	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
-	0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e,
+	0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e,
 	0x4d, 0x75, 0x74, 0x61, 0x74, 0x65, 0x41, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x72, 0x69,
 	0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x52, 0x65, 0x73, 0x75, 0x6c,
 	0x74, 0x52, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x22, 0x48, 0x0a, 0x21, 0x4d, 0x75,
@@ -446,14 +446,14 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0xe9, 0x01, 0x0a, 0x18, 0x47, 0x65, 0x74, 0x41, 0x64, 0x47,
 	0x72, 0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62,
 	0x65, 0x6c, 0x12, 0x41, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x47, 0x65, 0x74, 0x41, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x38, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61,
-	0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e,
+	0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e,
 	0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e, 0x41, 0x64, 0x47, 0x72, 0x6f, 0x75,
 	0x70, 0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x22,
-	0x50, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3a, 0x12, 0x38, 0x2f, 0x76, 0x38, 0x2f, 0x7b, 0x72, 0x65,
+	0x50, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3a, 0x12, 0x38, 0x2f, 0x76, 0x39, 0x2f, 0x7b, 0x72, 0x65,
 	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x3d, 0x63, 0x75, 0x73, 0x74,
 	0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x2a, 0x2f, 0x61, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43,
 	0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x73, 0x2f, 0x2a,
@@ -461,15 +461,15 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0x65, 0x12, 0x8e, 0x02, 0x0a, 0x1c, 0x4d, 0x75, 0x74, 0x61, 0x74, 0x65, 0x41, 0x64, 0x47, 0x72,
 	0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65,
 	0x6c, 0x73, 0x12, 0x45, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74, 0x61, 0x74, 0x65, 0x41, 0x64, 0x47, 0x72,
 	0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65,
 	0x6c, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x46, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
 	0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73,
-	0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74,
+	0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74,
 	0x61, 0x74, 0x65, 0x41, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65, 0x72,
 	0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x5f, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x40, 0x22, 0x3b, 0x2f, 0x76, 0x38, 0x2f, 0x63,
+	0x65, 0x22, 0x5f, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x40, 0x22, 0x3b, 0x2f, 0x76, 0x39, 0x2f, 0x63,
 	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x7b, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
 	0x65, 0x72, 0x5f, 0x69, 0x64, 0x3d, 0x2a, 0x7d, 0x2f, 0x61, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x43, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x73, 0x3a,
@@ -481,55 +481,55 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0x6f, 0x67, 0x6c, 0x65, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x61, 0x75, 0x74,
 	0x68, 0x2f, 0x61, 0x64, 0x77, 0x6f, 0x72, 0x64, 0x73, 0x42, 0x88, 0x02, 0x0a, 0x24, 0x63, 0x6f,
 	0x6d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
 	0x65, 0x73, 0x42, 0x21, 0x41, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x72, 0x69, 0x74, 0x65,
 	0x72, 0x69, 0x6f, 0x6e, 0x4c, 0x61, 0x62, 0x65, 0x6c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
 	0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x48, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
 	0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2e, 0x6f, 0x72, 0x67, 0x2f, 0x67, 0x65, 0x6e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x61,
-	0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f,
+	0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f,
 	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x3b, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
 	0x73, 0xa2, 0x02, 0x03, 0x47, 0x41, 0x41, 0xaa, 0x02, 0x20, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2e, 0x41, 0x64, 0x73, 0x2e, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x2e, 0x56,
-	0x38, 0x2e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xca, 0x02, 0x20, 0x47, 0x6f, 0x6f,
+	0x39, 0x2e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xca, 0x02, 0x20, 0x47, 0x6f, 0x6f,
 	0x67, 0x6c, 0x65, 0x5c, 0x41, 0x64, 0x73, 0x5c, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64,
-	0x73, 0x5c, 0x56, 0x38, 0x5c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xea, 0x02, 0x24,
+	0x73, 0x5c, 0x56, 0x39, 0x5c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xea, 0x02, 0x24,
 	0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x3a, 0x3a, 0x41, 0x64, 0x73, 0x3a, 0x3a, 0x47, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x3a, 0x3a, 0x56, 0x38, 0x3a, 0x3a, 0x53, 0x65, 0x72, 0x76,
+	0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x3a, 0x3a, 0x56, 0x39, 0x3a, 0x3a, 0x53, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescOnce sync.Once
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescData = file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDesc
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescOnce sync.Once
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescData = file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDesc
 )
 
-func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescGZIP() []byte {
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescOnce.Do(func() {
-		file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescData)
+func file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescGZIP() []byte {
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescOnce.Do(func() {
+		file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescData)
 	})
-	return file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDescData
+	return file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDescData
 }
 
-var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_goTypes = []interface{}{
-	(*GetAdGroupCriterionLabelRequest)(nil),      // 0: google.ads.googleads.v8.services.GetAdGroupCriterionLabelRequest
-	(*MutateAdGroupCriterionLabelsRequest)(nil),  // 1: google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsRequest
-	(*AdGroupCriterionLabelOperation)(nil),       // 2: google.ads.googleads.v8.services.AdGroupCriterionLabelOperation
-	(*MutateAdGroupCriterionLabelsResponse)(nil), // 3: google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsResponse
-	(*MutateAdGroupCriterionLabelResult)(nil),    // 4: google.ads.googleads.v8.services.MutateAdGroupCriterionLabelResult
-	(*resources.AdGroupCriterionLabel)(nil),      // 5: google.ads.googleads.v8.resources.AdGroupCriterionLabel
+var file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_goTypes = []interface{}{
+	(*GetAdGroupCriterionLabelRequest)(nil),      // 0: google.ads.googleads.v9.services.GetAdGroupCriterionLabelRequest
+	(*MutateAdGroupCriterionLabelsRequest)(nil),  // 1: google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsRequest
+	(*AdGroupCriterionLabelOperation)(nil),       // 2: google.ads.googleads.v9.services.AdGroupCriterionLabelOperation
+	(*MutateAdGroupCriterionLabelsResponse)(nil), // 3: google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsResponse
+	(*MutateAdGroupCriterionLabelResult)(nil),    // 4: google.ads.googleads.v9.services.MutateAdGroupCriterionLabelResult
+	(*resources.AdGroupCriterionLabel)(nil),      // 5: google.ads.googleads.v9.resources.AdGroupCriterionLabel
 	(*status.Status)(nil),                        // 6: google.rpc.Status
 }
-var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_depIdxs = []int32{
-	2, // 0: google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsRequest.operations:type_name -> google.ads.googleads.v8.services.AdGroupCriterionLabelOperation
-	5, // 1: google.ads.googleads.v8.services.AdGroupCriterionLabelOperation.create:type_name -> google.ads.googleads.v8.resources.AdGroupCriterionLabel
-	6, // 2: google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsResponse.partial_failure_error:type_name -> google.rpc.Status
-	4, // 3: google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsResponse.results:type_name -> google.ads.googleads.v8.services.MutateAdGroupCriterionLabelResult
-	0, // 4: google.ads.googleads.v8.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel:input_type -> google.ads.googleads.v8.services.GetAdGroupCriterionLabelRequest
-	1, // 5: google.ads.googleads.v8.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels:input_type -> google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsRequest
-	5, // 6: google.ads.googleads.v8.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel:output_type -> google.ads.googleads.v8.resources.AdGroupCriterionLabel
-	3, // 7: google.ads.googleads.v8.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels:output_type -> google.ads.googleads.v8.services.MutateAdGroupCriterionLabelsResponse
+var file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_depIdxs = []int32{
+	2, // 0: google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsRequest.operations:type_name -> google.ads.googleads.v9.services.AdGroupCriterionLabelOperation
+	5, // 1: google.ads.googleads.v9.services.AdGroupCriterionLabelOperation.create:type_name -> google.ads.googleads.v9.resources.AdGroupCriterionLabel
+	6, // 2: google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsResponse.partial_failure_error:type_name -> google.rpc.Status
+	4, // 3: google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsResponse.results:type_name -> google.ads.googleads.v9.services.MutateAdGroupCriterionLabelResult
+	0, // 4: google.ads.googleads.v9.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel:input_type -> google.ads.googleads.v9.services.GetAdGroupCriterionLabelRequest
+	1, // 5: google.ads.googleads.v9.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels:input_type -> google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsRequest
+	5, // 6: google.ads.googleads.v9.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel:output_type -> google.ads.googleads.v9.resources.AdGroupCriterionLabel
+	3, // 7: google.ads.googleads.v9.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels:output_type -> google.ads.googleads.v9.services.MutateAdGroupCriterionLabelsResponse
 	6, // [6:8] is the sub-list for method output_type
 	4, // [4:6] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name
@@ -537,13 +537,13 @@ var file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto
 	0, // [0:4] is the sub-list for field type_name
 }
 
-func init() { file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_init() }
-func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_init() {
-	if File_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto != nil {
+func init() { file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_init() }
+func file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_init() {
+	if File_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetAdGroupCriterionLabelRequest); i {
 			case 0:
 				return &v.state
@@ -555,7 +555,7 @@ func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_prot
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateAdGroupCriterionLabelsRequest); i {
 			case 0:
 				return &v.state
@@ -567,7 +567,7 @@ func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_prot
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AdGroupCriterionLabelOperation); i {
 			case 0:
 				return &v.state
@@ -579,7 +579,7 @@ func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_prot
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateAdGroupCriterionLabelsResponse); i {
 			case 0:
 				return &v.state
@@ -591,7 +591,7 @@ func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_prot
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateAdGroupCriterionLabelResult); i {
 			case 0:
 				return &v.state
@@ -604,7 +604,7 @@ func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_prot
 			}
 		}
 	}
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes[2].OneofWrappers = []interface{}{
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes[2].OneofWrappers = []interface{}{
 		(*AdGroupCriterionLabelOperation_Create)(nil),
 		(*AdGroupCriterionLabelOperation_Remove)(nil),
 	}
@@ -612,18 +612,18 @@ func file_google_ads_googleads_v8_services_ad_group_criterion_label_service_prot
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDesc,
+			RawDescriptor: file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_goTypes,
-		DependencyIndexes: file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_depIdxs,
-		MessageInfos:      file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_msgTypes,
+		GoTypes:           file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_goTypes,
+		DependencyIndexes: file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_depIdxs,
+		MessageInfos:      file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_msgTypes,
 	}.Build()
-	File_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto = out.File
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_rawDesc = nil
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_goTypes = nil
-	file_google_ads_googleads_v8_services_ad_group_criterion_label_service_proto_depIdxs = nil
+	File_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto = out.File
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_rawDesc = nil
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_goTypes = nil
+	file_google_ads_googleads_v9_services_ad_group_criterion_label_service_proto_depIdxs = nil
 }

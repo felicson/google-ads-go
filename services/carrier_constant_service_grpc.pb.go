@@ -41,7 +41,7 @@ func NewCarrierConstantServiceClient(cc grpc.ClientConnInterface) CarrierConstan
 
 func (c *carrierConstantServiceClient) GetCarrierConstant(ctx context.Context, in *GetCarrierConstantRequest, opts ...grpc.CallOption) (*resources.CarrierConstant, error) {
 	out := new(resources.CarrierConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CarrierConstantService/GetCarrierConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CarrierConstantService/GetCarrierConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _CarrierConstantService_GetCarrierConstant_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CarrierConstantService/GetCarrierConstant",
+		FullMethod: "/google.ads.googleads.v9.services.CarrierConstantService/GetCarrierConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CarrierConstantServiceServer).GetCarrierConstant(ctx, req.(*GetCarrierConstantRequest))
@@ -108,7 +108,7 @@ func _CarrierConstantService_GetCarrierConstant_Handler(srv interface{}, ctx con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CarrierConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CarrierConstantService",
+	ServiceName: "google.ads.googleads.v9.services.CarrierConstantService",
 	HandlerType: (*CarrierConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var CarrierConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/carrier_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/carrier_constant_service.proto",
 }

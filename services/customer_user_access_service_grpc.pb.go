@@ -55,7 +55,7 @@ func NewCustomerUserAccessServiceClient(cc grpc.ClientConnInterface) CustomerUse
 
 func (c *customerUserAccessServiceClient) GetCustomerUserAccess(ctx context.Context, in *GetCustomerUserAccessRequest, opts ...grpc.CallOption) (*resources.CustomerUserAccess, error) {
 	out := new(resources.CustomerUserAccess)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerUserAccessService/GetCustomerUserAccess", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerUserAccessService/GetCustomerUserAccess", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,7 @@ func (c *customerUserAccessServiceClient) GetCustomerUserAccess(ctx context.Cont
 
 func (c *customerUserAccessServiceClient) MutateCustomerUserAccess(ctx context.Context, in *MutateCustomerUserAccessRequest, opts ...grpc.CallOption) (*MutateCustomerUserAccessResponse, error) {
 	out := new(MutateCustomerUserAccessResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerUserAccessService/MutateCustomerUserAccess", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerUserAccessService/MutateCustomerUserAccess", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -136,7 +136,7 @@ func _CustomerUserAccessService_GetCustomerUserAccess_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CustomerUserAccessService/GetCustomerUserAccess",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerUserAccessService/GetCustomerUserAccess",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerUserAccessServiceServer).GetCustomerUserAccess(ctx, req.(*GetCustomerUserAccessRequest))
@@ -154,7 +154,7 @@ func _CustomerUserAccessService_MutateCustomerUserAccess_Handler(srv interface{}
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CustomerUserAccessService/MutateCustomerUserAccess",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerUserAccessService/MutateCustomerUserAccess",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerUserAccessServiceServer).MutateCustomerUserAccess(ctx, req.(*MutateCustomerUserAccessRequest))
@@ -166,7 +166,7 @@ func _CustomerUserAccessService_MutateCustomerUserAccess_Handler(srv interface{}
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CustomerUserAccessService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CustomerUserAccessService",
+	ServiceName: "google.ads.googleads.v9.services.CustomerUserAccessService",
 	HandlerType: (*CustomerUserAccessServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -179,5 +179,5 @@ var CustomerUserAccessService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/customer_user_access_service.proto",
+	Metadata: "google/ads/googleads/v9/services/customer_user_access_service.proto",
 }

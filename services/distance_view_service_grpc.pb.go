@@ -41,7 +41,7 @@ func NewDistanceViewServiceClient(cc grpc.ClientConnInterface) DistanceViewServi
 
 func (c *distanceViewServiceClient) GetDistanceView(ctx context.Context, in *GetDistanceViewRequest, opts ...grpc.CallOption) (*resources.DistanceView, error) {
 	out := new(resources.DistanceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.DistanceViewService/GetDistanceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.DistanceViewService/GetDistanceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _DistanceViewService_GetDistanceView_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.DistanceViewService/GetDistanceView",
+		FullMethod: "/google.ads.googleads.v9.services.DistanceViewService/GetDistanceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DistanceViewServiceServer).GetDistanceView(ctx, req.(*GetDistanceViewRequest))
@@ -107,7 +107,7 @@ func _DistanceViewService_GetDistanceView_Handler(srv interface{}, ctx context.C
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var DistanceViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.DistanceViewService",
+	ServiceName: "google.ads.googleads.v9.services.DistanceViewService",
 	HandlerType: (*DistanceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var DistanceViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/distance_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/distance_view_service.proto",
 }

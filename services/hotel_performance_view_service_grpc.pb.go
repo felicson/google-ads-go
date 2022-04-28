@@ -41,7 +41,7 @@ func NewHotelPerformanceViewServiceClient(cc grpc.ClientConnInterface) HotelPerf
 
 func (c *hotelPerformanceViewServiceClient) GetHotelPerformanceView(ctx context.Context, in *GetHotelPerformanceViewRequest, opts ...grpc.CallOption) (*resources.HotelPerformanceView, error) {
 	out := new(resources.HotelPerformanceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.HotelPerformanceViewService/GetHotelPerformanceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.HotelPerformanceViewService/GetHotelPerformanceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _HotelPerformanceViewService_GetHotelPerformanceView_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.HotelPerformanceViewService/GetHotelPerformanceView",
+		FullMethod: "/google.ads.googleads.v9.services.HotelPerformanceViewService/GetHotelPerformanceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HotelPerformanceViewServiceServer).GetHotelPerformanceView(ctx, req.(*GetHotelPerformanceViewRequest))
@@ -108,7 +108,7 @@ func _HotelPerformanceViewService_GetHotelPerformanceView_Handler(srv interface{
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var HotelPerformanceViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.HotelPerformanceViewService",
+	ServiceName: "google.ads.googleads.v9.services.HotelPerformanceViewService",
 	HandlerType: (*HotelPerformanceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var HotelPerformanceViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/hotel_performance_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/hotel_performance_view_service.proto",
 }

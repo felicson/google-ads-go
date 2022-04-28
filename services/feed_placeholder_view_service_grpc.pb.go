@@ -41,7 +41,7 @@ func NewFeedPlaceholderViewServiceClient(cc grpc.ClientConnInterface) FeedPlaceh
 
 func (c *feedPlaceholderViewServiceClient) GetFeedPlaceholderView(ctx context.Context, in *GetFeedPlaceholderViewRequest, opts ...grpc.CallOption) (*resources.FeedPlaceholderView, error) {
 	out := new(resources.FeedPlaceholderView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.FeedPlaceholderViewService/GetFeedPlaceholderView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.FeedPlaceholderViewService/GetFeedPlaceholderView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _FeedPlaceholderViewService_GetFeedPlaceholderView_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.FeedPlaceholderViewService/GetFeedPlaceholderView",
+		FullMethod: "/google.ads.googleads.v9.services.FeedPlaceholderViewService/GetFeedPlaceholderView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FeedPlaceholderViewServiceServer).GetFeedPlaceholderView(ctx, req.(*GetFeedPlaceholderViewRequest))
@@ -108,7 +108,7 @@ func _FeedPlaceholderViewService_GetFeedPlaceholderView_Handler(srv interface{},
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var FeedPlaceholderViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.FeedPlaceholderViewService",
+	ServiceName: "google.ads.googleads.v9.services.FeedPlaceholderViewService",
 	HandlerType: (*FeedPlaceholderViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var FeedPlaceholderViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/feed_placeholder_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/feed_placeholder_view_service.proto",
 }

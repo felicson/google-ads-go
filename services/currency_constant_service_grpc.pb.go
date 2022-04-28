@@ -41,7 +41,7 @@ func NewCurrencyConstantServiceClient(cc grpc.ClientConnInterface) CurrencyConst
 
 func (c *currencyConstantServiceClient) GetCurrencyConstant(ctx context.Context, in *GetCurrencyConstantRequest, opts ...grpc.CallOption) (*resources.CurrencyConstant, error) {
 	out := new(resources.CurrencyConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CurrencyConstantService/GetCurrencyConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CurrencyConstantService/GetCurrencyConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _CurrencyConstantService_GetCurrencyConstant_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CurrencyConstantService/GetCurrencyConstant",
+		FullMethod: "/google.ads.googleads.v9.services.CurrencyConstantService/GetCurrencyConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CurrencyConstantServiceServer).GetCurrencyConstant(ctx, req.(*GetCurrencyConstantRequest))
@@ -108,7 +108,7 @@ func _CurrencyConstantService_GetCurrencyConstant_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CurrencyConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CurrencyConstantService",
+	ServiceName: "google.ads.googleads.v9.services.CurrencyConstantService",
 	HandlerType: (*CurrencyConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var CurrencyConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/currency_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/currency_constant_service.proto",
 }

@@ -20,6 +20,11 @@ const _ = grpc.SupportPackageIsVersion7
 type SmartCampaignSuggestServiceClient interface {
 	// Returns BudgetOption suggestions.
 	SuggestSmartCampaignBudgetOptions(ctx context.Context, in *SuggestSmartCampaignBudgetOptionsRequest, opts ...grpc.CallOption) (*SuggestSmartCampaignBudgetOptionsResponse, error)
+	// Suggests a Smart campaign ad compatible with the Ad family of resources,
+	// based on data points such as targeting and the business to advertise.
+	SuggestSmartCampaignAd(ctx context.Context, in *SuggestSmartCampaignAdRequest, opts ...grpc.CallOption) (*SuggestSmartCampaignAdResponse, error)
+	// Suggests keyword themes to advertise on.
+	SuggestKeywordThemes(ctx context.Context, in *SuggestKeywordThemesRequest, opts ...grpc.CallOption) (*SuggestKeywordThemesResponse, error)
 }
 
 type smartCampaignSuggestServiceClient struct {
@@ -32,7 +37,25 @@ func NewSmartCampaignSuggestServiceClient(cc grpc.ClientConnInterface) SmartCamp
 
 func (c *smartCampaignSuggestServiceClient) SuggestSmartCampaignBudgetOptions(ctx context.Context, in *SuggestSmartCampaignBudgetOptionsRequest, opts ...grpc.CallOption) (*SuggestSmartCampaignBudgetOptionsResponse, error) {
 	out := new(SuggestSmartCampaignBudgetOptionsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.SmartCampaignSuggestService/SuggestSmartCampaignBudgetOptions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.SmartCampaignSuggestService/SuggestSmartCampaignBudgetOptions", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *smartCampaignSuggestServiceClient) SuggestSmartCampaignAd(ctx context.Context, in *SuggestSmartCampaignAdRequest, opts ...grpc.CallOption) (*SuggestSmartCampaignAdResponse, error) {
+	out := new(SuggestSmartCampaignAdResponse)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.SmartCampaignSuggestService/SuggestSmartCampaignAd", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *smartCampaignSuggestServiceClient) SuggestKeywordThemes(ctx context.Context, in *SuggestKeywordThemesRequest, opts ...grpc.CallOption) (*SuggestKeywordThemesResponse, error) {
+	out := new(SuggestKeywordThemesResponse)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.SmartCampaignSuggestService/SuggestKeywordThemes", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -45,6 +68,11 @@ func (c *smartCampaignSuggestServiceClient) SuggestSmartCampaignBudgetOptions(ct
 type SmartCampaignSuggestServiceServer interface {
 	// Returns BudgetOption suggestions.
 	SuggestSmartCampaignBudgetOptions(context.Context, *SuggestSmartCampaignBudgetOptionsRequest) (*SuggestSmartCampaignBudgetOptionsResponse, error)
+	// Suggests a Smart campaign ad compatible with the Ad family of resources,
+	// based on data points such as targeting and the business to advertise.
+	SuggestSmartCampaignAd(context.Context, *SuggestSmartCampaignAdRequest) (*SuggestSmartCampaignAdResponse, error)
+	// Suggests keyword themes to advertise on.
+	SuggestKeywordThemes(context.Context, *SuggestKeywordThemesRequest) (*SuggestKeywordThemesResponse, error)
 	mustEmbedUnimplementedSmartCampaignSuggestServiceServer()
 }
 
@@ -54,6 +82,12 @@ type UnimplementedSmartCampaignSuggestServiceServer struct {
 
 func (UnimplementedSmartCampaignSuggestServiceServer) SuggestSmartCampaignBudgetOptions(context.Context, *SuggestSmartCampaignBudgetOptionsRequest) (*SuggestSmartCampaignBudgetOptionsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SuggestSmartCampaignBudgetOptions not implemented")
+}
+func (UnimplementedSmartCampaignSuggestServiceServer) SuggestSmartCampaignAd(context.Context, *SuggestSmartCampaignAdRequest) (*SuggestSmartCampaignAdResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SuggestSmartCampaignAd not implemented")
+}
+func (UnimplementedSmartCampaignSuggestServiceServer) SuggestKeywordThemes(context.Context, *SuggestKeywordThemesRequest) (*SuggestKeywordThemesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SuggestKeywordThemes not implemented")
 }
 func (UnimplementedSmartCampaignSuggestServiceServer) mustEmbedUnimplementedSmartCampaignSuggestServiceServer() {
 }
@@ -79,10 +113,46 @@ func _SmartCampaignSuggestService_SuggestSmartCampaignBudgetOptions_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.SmartCampaignSuggestService/SuggestSmartCampaignBudgetOptions",
+		FullMethod: "/google.ads.googleads.v9.services.SmartCampaignSuggestService/SuggestSmartCampaignBudgetOptions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SmartCampaignSuggestServiceServer).SuggestSmartCampaignBudgetOptions(ctx, req.(*SuggestSmartCampaignBudgetOptionsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _SmartCampaignSuggestService_SuggestSmartCampaignAd_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SuggestSmartCampaignAdRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SmartCampaignSuggestServiceServer).SuggestSmartCampaignAd(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/google.ads.googleads.v9.services.SmartCampaignSuggestService/SuggestSmartCampaignAd",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SmartCampaignSuggestServiceServer).SuggestSmartCampaignAd(ctx, req.(*SuggestSmartCampaignAdRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _SmartCampaignSuggestService_SuggestKeywordThemes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SuggestKeywordThemesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SmartCampaignSuggestServiceServer).SuggestKeywordThemes(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/google.ads.googleads.v9.services.SmartCampaignSuggestService/SuggestKeywordThemes",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SmartCampaignSuggestServiceServer).SuggestKeywordThemes(ctx, req.(*SuggestKeywordThemesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -91,14 +161,22 @@ func _SmartCampaignSuggestService_SuggestSmartCampaignBudgetOptions_Handler(srv 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var SmartCampaignSuggestService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.SmartCampaignSuggestService",
+	ServiceName: "google.ads.googleads.v9.services.SmartCampaignSuggestService",
 	HandlerType: (*SmartCampaignSuggestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "SuggestSmartCampaignBudgetOptions",
 			Handler:    _SmartCampaignSuggestService_SuggestSmartCampaignBudgetOptions_Handler,
 		},
+		{
+			MethodName: "SuggestSmartCampaignAd",
+			Handler:    _SmartCampaignSuggestService_SuggestSmartCampaignAd_Handler,
+		},
+		{
+			MethodName: "SuggestKeywordThemes",
+			Handler:    _SmartCampaignSuggestService_SuggestKeywordThemes_Handler,
+		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/smart_campaign_suggest_service.proto",
+	Metadata: "google/ads/googleads/v9/services/smart_campaign_suggest_service.proto",
 }

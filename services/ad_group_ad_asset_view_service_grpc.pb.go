@@ -41,7 +41,7 @@ func NewAdGroupAdAssetViewServiceClient(cc grpc.ClientConnInterface) AdGroupAdAs
 
 func (c *adGroupAdAssetViewServiceClient) GetAdGroupAdAssetView(ctx context.Context, in *GetAdGroupAdAssetViewRequest, opts ...grpc.CallOption) (*resources.AdGroupAdAssetView, error) {
 	out := new(resources.AdGroupAdAssetView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupAdAssetViewService/GetAdGroupAdAssetView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdGroupAdAssetViewService/GetAdGroupAdAssetView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _AdGroupAdAssetViewService_GetAdGroupAdAssetView_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.AdGroupAdAssetViewService/GetAdGroupAdAssetView",
+		FullMethod: "/google.ads.googleads.v9.services.AdGroupAdAssetViewService/GetAdGroupAdAssetView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupAdAssetViewServiceServer).GetAdGroupAdAssetView(ctx, req.(*GetAdGroupAdAssetViewRequest))
@@ -108,7 +108,7 @@ func _AdGroupAdAssetViewService_GetAdGroupAdAssetView_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupAdAssetViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.AdGroupAdAssetViewService",
+	ServiceName: "google.ads.googleads.v9.services.AdGroupAdAssetViewService",
 	HandlerType: (*AdGroupAdAssetViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var AdGroupAdAssetViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/ad_group_ad_asset_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/ad_group_ad_asset_view_service.proto",
 }

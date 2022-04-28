@@ -41,7 +41,7 @@ func NewMobileDeviceConstantServiceClient(cc grpc.ClientConnInterface) MobileDev
 
 func (c *mobileDeviceConstantServiceClient) GetMobileDeviceConstant(ctx context.Context, in *GetMobileDeviceConstantRequest, opts ...grpc.CallOption) (*resources.MobileDeviceConstant, error) {
 	out := new(resources.MobileDeviceConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.MobileDeviceConstantService/GetMobileDeviceConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.MobileDeviceConstantService/GetMobileDeviceConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _MobileDeviceConstantService_GetMobileDeviceConstant_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.MobileDeviceConstantService/GetMobileDeviceConstant",
+		FullMethod: "/google.ads.googleads.v9.services.MobileDeviceConstantService/GetMobileDeviceConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MobileDeviceConstantServiceServer).GetMobileDeviceConstant(ctx, req.(*GetMobileDeviceConstantRequest))
@@ -108,7 +108,7 @@ func _MobileDeviceConstantService_GetMobileDeviceConstant_Handler(srv interface{
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MobileDeviceConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.MobileDeviceConstantService",
+	ServiceName: "google.ads.googleads.v9.services.MobileDeviceConstantService",
 	HandlerType: (*MobileDeviceConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var MobileDeviceConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/mobile_device_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/mobile_device_constant_service.proto",
 }

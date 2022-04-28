@@ -73,7 +73,7 @@ func NewCustomerManagerLinkServiceClient(cc grpc.ClientConnInterface) CustomerMa
 
 func (c *customerManagerLinkServiceClient) GetCustomerManagerLink(ctx context.Context, in *GetCustomerManagerLinkRequest, opts ...grpc.CallOption) (*resources.CustomerManagerLink, error) {
 	out := new(resources.CustomerManagerLink)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerManagerLinkService/GetCustomerManagerLink", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerManagerLinkService/GetCustomerManagerLink", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -82,7 +82,7 @@ func (c *customerManagerLinkServiceClient) GetCustomerManagerLink(ctx context.Co
 
 func (c *customerManagerLinkServiceClient) MutateCustomerManagerLink(ctx context.Context, in *MutateCustomerManagerLinkRequest, opts ...grpc.CallOption) (*MutateCustomerManagerLinkResponse, error) {
 	out := new(MutateCustomerManagerLinkResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerManagerLinkService/MutateCustomerManagerLink", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerManagerLinkService/MutateCustomerManagerLink", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -91,7 +91,7 @@ func (c *customerManagerLinkServiceClient) MutateCustomerManagerLink(ctx context
 
 func (c *customerManagerLinkServiceClient) MoveManagerLink(ctx context.Context, in *MoveManagerLinkRequest, opts ...grpc.CallOption) (*MoveManagerLinkResponse, error) {
 	out := new(MoveManagerLinkResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CustomerManagerLinkService/MoveManagerLink", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerManagerLinkService/MoveManagerLink", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -184,7 +184,7 @@ func _CustomerManagerLinkService_GetCustomerManagerLink_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CustomerManagerLinkService/GetCustomerManagerLink",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerManagerLinkService/GetCustomerManagerLink",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerManagerLinkServiceServer).GetCustomerManagerLink(ctx, req.(*GetCustomerManagerLinkRequest))
@@ -202,7 +202,7 @@ func _CustomerManagerLinkService_MutateCustomerManagerLink_Handler(srv interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CustomerManagerLinkService/MutateCustomerManagerLink",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerManagerLinkService/MutateCustomerManagerLink",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerManagerLinkServiceServer).MutateCustomerManagerLink(ctx, req.(*MutateCustomerManagerLinkRequest))
@@ -220,7 +220,7 @@ func _CustomerManagerLinkService_MoveManagerLink_Handler(srv interface{}, ctx co
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CustomerManagerLinkService/MoveManagerLink",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerManagerLinkService/MoveManagerLink",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerManagerLinkServiceServer).MoveManagerLink(ctx, req.(*MoveManagerLinkRequest))
@@ -232,7 +232,7 @@ func _CustomerManagerLinkService_MoveManagerLink_Handler(srv interface{}, ctx co
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CustomerManagerLinkService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CustomerManagerLinkService",
+	ServiceName: "google.ads.googleads.v9.services.CustomerManagerLinkService",
 	HandlerType: (*CustomerManagerLinkServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -249,5 +249,5 @@ var CustomerManagerLinkService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/customer_manager_link_service.proto",
+	Metadata: "google/ads/googleads/v9/services/customer_manager_link_service.proto",
 }

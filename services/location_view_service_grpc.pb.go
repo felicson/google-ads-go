@@ -41,7 +41,7 @@ func NewLocationViewServiceClient(cc grpc.ClientConnInterface) LocationViewServi
 
 func (c *locationViewServiceClient) GetLocationView(ctx context.Context, in *GetLocationViewRequest, opts ...grpc.CallOption) (*resources.LocationView, error) {
 	out := new(resources.LocationView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.LocationViewService/GetLocationView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.LocationViewService/GetLocationView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _LocationViewService_GetLocationView_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.LocationViewService/GetLocationView",
+		FullMethod: "/google.ads.googleads.v9.services.LocationViewService/GetLocationView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LocationViewServiceServer).GetLocationView(ctx, req.(*GetLocationViewRequest))
@@ -107,7 +107,7 @@ func _LocationViewService_GetLocationView_Handler(srv interface{}, ctx context.C
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LocationViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.LocationViewService",
+	ServiceName: "google.ads.googleads.v9.services.LocationViewService",
 	HandlerType: (*LocationViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var LocationViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/location_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/location_view_service.proto",
 }

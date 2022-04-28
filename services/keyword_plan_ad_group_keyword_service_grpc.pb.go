@@ -58,7 +58,7 @@ func NewKeywordPlanAdGroupKeywordServiceClient(cc grpc.ClientConnInterface) Keyw
 
 func (c *keywordPlanAdGroupKeywordServiceClient) GetKeywordPlanAdGroupKeyword(ctx context.Context, in *GetKeywordPlanAdGroupKeywordRequest, opts ...grpc.CallOption) (*resources.KeywordPlanAdGroupKeyword, error) {
 	out := new(resources.KeywordPlanAdGroupKeyword)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService/GetKeywordPlanAdGroupKeyword", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanAdGroupKeywordService/GetKeywordPlanAdGroupKeyword", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -67,7 +67,7 @@ func (c *keywordPlanAdGroupKeywordServiceClient) GetKeywordPlanAdGroupKeyword(ct
 
 func (c *keywordPlanAdGroupKeywordServiceClient) MutateKeywordPlanAdGroupKeywords(ctx context.Context, in *MutateKeywordPlanAdGroupKeywordsRequest, opts ...grpc.CallOption) (*MutateKeywordPlanAdGroupKeywordsResponse, error) {
 	out := new(MutateKeywordPlanAdGroupKeywordsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService/MutateKeywordPlanAdGroupKeywords", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanAdGroupKeywordService/MutateKeywordPlanAdGroupKeywords", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -142,7 +142,7 @@ func _KeywordPlanAdGroupKeywordService_GetKeywordPlanAdGroupKeyword_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService/GetKeywordPlanAdGroupKeyword",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanAdGroupKeywordService/GetKeywordPlanAdGroupKeyword",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanAdGroupKeywordServiceServer).GetKeywordPlanAdGroupKeyword(ctx, req.(*GetKeywordPlanAdGroupKeywordRequest))
@@ -160,7 +160,7 @@ func _KeywordPlanAdGroupKeywordService_MutateKeywordPlanAdGroupKeywords_Handler(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService/MutateKeywordPlanAdGroupKeywords",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanAdGroupKeywordService/MutateKeywordPlanAdGroupKeywords",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanAdGroupKeywordServiceServer).MutateKeywordPlanAdGroupKeywords(ctx, req.(*MutateKeywordPlanAdGroupKeywordsRequest))
@@ -172,7 +172,7 @@ func _KeywordPlanAdGroupKeywordService_MutateKeywordPlanAdGroupKeywords_Handler(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var KeywordPlanAdGroupKeywordService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService",
+	ServiceName: "google.ads.googleads.v9.services.KeywordPlanAdGroupKeywordService",
 	HandlerType: (*KeywordPlanAdGroupKeywordServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -185,5 +185,5 @@ var KeywordPlanAdGroupKeywordService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/keyword_plan_ad_group_keyword_service.proto",
+	Metadata: "google/ads/googleads/v9/services/keyword_plan_ad_group_keyword_service.proto",
 }

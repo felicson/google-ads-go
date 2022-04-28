@@ -52,7 +52,7 @@ func NewGeoTargetConstantServiceClient(cc grpc.ClientConnInterface) GeoTargetCon
 
 func (c *geoTargetConstantServiceClient) GetGeoTargetConstant(ctx context.Context, in *GetGeoTargetConstantRequest, opts ...grpc.CallOption) (*resources.GeoTargetConstant, error) {
 	out := new(resources.GeoTargetConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.GeoTargetConstantService/GetGeoTargetConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.GeoTargetConstantService/GetGeoTargetConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -61,7 +61,7 @@ func (c *geoTargetConstantServiceClient) GetGeoTargetConstant(ctx context.Contex
 
 func (c *geoTargetConstantServiceClient) SuggestGeoTargetConstants(ctx context.Context, in *SuggestGeoTargetConstantsRequest, opts ...grpc.CallOption) (*SuggestGeoTargetConstantsResponse, error) {
 	out := new(SuggestGeoTargetConstantsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.GeoTargetConstantService/SuggestGeoTargetConstants", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.GeoTargetConstantService/SuggestGeoTargetConstants", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -130,7 +130,7 @@ func _GeoTargetConstantService_GetGeoTargetConstant_Handler(srv interface{}, ctx
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.GeoTargetConstantService/GetGeoTargetConstant",
+		FullMethod: "/google.ads.googleads.v9.services.GeoTargetConstantService/GetGeoTargetConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GeoTargetConstantServiceServer).GetGeoTargetConstant(ctx, req.(*GetGeoTargetConstantRequest))
@@ -148,7 +148,7 @@ func _GeoTargetConstantService_SuggestGeoTargetConstants_Handler(srv interface{}
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.GeoTargetConstantService/SuggestGeoTargetConstants",
+		FullMethod: "/google.ads.googleads.v9.services.GeoTargetConstantService/SuggestGeoTargetConstants",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GeoTargetConstantServiceServer).SuggestGeoTargetConstants(ctx, req.(*SuggestGeoTargetConstantsRequest))
@@ -160,7 +160,7 @@ func _GeoTargetConstantService_SuggestGeoTargetConstants_Handler(srv interface{}
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var GeoTargetConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.GeoTargetConstantService",
+	ServiceName: "google.ads.googleads.v9.services.GeoTargetConstantService",
 	HandlerType: (*GeoTargetConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -173,5 +173,5 @@ var GeoTargetConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/geo_target_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/geo_target_constant_service.proto",
 }

@@ -41,7 +41,7 @@ func NewProductGroupViewServiceClient(cc grpc.ClientConnInterface) ProductGroupV
 
 func (c *productGroupViewServiceClient) GetProductGroupView(ctx context.Context, in *GetProductGroupViewRequest, opts ...grpc.CallOption) (*resources.ProductGroupView, error) {
 	out := new(resources.ProductGroupView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ProductGroupViewService/GetProductGroupView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ProductGroupViewService/GetProductGroupView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _ProductGroupViewService_GetProductGroupView_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.ProductGroupViewService/GetProductGroupView",
+		FullMethod: "/google.ads.googleads.v9.services.ProductGroupViewService/GetProductGroupView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProductGroupViewServiceServer).GetProductGroupView(ctx, req.(*GetProductGroupViewRequest))
@@ -108,7 +108,7 @@ func _ProductGroupViewService_GetProductGroupView_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ProductGroupViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.ProductGroupViewService",
+	ServiceName: "google.ads.googleads.v9.services.ProductGroupViewService",
 	HandlerType: (*ProductGroupViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var ProductGroupViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/product_group_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/product_group_view_service.proto",
 }

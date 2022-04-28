@@ -16,20 +16,20 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.15.8
-// source: google/ads/googleads/v8/services/campaign_experiment_service.proto
+// source: google/ads/googleads/v9/services/campaign_experiment_service.proto
 
 package services
 
 import (
-	empty "github.com/golang/protobuf/ptypes/empty"
 	enums "github.com/felicson/google-ads-go/enums"
 	resources "github.com/felicson/google-ads-go/resources"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	longrunning "google.golang.org/genproto/googleapis/longrunning"
 	status "google.golang.org/genproto/googleapis/rpc/status"
-	field_mask "google.golang.org/genproto/protobuf/field_mask"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	emptypb "google.golang.org/protobuf/types/known/emptypb"
+	fieldmaskpb "google.golang.org/protobuf/types/known/fieldmaskpb"
 	reflect "reflect"
 	sync "sync"
 )
@@ -41,7 +41,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// Request message for [CampaignExperimentService.GetCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.GetCampaignExperiment].
+// Request message for [CampaignExperimentService.GetCampaignExperiment][google.ads.googleads.v9.services.CampaignExperimentService.GetCampaignExperiment].
 type GetCampaignExperimentRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -54,7 +54,7 @@ type GetCampaignExperimentRequest struct {
 func (x *GetCampaignExperimentRequest) Reset() {
 	*x = GetCampaignExperimentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[0]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -67,7 +67,7 @@ func (x *GetCampaignExperimentRequest) String() string {
 func (*GetCampaignExperimentRequest) ProtoMessage() {}
 
 func (x *GetCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[0]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -80,7 +80,7 @@ func (x *GetCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetCampaignExperimentRequest.ProtoReflect.Descriptor instead.
 func (*GetCampaignExperimentRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{0}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GetCampaignExperimentRequest) GetResourceName() string {
@@ -90,7 +90,7 @@ func (x *GetCampaignExperimentRequest) GetResourceName() string {
 	return ""
 }
 
-// Request message for [CampaignExperimentService.MutateCampaignExperiments][google.ads.googleads.v8.services.CampaignExperimentService.MutateCampaignExperiments].
+// Request message for [CampaignExperimentService.MutateCampaignExperiments][google.ads.googleads.v9.services.CampaignExperimentService.MutateCampaignExperiments].
 type MutateCampaignExperimentsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -110,13 +110,13 @@ type MutateCampaignExperimentsRequest struct {
 	ValidateOnly bool `protobuf:"varint,4,opt,name=validate_only,json=validateOnly,proto3" json:"validate_only,omitempty"`
 	// The response content type setting. Determines whether the mutable resource
 	// or just the resource name should be returned post mutation.
-	ResponseContentType enums.ResponseContentTypeEnum_ResponseContentType `protobuf:"varint,5,opt,name=response_content_type,json=responseContentType,proto3,enum=google.ads.googleads.v8.enums.ResponseContentTypeEnum_ResponseContentType" json:"response_content_type,omitempty"`
+	ResponseContentType enums.ResponseContentTypeEnum_ResponseContentType `protobuf:"varint,5,opt,name=response_content_type,json=responseContentType,proto3,enum=google.ads.googleads.v9.enums.ResponseContentTypeEnum_ResponseContentType" json:"response_content_type,omitempty"`
 }
 
 func (x *MutateCampaignExperimentsRequest) Reset() {
 	*x = MutateCampaignExperimentsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[1]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -129,7 +129,7 @@ func (x *MutateCampaignExperimentsRequest) String() string {
 func (*MutateCampaignExperimentsRequest) ProtoMessage() {}
 
 func (x *MutateCampaignExperimentsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[1]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -142,7 +142,7 @@ func (x *MutateCampaignExperimentsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MutateCampaignExperimentsRequest.ProtoReflect.Descriptor instead.
 func (*MutateCampaignExperimentsRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{1}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *MutateCampaignExperimentsRequest) GetCustomerId() string {
@@ -187,7 +187,7 @@ type CampaignExperimentOperation struct {
 	unknownFields protoimpl.UnknownFields
 
 	// FieldMask that determines which resource fields are modified in an update.
-	UpdateMask *field_mask.FieldMask `protobuf:"bytes,3,opt,name=update_mask,json=updateMask,proto3" json:"update_mask,omitempty"`
+	UpdateMask *fieldmaskpb.FieldMask `protobuf:"bytes,3,opt,name=update_mask,json=updateMask,proto3" json:"update_mask,omitempty"`
 	// The mutate operation.
 	//
 	// Types that are assignable to Operation:
@@ -199,7 +199,7 @@ type CampaignExperimentOperation struct {
 func (x *CampaignExperimentOperation) Reset() {
 	*x = CampaignExperimentOperation{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[2]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -212,7 +212,7 @@ func (x *CampaignExperimentOperation) String() string {
 func (*CampaignExperimentOperation) ProtoMessage() {}
 
 func (x *CampaignExperimentOperation) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[2]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -225,10 +225,10 @@ func (x *CampaignExperimentOperation) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CampaignExperimentOperation.ProtoReflect.Descriptor instead.
 func (*CampaignExperimentOperation) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{2}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *CampaignExperimentOperation) GetUpdateMask() *field_mask.FieldMask {
+func (x *CampaignExperimentOperation) GetUpdateMask() *fieldmaskpb.FieldMask {
 	if x != nil {
 		return x.UpdateMask
 	}
@@ -296,7 +296,7 @@ type MutateCampaignExperimentsResponse struct {
 func (x *MutateCampaignExperimentsResponse) Reset() {
 	*x = MutateCampaignExperimentsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[3]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -309,7 +309,7 @@ func (x *MutateCampaignExperimentsResponse) String() string {
 func (*MutateCampaignExperimentsResponse) ProtoMessage() {}
 
 func (x *MutateCampaignExperimentsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[3]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -322,7 +322,7 @@ func (x *MutateCampaignExperimentsResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use MutateCampaignExperimentsResponse.ProtoReflect.Descriptor instead.
 func (*MutateCampaignExperimentsResponse) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{3}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *MutateCampaignExperimentsResponse) GetPartialFailureError() *status.Status {
@@ -356,7 +356,7 @@ type MutateCampaignExperimentResult struct {
 func (x *MutateCampaignExperimentResult) Reset() {
 	*x = MutateCampaignExperimentResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[4]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -369,7 +369,7 @@ func (x *MutateCampaignExperimentResult) String() string {
 func (*MutateCampaignExperimentResult) ProtoMessage() {}
 
 func (x *MutateCampaignExperimentResult) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[4]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -382,7 +382,7 @@ func (x *MutateCampaignExperimentResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MutateCampaignExperimentResult.ProtoReflect.Descriptor instead.
 func (*MutateCampaignExperimentResult) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{4}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *MutateCampaignExperimentResult) GetResourceName() string {
@@ -399,7 +399,7 @@ func (x *MutateCampaignExperimentResult) GetCampaignExperiment() *resources.Camp
 	return nil
 }
 
-// Request message for [CampaignExperimentService.CreateCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.CreateCampaignExperiment].
+// Request message for [CampaignExperimentService.CreateCampaignExperiment][google.ads.googleads.v9.services.CampaignExperimentService.CreateCampaignExperiment].
 type CreateCampaignExperimentRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -417,7 +417,7 @@ type CreateCampaignExperimentRequest struct {
 func (x *CreateCampaignExperimentRequest) Reset() {
 	*x = CreateCampaignExperimentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[5]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -430,7 +430,7 @@ func (x *CreateCampaignExperimentRequest) String() string {
 func (*CreateCampaignExperimentRequest) ProtoMessage() {}
 
 func (x *CreateCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[5]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -443,7 +443,7 @@ func (x *CreateCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateCampaignExperimentRequest.ProtoReflect.Descriptor instead.
 func (*CreateCampaignExperimentRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{5}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CreateCampaignExperimentRequest) GetCustomerId() string {
@@ -481,7 +481,7 @@ type CreateCampaignExperimentMetadata struct {
 func (x *CreateCampaignExperimentMetadata) Reset() {
 	*x = CreateCampaignExperimentMetadata{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[6]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -494,7 +494,7 @@ func (x *CreateCampaignExperimentMetadata) String() string {
 func (*CreateCampaignExperimentMetadata) ProtoMessage() {}
 
 func (x *CreateCampaignExperimentMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[6]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -507,7 +507,7 @@ func (x *CreateCampaignExperimentMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateCampaignExperimentMetadata.ProtoReflect.Descriptor instead.
 func (*CreateCampaignExperimentMetadata) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{6}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *CreateCampaignExperimentMetadata) GetCampaignExperiment() string {
@@ -517,7 +517,7 @@ func (x *CreateCampaignExperimentMetadata) GetCampaignExperiment() string {
 	return ""
 }
 
-// Request message for [CampaignExperimentService.GraduateCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.GraduateCampaignExperiment].
+// Request message for [CampaignExperimentService.GraduateCampaignExperiment][google.ads.googleads.v9.services.CampaignExperimentService.GraduateCampaignExperiment].
 type GraduateCampaignExperimentRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -536,7 +536,7 @@ type GraduateCampaignExperimentRequest struct {
 func (x *GraduateCampaignExperimentRequest) Reset() {
 	*x = GraduateCampaignExperimentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[7]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -549,7 +549,7 @@ func (x *GraduateCampaignExperimentRequest) String() string {
 func (*GraduateCampaignExperimentRequest) ProtoMessage() {}
 
 func (x *GraduateCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[7]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -562,7 +562,7 @@ func (x *GraduateCampaignExperimentRequest) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GraduateCampaignExperimentRequest.ProtoReflect.Descriptor instead.
 func (*GraduateCampaignExperimentRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{7}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *GraduateCampaignExperimentRequest) GetCampaignExperiment() string {
@@ -600,7 +600,7 @@ type GraduateCampaignExperimentResponse struct {
 func (x *GraduateCampaignExperimentResponse) Reset() {
 	*x = GraduateCampaignExperimentResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[8]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -613,7 +613,7 @@ func (x *GraduateCampaignExperimentResponse) String() string {
 func (*GraduateCampaignExperimentResponse) ProtoMessage() {}
 
 func (x *GraduateCampaignExperimentResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[8]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -626,7 +626,7 @@ func (x *GraduateCampaignExperimentResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use GraduateCampaignExperimentResponse.ProtoReflect.Descriptor instead.
 func (*GraduateCampaignExperimentResponse) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{8}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *GraduateCampaignExperimentResponse) GetGraduatedCampaign() string {
@@ -636,7 +636,7 @@ func (x *GraduateCampaignExperimentResponse) GetGraduatedCampaign() string {
 	return ""
 }
 
-// Request message for [CampaignExperimentService.PromoteCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.PromoteCampaignExperiment].
+// Request message for [CampaignExperimentService.PromoteCampaignExperiment][google.ads.googleads.v9.services.CampaignExperimentService.PromoteCampaignExperiment].
 type PromoteCampaignExperimentRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -652,7 +652,7 @@ type PromoteCampaignExperimentRequest struct {
 func (x *PromoteCampaignExperimentRequest) Reset() {
 	*x = PromoteCampaignExperimentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[9]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -665,7 +665,7 @@ func (x *PromoteCampaignExperimentRequest) String() string {
 func (*PromoteCampaignExperimentRequest) ProtoMessage() {}
 
 func (x *PromoteCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[9]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -678,7 +678,7 @@ func (x *PromoteCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PromoteCampaignExperimentRequest.ProtoReflect.Descriptor instead.
 func (*PromoteCampaignExperimentRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{9}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *PromoteCampaignExperimentRequest) GetCampaignExperiment() string {
@@ -695,7 +695,7 @@ func (x *PromoteCampaignExperimentRequest) GetValidateOnly() bool {
 	return false
 }
 
-// Request message for [CampaignExperimentService.EndCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.EndCampaignExperiment].
+// Request message for [CampaignExperimentService.EndCampaignExperiment][google.ads.googleads.v9.services.CampaignExperimentService.EndCampaignExperiment].
 type EndCampaignExperimentRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -711,7 +711,7 @@ type EndCampaignExperimentRequest struct {
 func (x *EndCampaignExperimentRequest) Reset() {
 	*x = EndCampaignExperimentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[10]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -724,7 +724,7 @@ func (x *EndCampaignExperimentRequest) String() string {
 func (*EndCampaignExperimentRequest) ProtoMessage() {}
 
 func (x *EndCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[10]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -737,7 +737,7 @@ func (x *EndCampaignExperimentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use EndCampaignExperimentRequest.ProtoReflect.Descriptor instead.
 func (*EndCampaignExperimentRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{10}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *EndCampaignExperimentRequest) GetCampaignExperiment() string {
@@ -755,7 +755,7 @@ func (x *EndCampaignExperimentRequest) GetValidateOnly() bool {
 }
 
 // Request message for
-// [CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors].
+// [CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v9.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors].
 type ListCampaignExperimentAsyncErrorsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -778,7 +778,7 @@ type ListCampaignExperimentAsyncErrorsRequest struct {
 func (x *ListCampaignExperimentAsyncErrorsRequest) Reset() {
 	*x = ListCampaignExperimentAsyncErrorsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[11]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -791,7 +791,7 @@ func (x *ListCampaignExperimentAsyncErrorsRequest) String() string {
 func (*ListCampaignExperimentAsyncErrorsRequest) ProtoMessage() {}
 
 func (x *ListCampaignExperimentAsyncErrorsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[11]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -804,7 +804,7 @@ func (x *ListCampaignExperimentAsyncErrorsRequest) ProtoReflect() protoreflect.M
 
 // Deprecated: Use ListCampaignExperimentAsyncErrorsRequest.ProtoReflect.Descriptor instead.
 func (*ListCampaignExperimentAsyncErrorsRequest) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{11}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *ListCampaignExperimentAsyncErrorsRequest) GetResourceName() string {
@@ -829,7 +829,7 @@ func (x *ListCampaignExperimentAsyncErrorsRequest) GetPageSize() int32 {
 }
 
 // Response message for
-// [CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors].
+// [CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v9.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors].
 type ListCampaignExperimentAsyncErrorsResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -847,7 +847,7 @@ type ListCampaignExperimentAsyncErrorsResponse struct {
 func (x *ListCampaignExperimentAsyncErrorsResponse) Reset() {
 	*x = ListCampaignExperimentAsyncErrorsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[12]
+		mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -860,7 +860,7 @@ func (x *ListCampaignExperimentAsyncErrorsResponse) String() string {
 func (*ListCampaignExperimentAsyncErrorsResponse) ProtoMessage() {}
 
 func (x *ListCampaignExperimentAsyncErrorsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[12]
+	mi := &file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -873,7 +873,7 @@ func (x *ListCampaignExperimentAsyncErrorsResponse) ProtoReflect() protoreflect.
 
 // Deprecated: Use ListCampaignExperimentAsyncErrorsResponse.ProtoReflect.Descriptor instead.
 func (*ListCampaignExperimentAsyncErrorsResponse) Descriptor() ([]byte, []int) {
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP(), []int{12}
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *ListCampaignExperimentAsyncErrorsResponse) GetErrors() []*status.Status {
@@ -890,21 +890,21 @@ func (x *ListCampaignExperimentAsyncErrorsResponse) GetNextPageToken() string {
 	return ""
 }
 
-var File_google_ads_googleads_v8_services_campaign_experiment_service_proto protoreflect.FileDescriptor
+var File_google_ads_googleads_v9_services_campaign_experiment_service_proto protoreflect.FileDescriptor
 
-var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDesc = []byte{
+var file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDesc = []byte{
 	0x0a, 0x42, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
 	0x65, 0x73, 0x2f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x65, 0x78, 0x70, 0x65,
 	0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x20, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73,
-	0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65,
+	0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x1a, 0x39, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61,
-	0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f,
+	0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f,
 	0x65, 0x6e, 0x75, 0x6d, 0x73, 0x2f, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x5f, 0x63,
 	0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x1a, 0x3b, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f,
-	0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x38, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75,
+	0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2f, 0x76, 0x39, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75,
 	0x72, 0x63, 0x65, 0x73, 0x2f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x65, 0x78,
 	0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1c,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6e, 0x6e, 0x6f, 0x74,
@@ -937,7 +937,7 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x72, 0x49, 0x64, 0x12, 0x62, 0x0a, 0x0a, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e,
 	0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x3d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76,
-	0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x61, 0x6d, 0x70, 0x61,
+	0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x61, 0x6d, 0x70, 0x61,
 	0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x4f, 0x70, 0x65,
 	0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x03, 0xe0, 0x41, 0x02, 0x52, 0x0a, 0x6f, 0x70, 0x65,
 	0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x27, 0x0a, 0x0f, 0x70, 0x61, 0x72, 0x74, 0x69,
@@ -948,7 +948,7 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x65, 0x4f, 0x6e, 0x6c, 0x79, 0x12, 0x7e, 0x0a, 0x15, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
 	0x65, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x05,
 	0x20, 0x01, 0x28, 0x0e, 0x32, 0x4a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64,
-	0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x65,
+	0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x65,
 	0x6e, 0x75, 0x6d, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x43, 0x6f, 0x6e,
 	0x74, 0x65, 0x6e, 0x74, 0x54, 0x79, 0x70, 0x65, 0x45, 0x6e, 0x75, 0x6d, 0x2e, 0x52, 0x65, 0x73,
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x54, 0x79, 0x70, 0x65,
@@ -961,7 +961,7 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x6c, 0x64, 0x4d, 0x61, 0x73, 0x6b, 0x52, 0x0a, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d, 0x61,
 	0x73, 0x6b, 0x12, 0x4f, 0x0a, 0x06, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x0b, 0x32, 0x35, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73,
 	0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45,
 	0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x48, 0x00, 0x52, 0x06, 0x75, 0x70, 0x64,
 	0x61, 0x74, 0x65, 0x12, 0x18, 0x0a, 0x06, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x18, 0x02, 0x20,
@@ -976,7 +976,7 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x75, 0x72, 0x65, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x12, 0x5a, 0x0a, 0x07, 0x72, 0x65, 0x73, 0x75,
 	0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x40, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
 	0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73,
-	0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74,
+	0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74,
 	0x61, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72,
 	0x69, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x52, 0x07, 0x72, 0x65, 0x73,
 	0x75, 0x6c, 0x74, 0x73, 0x22, 0xad, 0x01, 0x0a, 0x1e, 0x4d, 0x75, 0x74, 0x61, 0x74, 0x65, 0x43,
@@ -987,7 +987,7 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x65, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d,
 	0x65, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x35, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
 	0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73,
-	0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x61,
+	0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x61,
 	0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74,
 	0x52, 0x12, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69,
 	0x6d, 0x65, 0x6e, 0x74, 0x22, 0xd9, 0x01, 0x0a, 0x1f, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43,
@@ -998,7 +998,7 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x0a, 0x13, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x65, 0x78, 0x70, 0x65, 0x72,
 	0x69, 0x6d, 0x65, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x35, 0x2e, 0x67, 0x6f,
 	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61,
-	0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e,
+	0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x2e,
 	0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65,
 	0x6e, 0x74, 0x42, 0x03, 0xe0, 0x41, 0x02, 0x52, 0x12, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67,
 	0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x23, 0x0a, 0x0d, 0x76,
@@ -1066,27 +1066,27 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0xdd, 0x01, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x43, 0x61, 0x6d,
 	0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x12,
 	0x3e, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
 	0x65, 0x73, 0x2e, 0x47, 0x65, 0x74, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78,
 	0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
 	0x35, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
 	0x63, 0x65, 0x73, 0x2e, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65,
 	0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x22, 0x4d, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x37, 0x12, 0x35,
-	0x2f, 0x76, 0x38, 0x2f, 0x7b, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x6e, 0x61,
+	0x2f, 0x76, 0x39, 0x2f, 0x7b, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x6e, 0x61,
 	0x6d, 0x65, 0x3d, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x2a, 0x2f, 0x63,
 	0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e,
 	0x74, 0x73, 0x2f, 0x2a, 0x7d, 0xda, 0x41, 0x0d, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65,
 	0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0xc1, 0x02, 0x0a, 0x18, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
 	0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65,
 	0x6e, 0x74, 0x12, 0x41, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70,
 	0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x6c,
 	0x6f, 0x6e, 0x67, 0x72, 0x75, 0x6e, 0x6e, 0x69, 0x6e, 0x67, 0x2e, 0x4f, 0x70, 0x65, 0x72, 0x61,
 	0x74, 0x69, 0x6f, 0x6e, 0x22, 0xc2, 0x01, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3d, 0x22, 0x38, 0x2f,
-	0x76, 0x38, 0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x7b, 0x63, 0x75,
+	0x76, 0x39, 0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x7b, 0x63, 0x75,
 	0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x3d, 0x2a, 0x7d, 0x2f, 0x63, 0x61, 0x6d,
 	0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73,
 	0x3a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x3a, 0x01, 0x2a, 0xda, 0x41, 0x1f, 0x63, 0x75, 0x73,
@@ -1094,21 +1094,21 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x6e, 0x5f, 0x65, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0xca, 0x41, 0x5a, 0x0a,
 	0x15, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66,
 	0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x12, 0x41, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61,
-	0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e,
+	0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e,
 	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43,
 	0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e,
 	0x74, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x12, 0x82, 0x02, 0x0a, 0x19, 0x4d, 0x75,
 	0x74, 0x61, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65,
 	0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x12, 0x42, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76,
-	0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74, 0x61, 0x74,
+	0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d, 0x75, 0x74, 0x61, 0x74,
 	0x65, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d,
 	0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x43, 0x2e, 0x67, 0x6f,
 	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61,
-	0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d,
+	0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4d,
 	0x75, 0x74, 0x61, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70,
 	0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x5c, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3d, 0x22, 0x38, 0x2f, 0x76, 0x38, 0x2f, 0x63, 0x75,
+	0x22, 0x5c, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3d, 0x22, 0x38, 0x2f, 0x76, 0x39, 0x2f, 0x63, 0x75,
 	0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x7b, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
 	0x72, 0x5f, 0x69, 0x64, 0x3d, 0x2a, 0x7d, 0x2f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e,
 	0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x3a, 0x6d, 0x75, 0x74, 0x61,
@@ -1117,15 +1117,15 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x02, 0x0a, 0x1a, 0x47, 0x72, 0x61, 0x64, 0x75, 0x61, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61,
 	0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x43, 0x2e,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
 	0x2e, 0x47, 0x72, 0x61, 0x64, 0x75, 0x61, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67,
 	0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x44, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x47, 0x72, 0x61, 0x64, 0x75, 0x61, 0x74, 0x65, 0x43, 0x61,
 	0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x75, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x49,
-	0x22, 0x44, 0x2f, 0x76, 0x38, 0x2f, 0x7b, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f,
+	0x22, 0x44, 0x2f, 0x76, 0x39, 0x2f, 0x7b, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f,
 	0x65, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x3d, 0x63, 0x75, 0x73, 0x74, 0x6f,
 	0x6d, 0x65, 0x72, 0x73, 0x2f, 0x2a, 0x2f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45,
 	0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x2f, 0x2a, 0x7d, 0x3a, 0x67, 0x72,
@@ -1135,12 +1135,12 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x96, 0x02, 0x0a, 0x19, 0x50, 0x72, 0x6f, 0x6d, 0x6f, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61,
 	0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x42, 0x2e,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
-	0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
 	0x2e, 0x50, 0x72, 0x6f, 0x6d, 0x6f, 0x74, 0x65, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e,
 	0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x1a, 0x1d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x6c, 0x6f, 0x6e, 0x67, 0x72,
 	0x75, 0x6e, 0x6e, 0x69, 0x6e, 0x67, 0x2e, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x22, 0x95, 0x01, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x48, 0x22, 0x43, 0x2f, 0x76, 0x38, 0x2f, 0x7b,
+	0x22, 0x95, 0x01, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x48, 0x22, 0x43, 0x2f, 0x76, 0x39, 0x2f, 0x7b,
 	0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x5f, 0x65, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d,
 	0x65, 0x6e, 0x74, 0x3d, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x2a, 0x2f,
 	0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65,
@@ -1152,12 +1152,12 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x12, 0xd1, 0x01, 0x0a, 0x15, 0x45, 0x6e, 0x64,
 	0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65,
 	0x6e, 0x74, 0x12, 0x3e, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x45, 0x6e, 0x64, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67,
 	0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x60, 0x82, 0xd3, 0xe4, 0x93,
-	0x02, 0x44, 0x22, 0x3f, 0x2f, 0x76, 0x38, 0x2f, 0x7b, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67,
+	0x02, 0x44, 0x22, 0x3f, 0x2f, 0x76, 0x39, 0x2f, 0x7b, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67,
 	0x6e, 0x5f, 0x65, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x3d, 0x63, 0x75, 0x73,
 	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x73, 0x2f, 0x2a, 0x2f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67,
 	0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x2f, 0x2a, 0x7d, 0x3a,
@@ -1166,16 +1166,16 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x21, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70,
 	0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x73, 0x79, 0x6e, 0x63, 0x45, 0x72, 0x72, 0x6f,
 	0x72, 0x73, 0x12, 0x4a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e,
-	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72,
+	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69,
 	0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x73, 0x79, 0x6e,
 	0x63, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x4b,
 	0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
-	0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76, 0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
 	0x73, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78,
 	0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x41, 0x73, 0x79, 0x6e, 0x63, 0x45, 0x72, 0x72,
 	0x6f, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5d, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x47, 0x12, 0x45, 0x2f, 0x76, 0x38, 0x2f, 0x7b, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x93, 0x02, 0x47, 0x12, 0x45, 0x2f, 0x76, 0x39, 0x2f, 0x7b, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72,
 	0x63, 0x65, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x3d, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
 	0x73, 0x2f, 0x2a, 0x2f, 0x63, 0x61, 0x6d, 0x70, 0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65,
 	0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x2f, 0x2a, 0x7d, 0x3a, 0x6c, 0x69, 0x73, 0x74, 0x41,
@@ -1187,82 +1187,82 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawD
 	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x61, 0x75, 0x74, 0x68, 0x2f, 0x61, 0x64, 0x77, 0x6f, 0x72, 0x64,
 	0x73, 0x42, 0x85, 0x02, 0x0a, 0x24, 0x63, 0x6f, 0x6d, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2e, 0x61, 0x64, 0x73, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64, 0x73, 0x2e, 0x76,
-	0x38, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x42, 0x1e, 0x43, 0x61, 0x6d, 0x70,
+	0x39, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x42, 0x1e, 0x43, 0x61, 0x6d, 0x70,
 	0x61, 0x69, 0x67, 0x6e, 0x45, 0x78, 0x70, 0x65, 0x72, 0x69, 0x6d, 0x65, 0x6e, 0x74, 0x53, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x48, 0x67, 0x6f,
 	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x67, 0x6f, 0x6c, 0x61, 0x6e, 0x67, 0x2e, 0x6f, 0x72, 0x67, 0x2f,
 	0x67, 0x65, 0x6e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61,
 	0x70, 0x69, 0x73, 0x2f, 0x61, 0x64, 0x73, 0x2f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x61, 0x64,
-	0x73, 0x2f, 0x76, 0x38, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x3b, 0x73, 0x65,
+	0x73, 0x2f, 0x76, 0x39, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x3b, 0x73, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xa2, 0x02, 0x03, 0x47, 0x41, 0x41, 0xaa, 0x02, 0x20, 0x47,
 	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x41, 0x64, 0x73, 0x2e, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
-	0x41, 0x64, 0x73, 0x2e, 0x56, 0x38, 0x2e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xca,
+	0x41, 0x64, 0x73, 0x2e, 0x56, 0x39, 0x2e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0xca,
 	0x02, 0x20, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x5c, 0x41, 0x64, 0x73, 0x5c, 0x47, 0x6f, 0x6f,
-	0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x5c, 0x56, 0x38, 0x5c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x5c, 0x56, 0x39, 0x5c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63,
 	0x65, 0x73, 0xea, 0x02, 0x24, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x3a, 0x3a, 0x41, 0x64, 0x73,
-	0x3a, 0x3a, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x3a, 0x3a, 0x56, 0x38, 0x3a,
+	0x3a, 0x3a, 0x47, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x41, 0x64, 0x73, 0x3a, 0x3a, 0x56, 0x39, 0x3a,
 	0x3a, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
 	0x33,
 }
 
 var (
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescOnce sync.Once
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescData = file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDesc
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescOnce sync.Once
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescData = file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDesc
 )
 
-func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescGZIP() []byte {
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescOnce.Do(func() {
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescData)
+func file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescGZIP() []byte {
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescOnce.Do(func() {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescData)
 	})
-	return file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDescData
+	return file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDescData
 }
 
-var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
-var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_goTypes = []interface{}{
-	(*GetCampaignExperimentRequest)(nil),                   // 0: google.ads.googleads.v8.services.GetCampaignExperimentRequest
-	(*MutateCampaignExperimentsRequest)(nil),               // 1: google.ads.googleads.v8.services.MutateCampaignExperimentsRequest
-	(*CampaignExperimentOperation)(nil),                    // 2: google.ads.googleads.v8.services.CampaignExperimentOperation
-	(*MutateCampaignExperimentsResponse)(nil),              // 3: google.ads.googleads.v8.services.MutateCampaignExperimentsResponse
-	(*MutateCampaignExperimentResult)(nil),                 // 4: google.ads.googleads.v8.services.MutateCampaignExperimentResult
-	(*CreateCampaignExperimentRequest)(nil),                // 5: google.ads.googleads.v8.services.CreateCampaignExperimentRequest
-	(*CreateCampaignExperimentMetadata)(nil),               // 6: google.ads.googleads.v8.services.CreateCampaignExperimentMetadata
-	(*GraduateCampaignExperimentRequest)(nil),              // 7: google.ads.googleads.v8.services.GraduateCampaignExperimentRequest
-	(*GraduateCampaignExperimentResponse)(nil),             // 8: google.ads.googleads.v8.services.GraduateCampaignExperimentResponse
-	(*PromoteCampaignExperimentRequest)(nil),               // 9: google.ads.googleads.v8.services.PromoteCampaignExperimentRequest
-	(*EndCampaignExperimentRequest)(nil),                   // 10: google.ads.googleads.v8.services.EndCampaignExperimentRequest
-	(*ListCampaignExperimentAsyncErrorsRequest)(nil),       // 11: google.ads.googleads.v8.services.ListCampaignExperimentAsyncErrorsRequest
-	(*ListCampaignExperimentAsyncErrorsResponse)(nil),      // 12: google.ads.googleads.v8.services.ListCampaignExperimentAsyncErrorsResponse
-	(enums.ResponseContentTypeEnum_ResponseContentType)(0), // 13: google.ads.googleads.v8.enums.ResponseContentTypeEnum.ResponseContentType
-	(*field_mask.FieldMask)(nil),                           // 14: google.protobuf.FieldMask
-	(*resources.CampaignExperiment)(nil),                   // 15: google.ads.googleads.v8.resources.CampaignExperiment
+var file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
+var file_google_ads_googleads_v9_services_campaign_experiment_service_proto_goTypes = []interface{}{
+	(*GetCampaignExperimentRequest)(nil),                   // 0: google.ads.googleads.v9.services.GetCampaignExperimentRequest
+	(*MutateCampaignExperimentsRequest)(nil),               // 1: google.ads.googleads.v9.services.MutateCampaignExperimentsRequest
+	(*CampaignExperimentOperation)(nil),                    // 2: google.ads.googleads.v9.services.CampaignExperimentOperation
+	(*MutateCampaignExperimentsResponse)(nil),              // 3: google.ads.googleads.v9.services.MutateCampaignExperimentsResponse
+	(*MutateCampaignExperimentResult)(nil),                 // 4: google.ads.googleads.v9.services.MutateCampaignExperimentResult
+	(*CreateCampaignExperimentRequest)(nil),                // 5: google.ads.googleads.v9.services.CreateCampaignExperimentRequest
+	(*CreateCampaignExperimentMetadata)(nil),               // 6: google.ads.googleads.v9.services.CreateCampaignExperimentMetadata
+	(*GraduateCampaignExperimentRequest)(nil),              // 7: google.ads.googleads.v9.services.GraduateCampaignExperimentRequest
+	(*GraduateCampaignExperimentResponse)(nil),             // 8: google.ads.googleads.v9.services.GraduateCampaignExperimentResponse
+	(*PromoteCampaignExperimentRequest)(nil),               // 9: google.ads.googleads.v9.services.PromoteCampaignExperimentRequest
+	(*EndCampaignExperimentRequest)(nil),                   // 10: google.ads.googleads.v9.services.EndCampaignExperimentRequest
+	(*ListCampaignExperimentAsyncErrorsRequest)(nil),       // 11: google.ads.googleads.v9.services.ListCampaignExperimentAsyncErrorsRequest
+	(*ListCampaignExperimentAsyncErrorsResponse)(nil),      // 12: google.ads.googleads.v9.services.ListCampaignExperimentAsyncErrorsResponse
+	(enums.ResponseContentTypeEnum_ResponseContentType)(0), // 13: google.ads.googleads.v9.enums.ResponseContentTypeEnum.ResponseContentType
+	(*fieldmaskpb.FieldMask)(nil),                          // 14: google.protobuf.FieldMask
+	(*resources.CampaignExperiment)(nil),                   // 15: google.ads.googleads.v9.resources.CampaignExperiment
 	(*status.Status)(nil),                                  // 16: google.rpc.Status
 	(*longrunning.Operation)(nil),                          // 17: google.longrunning.Operation
-	(*empty.Empty)(nil),                                    // 18: google.protobuf.Empty
+	(*emptypb.Empty)(nil),                                  // 18: google.protobuf.Empty
 }
-var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_depIdxs = []int32{
-	2,  // 0: google.ads.googleads.v8.services.MutateCampaignExperimentsRequest.operations:type_name -> google.ads.googleads.v8.services.CampaignExperimentOperation
-	13, // 1: google.ads.googleads.v8.services.MutateCampaignExperimentsRequest.response_content_type:type_name -> google.ads.googleads.v8.enums.ResponseContentTypeEnum.ResponseContentType
-	14, // 2: google.ads.googleads.v8.services.CampaignExperimentOperation.update_mask:type_name -> google.protobuf.FieldMask
-	15, // 3: google.ads.googleads.v8.services.CampaignExperimentOperation.update:type_name -> google.ads.googleads.v8.resources.CampaignExperiment
-	16, // 4: google.ads.googleads.v8.services.MutateCampaignExperimentsResponse.partial_failure_error:type_name -> google.rpc.Status
-	4,  // 5: google.ads.googleads.v8.services.MutateCampaignExperimentsResponse.results:type_name -> google.ads.googleads.v8.services.MutateCampaignExperimentResult
-	15, // 6: google.ads.googleads.v8.services.MutateCampaignExperimentResult.campaign_experiment:type_name -> google.ads.googleads.v8.resources.CampaignExperiment
-	15, // 7: google.ads.googleads.v8.services.CreateCampaignExperimentRequest.campaign_experiment:type_name -> google.ads.googleads.v8.resources.CampaignExperiment
-	16, // 8: google.ads.googleads.v8.services.ListCampaignExperimentAsyncErrorsResponse.errors:type_name -> google.rpc.Status
-	0,  // 9: google.ads.googleads.v8.services.CampaignExperimentService.GetCampaignExperiment:input_type -> google.ads.googleads.v8.services.GetCampaignExperimentRequest
-	5,  // 10: google.ads.googleads.v8.services.CampaignExperimentService.CreateCampaignExperiment:input_type -> google.ads.googleads.v8.services.CreateCampaignExperimentRequest
-	1,  // 11: google.ads.googleads.v8.services.CampaignExperimentService.MutateCampaignExperiments:input_type -> google.ads.googleads.v8.services.MutateCampaignExperimentsRequest
-	7,  // 12: google.ads.googleads.v8.services.CampaignExperimentService.GraduateCampaignExperiment:input_type -> google.ads.googleads.v8.services.GraduateCampaignExperimentRequest
-	9,  // 13: google.ads.googleads.v8.services.CampaignExperimentService.PromoteCampaignExperiment:input_type -> google.ads.googleads.v8.services.PromoteCampaignExperimentRequest
-	10, // 14: google.ads.googleads.v8.services.CampaignExperimentService.EndCampaignExperiment:input_type -> google.ads.googleads.v8.services.EndCampaignExperimentRequest
-	11, // 15: google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors:input_type -> google.ads.googleads.v8.services.ListCampaignExperimentAsyncErrorsRequest
-	15, // 16: google.ads.googleads.v8.services.CampaignExperimentService.GetCampaignExperiment:output_type -> google.ads.googleads.v8.resources.CampaignExperiment
-	17, // 17: google.ads.googleads.v8.services.CampaignExperimentService.CreateCampaignExperiment:output_type -> google.longrunning.Operation
-	3,  // 18: google.ads.googleads.v8.services.CampaignExperimentService.MutateCampaignExperiments:output_type -> google.ads.googleads.v8.services.MutateCampaignExperimentsResponse
-	8,  // 19: google.ads.googleads.v8.services.CampaignExperimentService.GraduateCampaignExperiment:output_type -> google.ads.googleads.v8.services.GraduateCampaignExperimentResponse
-	17, // 20: google.ads.googleads.v8.services.CampaignExperimentService.PromoteCampaignExperiment:output_type -> google.longrunning.Operation
-	18, // 21: google.ads.googleads.v8.services.CampaignExperimentService.EndCampaignExperiment:output_type -> google.protobuf.Empty
-	12, // 22: google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors:output_type -> google.ads.googleads.v8.services.ListCampaignExperimentAsyncErrorsResponse
+var file_google_ads_googleads_v9_services_campaign_experiment_service_proto_depIdxs = []int32{
+	2,  // 0: google.ads.googleads.v9.services.MutateCampaignExperimentsRequest.operations:type_name -> google.ads.googleads.v9.services.CampaignExperimentOperation
+	13, // 1: google.ads.googleads.v9.services.MutateCampaignExperimentsRequest.response_content_type:type_name -> google.ads.googleads.v9.enums.ResponseContentTypeEnum.ResponseContentType
+	14, // 2: google.ads.googleads.v9.services.CampaignExperimentOperation.update_mask:type_name -> google.protobuf.FieldMask
+	15, // 3: google.ads.googleads.v9.services.CampaignExperimentOperation.update:type_name -> google.ads.googleads.v9.resources.CampaignExperiment
+	16, // 4: google.ads.googleads.v9.services.MutateCampaignExperimentsResponse.partial_failure_error:type_name -> google.rpc.Status
+	4,  // 5: google.ads.googleads.v9.services.MutateCampaignExperimentsResponse.results:type_name -> google.ads.googleads.v9.services.MutateCampaignExperimentResult
+	15, // 6: google.ads.googleads.v9.services.MutateCampaignExperimentResult.campaign_experiment:type_name -> google.ads.googleads.v9.resources.CampaignExperiment
+	15, // 7: google.ads.googleads.v9.services.CreateCampaignExperimentRequest.campaign_experiment:type_name -> google.ads.googleads.v9.resources.CampaignExperiment
+	16, // 8: google.ads.googleads.v9.services.ListCampaignExperimentAsyncErrorsResponse.errors:type_name -> google.rpc.Status
+	0,  // 9: google.ads.googleads.v9.services.CampaignExperimentService.GetCampaignExperiment:input_type -> google.ads.googleads.v9.services.GetCampaignExperimentRequest
+	5,  // 10: google.ads.googleads.v9.services.CampaignExperimentService.CreateCampaignExperiment:input_type -> google.ads.googleads.v9.services.CreateCampaignExperimentRequest
+	1,  // 11: google.ads.googleads.v9.services.CampaignExperimentService.MutateCampaignExperiments:input_type -> google.ads.googleads.v9.services.MutateCampaignExperimentsRequest
+	7,  // 12: google.ads.googleads.v9.services.CampaignExperimentService.GraduateCampaignExperiment:input_type -> google.ads.googleads.v9.services.GraduateCampaignExperimentRequest
+	9,  // 13: google.ads.googleads.v9.services.CampaignExperimentService.PromoteCampaignExperiment:input_type -> google.ads.googleads.v9.services.PromoteCampaignExperimentRequest
+	10, // 14: google.ads.googleads.v9.services.CampaignExperimentService.EndCampaignExperiment:input_type -> google.ads.googleads.v9.services.EndCampaignExperimentRequest
+	11, // 15: google.ads.googleads.v9.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors:input_type -> google.ads.googleads.v9.services.ListCampaignExperimentAsyncErrorsRequest
+	15, // 16: google.ads.googleads.v9.services.CampaignExperimentService.GetCampaignExperiment:output_type -> google.ads.googleads.v9.resources.CampaignExperiment
+	17, // 17: google.ads.googleads.v9.services.CampaignExperimentService.CreateCampaignExperiment:output_type -> google.longrunning.Operation
+	3,  // 18: google.ads.googleads.v9.services.CampaignExperimentService.MutateCampaignExperiments:output_type -> google.ads.googleads.v9.services.MutateCampaignExperimentsResponse
+	8,  // 19: google.ads.googleads.v9.services.CampaignExperimentService.GraduateCampaignExperiment:output_type -> google.ads.googleads.v9.services.GraduateCampaignExperimentResponse
+	17, // 20: google.ads.googleads.v9.services.CampaignExperimentService.PromoteCampaignExperiment:output_type -> google.longrunning.Operation
+	18, // 21: google.ads.googleads.v9.services.CampaignExperimentService.EndCampaignExperiment:output_type -> google.protobuf.Empty
+	12, // 22: google.ads.googleads.v9.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors:output_type -> google.ads.googleads.v9.services.ListCampaignExperimentAsyncErrorsResponse
 	16, // [16:23] is the sub-list for method output_type
 	9,  // [9:16] is the sub-list for method input_type
 	9,  // [9:9] is the sub-list for extension type_name
@@ -1270,13 +1270,13 @@ var file_google_ads_googleads_v8_services_campaign_experiment_service_proto_depI
 	0,  // [0:9] is the sub-list for field type_name
 }
 
-func init() { file_google_ads_googleads_v8_services_campaign_experiment_service_proto_init() }
-func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_init() {
-	if File_google_ads_googleads_v8_services_campaign_experiment_service_proto != nil {
+func init() { file_google_ads_googleads_v9_services_campaign_experiment_service_proto_init() }
+func file_google_ads_googleads_v9_services_campaign_experiment_service_proto_init() {
+	if File_google_ads_googleads_v9_services_campaign_experiment_service_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetCampaignExperimentRequest); i {
 			case 0:
 				return &v.state
@@ -1288,7 +1288,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateCampaignExperimentsRequest); i {
 			case 0:
 				return &v.state
@@ -1300,7 +1300,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CampaignExperimentOperation); i {
 			case 0:
 				return &v.state
@@ -1312,7 +1312,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateCampaignExperimentsResponse); i {
 			case 0:
 				return &v.state
@@ -1324,7 +1324,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MutateCampaignExperimentResult); i {
 			case 0:
 				return &v.state
@@ -1336,7 +1336,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateCampaignExperimentRequest); i {
 			case 0:
 				return &v.state
@@ -1348,7 +1348,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateCampaignExperimentMetadata); i {
 			case 0:
 				return &v.state
@@ -1360,7 +1360,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GraduateCampaignExperimentRequest); i {
 			case 0:
 				return &v.state
@@ -1372,7 +1372,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GraduateCampaignExperimentResponse); i {
 			case 0:
 				return &v.state
@@ -1384,7 +1384,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PromoteCampaignExperimentRequest); i {
 			case 0:
 				return &v.state
@@ -1396,7 +1396,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EndCampaignExperimentRequest); i {
 			case 0:
 				return &v.state
@@ -1408,7 +1408,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ListCampaignExperimentAsyncErrorsRequest); i {
 			case 0:
 				return &v.state
@@ -1420,7 +1420,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 				return nil
 			}
 		}
-		file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ListCampaignExperimentAsyncErrorsResponse); i {
 			case 0:
 				return &v.state
@@ -1433,7 +1433,7 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 			}
 		}
 	}
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes[2].OneofWrappers = []interface{}{
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes[2].OneofWrappers = []interface{}{
 		(*CampaignExperimentOperation_Update)(nil),
 		(*CampaignExperimentOperation_Remove)(nil),
 	}
@@ -1441,18 +1441,18 @@ func file_google_ads_googleads_v8_services_campaign_experiment_service_proto_ini
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDesc,
+			RawDescriptor: file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_google_ads_googleads_v8_services_campaign_experiment_service_proto_goTypes,
-		DependencyIndexes: file_google_ads_googleads_v8_services_campaign_experiment_service_proto_depIdxs,
-		MessageInfos:      file_google_ads_googleads_v8_services_campaign_experiment_service_proto_msgTypes,
+		GoTypes:           file_google_ads_googleads_v9_services_campaign_experiment_service_proto_goTypes,
+		DependencyIndexes: file_google_ads_googleads_v9_services_campaign_experiment_service_proto_depIdxs,
+		MessageInfos:      file_google_ads_googleads_v9_services_campaign_experiment_service_proto_msgTypes,
 	}.Build()
-	File_google_ads_googleads_v8_services_campaign_experiment_service_proto = out.File
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_rawDesc = nil
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_goTypes = nil
-	file_google_ads_googleads_v8_services_campaign_experiment_service_proto_depIdxs = nil
+	File_google_ads_googleads_v9_services_campaign_experiment_service_proto = out.File
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_rawDesc = nil
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_goTypes = nil
+	file_google_ads_googleads_v9_services_campaign_experiment_service_proto_depIdxs = nil
 }

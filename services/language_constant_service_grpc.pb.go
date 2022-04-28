@@ -41,7 +41,7 @@ func NewLanguageConstantServiceClient(cc grpc.ClientConnInterface) LanguageConst
 
 func (c *languageConstantServiceClient) GetLanguageConstant(ctx context.Context, in *GetLanguageConstantRequest, opts ...grpc.CallOption) (*resources.LanguageConstant, error) {
 	out := new(resources.LanguageConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.LanguageConstantService/GetLanguageConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.LanguageConstantService/GetLanguageConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _LanguageConstantService_GetLanguageConstant_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.LanguageConstantService/GetLanguageConstant",
+		FullMethod: "/google.ads.googleads.v9.services.LanguageConstantService/GetLanguageConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LanguageConstantServiceServer).GetLanguageConstant(ctx, req.(*GetLanguageConstantRequest))
@@ -108,7 +108,7 @@ func _LanguageConstantService_GetLanguageConstant_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LanguageConstantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.LanguageConstantService",
+	ServiceName: "google.ads.googleads.v9.services.LanguageConstantService",
 	HandlerType: (*LanguageConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var LanguageConstantService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/language_constant_service.proto",
+	Metadata: "google/ads/googleads/v9/services/language_constant_service.proto",
 }

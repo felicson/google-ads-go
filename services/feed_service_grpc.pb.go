@@ -70,7 +70,7 @@ func NewFeedServiceClient(cc grpc.ClientConnInterface) FeedServiceClient {
 
 func (c *feedServiceClient) GetFeed(ctx context.Context, in *GetFeedRequest, opts ...grpc.CallOption) (*resources.Feed, error) {
 	out := new(resources.Feed)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.FeedService/GetFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.FeedService/GetFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -79,7 +79,7 @@ func (c *feedServiceClient) GetFeed(ctx context.Context, in *GetFeedRequest, opt
 
 func (c *feedServiceClient) MutateFeeds(ctx context.Context, in *MutateFeedsRequest, opts ...grpc.CallOption) (*MutateFeedsResponse, error) {
 	out := new(MutateFeedsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.FeedService/MutateFeeds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.FeedService/MutateFeeds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -165,7 +165,7 @@ func _FeedService_GetFeed_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.FeedService/GetFeed",
+		FullMethod: "/google.ads.googleads.v9.services.FeedService/GetFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FeedServiceServer).GetFeed(ctx, req.(*GetFeedRequest))
@@ -183,7 +183,7 @@ func _FeedService_MutateFeeds_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.FeedService/MutateFeeds",
+		FullMethod: "/google.ads.googleads.v9.services.FeedService/MutateFeeds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FeedServiceServer).MutateFeeds(ctx, req.(*MutateFeedsRequest))
@@ -195,7 +195,7 @@ func _FeedService_MutateFeeds_Handler(srv interface{}, ctx context.Context, dec 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var FeedService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.FeedService",
+	ServiceName: "google.ads.googleads.v9.services.FeedService",
 	HandlerType: (*FeedServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -208,5 +208,5 @@ var FeedService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/feed_service.proto",
+	Metadata: "google/ads/googleads/v9/services/feed_service.proto",
 }

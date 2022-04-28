@@ -41,7 +41,7 @@ func NewCampaignAudienceViewServiceClient(cc grpc.ClientConnInterface) CampaignA
 
 func (c *campaignAudienceViewServiceClient) GetCampaignAudienceView(ctx context.Context, in *GetCampaignAudienceViewRequest, opts ...grpc.CallOption) (*resources.CampaignAudienceView, error) {
 	out := new(resources.CampaignAudienceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignAudienceViewService/GetCampaignAudienceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CampaignAudienceViewService/GetCampaignAudienceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _CampaignAudienceViewService_GetCampaignAudienceView_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CampaignAudienceViewService/GetCampaignAudienceView",
+		FullMethod: "/google.ads.googleads.v9.services.CampaignAudienceViewService/GetCampaignAudienceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignAudienceViewServiceServer).GetCampaignAudienceView(ctx, req.(*GetCampaignAudienceViewRequest))
@@ -108,7 +108,7 @@ func _CampaignAudienceViewService_GetCampaignAudienceView_Handler(srv interface{
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignAudienceViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CampaignAudienceViewService",
+	ServiceName: "google.ads.googleads.v9.services.CampaignAudienceViewService",
 	HandlerType: (*CampaignAudienceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var CampaignAudienceViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/campaign_audience_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/campaign_audience_view_service.proto",
 }

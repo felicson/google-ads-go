@@ -72,7 +72,7 @@ func NewBiddingStrategyServiceClient(cc grpc.ClientConnInterface) BiddingStrateg
 
 func (c *biddingStrategyServiceClient) GetBiddingStrategy(ctx context.Context, in *GetBiddingStrategyRequest, opts ...grpc.CallOption) (*resources.BiddingStrategy, error) {
 	out := new(resources.BiddingStrategy)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BiddingStrategyService/GetBiddingStrategy", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.BiddingStrategyService/GetBiddingStrategy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -81,7 +81,7 @@ func (c *biddingStrategyServiceClient) GetBiddingStrategy(ctx context.Context, i
 
 func (c *biddingStrategyServiceClient) MutateBiddingStrategies(ctx context.Context, in *MutateBiddingStrategiesRequest, opts ...grpc.CallOption) (*MutateBiddingStrategiesResponse, error) {
 	out := new(MutateBiddingStrategiesResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.BiddingStrategyService/MutateBiddingStrategies", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.BiddingStrategyService/MutateBiddingStrategies", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -170,7 +170,7 @@ func _BiddingStrategyService_GetBiddingStrategy_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.BiddingStrategyService/GetBiddingStrategy",
+		FullMethod: "/google.ads.googleads.v9.services.BiddingStrategyService/GetBiddingStrategy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BiddingStrategyServiceServer).GetBiddingStrategy(ctx, req.(*GetBiddingStrategyRequest))
@@ -188,7 +188,7 @@ func _BiddingStrategyService_MutateBiddingStrategies_Handler(srv interface{}, ct
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.BiddingStrategyService/MutateBiddingStrategies",
+		FullMethod: "/google.ads.googleads.v9.services.BiddingStrategyService/MutateBiddingStrategies",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(BiddingStrategyServiceServer).MutateBiddingStrategies(ctx, req.(*MutateBiddingStrategiesRequest))
@@ -200,7 +200,7 @@ func _BiddingStrategyService_MutateBiddingStrategies_Handler(srv interface{}, ct
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var BiddingStrategyService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.BiddingStrategyService",
+	ServiceName: "google.ads.googleads.v9.services.BiddingStrategyService",
 	HandlerType: (*BiddingStrategyServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -213,5 +213,5 @@ var BiddingStrategyService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/bidding_strategy_service.proto",
+	Metadata: "google/ads/googleads/v9/services/bidding_strategy_service.proto",
 }

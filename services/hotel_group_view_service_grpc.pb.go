@@ -41,7 +41,7 @@ func NewHotelGroupViewServiceClient(cc grpc.ClientConnInterface) HotelGroupViewS
 
 func (c *hotelGroupViewServiceClient) GetHotelGroupView(ctx context.Context, in *GetHotelGroupViewRequest, opts ...grpc.CallOption) (*resources.HotelGroupView, error) {
 	out := new(resources.HotelGroupView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.HotelGroupViewService/GetHotelGroupView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.HotelGroupViewService/GetHotelGroupView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _HotelGroupViewService_GetHotelGroupView_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.HotelGroupViewService/GetHotelGroupView",
+		FullMethod: "/google.ads.googleads.v9.services.HotelGroupViewService/GetHotelGroupView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HotelGroupViewServiceServer).GetHotelGroupView(ctx, req.(*GetHotelGroupViewRequest))
@@ -107,7 +107,7 @@ func _HotelGroupViewService_GetHotelGroupView_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var HotelGroupViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.HotelGroupViewService",
+	ServiceName: "google.ads.googleads.v9.services.HotelGroupViewService",
 	HandlerType: (*HotelGroupViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var HotelGroupViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/hotel_group_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/hotel_group_view_service.proto",
 }

@@ -52,7 +52,7 @@ func NewRemarketingActionServiceClient(cc grpc.ClientConnInterface) RemarketingA
 
 func (c *remarketingActionServiceClient) GetRemarketingAction(ctx context.Context, in *GetRemarketingActionRequest, opts ...grpc.CallOption) (*resources.RemarketingAction, error) {
 	out := new(resources.RemarketingAction)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.RemarketingActionService/GetRemarketingAction", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.RemarketingActionService/GetRemarketingAction", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -61,7 +61,7 @@ func (c *remarketingActionServiceClient) GetRemarketingAction(ctx context.Contex
 
 func (c *remarketingActionServiceClient) MutateRemarketingActions(ctx context.Context, in *MutateRemarketingActionsRequest, opts ...grpc.CallOption) (*MutateRemarketingActionsResponse, error) {
 	out := new(MutateRemarketingActionsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.RemarketingActionService/MutateRemarketingActions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.RemarketingActionService/MutateRemarketingActions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -130,7 +130,7 @@ func _RemarketingActionService_GetRemarketingAction_Handler(srv interface{}, ctx
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.RemarketingActionService/GetRemarketingAction",
+		FullMethod: "/google.ads.googleads.v9.services.RemarketingActionService/GetRemarketingAction",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(RemarketingActionServiceServer).GetRemarketingAction(ctx, req.(*GetRemarketingActionRequest))
@@ -148,7 +148,7 @@ func _RemarketingActionService_MutateRemarketingActions_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.RemarketingActionService/MutateRemarketingActions",
+		FullMethod: "/google.ads.googleads.v9.services.RemarketingActionService/MutateRemarketingActions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(RemarketingActionServiceServer).MutateRemarketingActions(ctx, req.(*MutateRemarketingActionsRequest))
@@ -160,7 +160,7 @@ func _RemarketingActionService_MutateRemarketingActions_Handler(srv interface{},
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var RemarketingActionService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.RemarketingActionService",
+	ServiceName: "google.ads.googleads.v9.services.RemarketingActionService",
 	HandlerType: (*RemarketingActionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -173,5 +173,5 @@ var RemarketingActionService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/remarketing_action_service.proto",
+	Metadata: "google/ads/googleads/v9/services/remarketing_action_service.proto",
 }

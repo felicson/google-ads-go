@@ -41,7 +41,7 @@ func NewVideoServiceClient(cc grpc.ClientConnInterface) VideoServiceClient {
 
 func (c *videoServiceClient) GetVideo(ctx context.Context, in *GetVideoRequest, opts ...grpc.CallOption) (*resources.Video, error) {
 	out := new(resources.Video)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.VideoService/GetVideo", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.VideoService/GetVideo", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _VideoService_GetVideo_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.VideoService/GetVideo",
+		FullMethod: "/google.ads.googleads.v9.services.VideoService/GetVideo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(VideoServiceServer).GetVideo(ctx, req.(*GetVideoRequest))
@@ -107,7 +107,7 @@ func _VideoService_GetVideo_Handler(srv interface{}, ctx context.Context, dec fu
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var VideoService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.VideoService",
+	ServiceName: "google.ads.googleads.v9.services.VideoService",
 	HandlerType: (*VideoServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var VideoService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/video_service.proto",
+	Metadata: "google/ads/googleads/v9/services/video_service.proto",
 }

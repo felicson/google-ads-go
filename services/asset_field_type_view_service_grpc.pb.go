@@ -33,7 +33,7 @@ func NewAssetFieldTypeViewServiceClient(cc grpc.ClientConnInterface) AssetFieldT
 
 func (c *assetFieldTypeViewServiceClient) GetAssetFieldTypeView(ctx context.Context, in *GetAssetFieldTypeViewRequest, opts ...grpc.CallOption) (*resources.AssetFieldTypeView, error) {
 	out := new(resources.AssetFieldTypeView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AssetFieldTypeViewService/GetAssetFieldTypeView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AssetFieldTypeViewService/GetAssetFieldTypeView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _AssetFieldTypeViewService_GetAssetFieldTypeView_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.AssetFieldTypeViewService/GetAssetFieldTypeView",
+		FullMethod: "/google.ads.googleads.v9.services.AssetFieldTypeViewService/GetAssetFieldTypeView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AssetFieldTypeViewServiceServer).GetAssetFieldTypeView(ctx, req.(*GetAssetFieldTypeViewRequest))
@@ -92,7 +92,7 @@ func _AssetFieldTypeViewService_GetAssetFieldTypeView_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AssetFieldTypeViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.AssetFieldTypeViewService",
+	ServiceName: "google.ads.googleads.v9.services.AssetFieldTypeViewService",
 	HandlerType: (*AssetFieldTypeViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var AssetFieldTypeViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/asset_field_type_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/asset_field_type_view_service.proto",
 }

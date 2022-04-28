@@ -57,7 +57,7 @@ func NewCampaignLabelServiceClient(cc grpc.ClientConnInterface) CampaignLabelSer
 
 func (c *campaignLabelServiceClient) GetCampaignLabel(ctx context.Context, in *GetCampaignLabelRequest, opts ...grpc.CallOption) (*resources.CampaignLabel, error) {
 	out := new(resources.CampaignLabel)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignLabelService/GetCampaignLabel", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CampaignLabelService/GetCampaignLabel", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -66,7 +66,7 @@ func (c *campaignLabelServiceClient) GetCampaignLabel(ctx context.Context, in *G
 
 func (c *campaignLabelServiceClient) MutateCampaignLabels(ctx context.Context, in *MutateCampaignLabelsRequest, opts ...grpc.CallOption) (*MutateCampaignLabelsResponse, error) {
 	out := new(MutateCampaignLabelsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignLabelService/MutateCampaignLabels", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CampaignLabelService/MutateCampaignLabels", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -139,7 +139,7 @@ func _CampaignLabelService_GetCampaignLabel_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CampaignLabelService/GetCampaignLabel",
+		FullMethod: "/google.ads.googleads.v9.services.CampaignLabelService/GetCampaignLabel",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignLabelServiceServer).GetCampaignLabel(ctx, req.(*GetCampaignLabelRequest))
@@ -157,7 +157,7 @@ func _CampaignLabelService_MutateCampaignLabels_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CampaignLabelService/MutateCampaignLabels",
+		FullMethod: "/google.ads.googleads.v9.services.CampaignLabelService/MutateCampaignLabels",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignLabelServiceServer).MutateCampaignLabels(ctx, req.(*MutateCampaignLabelsRequest))
@@ -169,7 +169,7 @@ func _CampaignLabelService_MutateCampaignLabels_Handler(srv interface{}, ctx con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignLabelService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CampaignLabelService",
+	ServiceName: "google.ads.googleads.v9.services.CampaignLabelService",
 	HandlerType: (*CampaignLabelServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -182,5 +182,5 @@ var CampaignLabelService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/campaign_label_service.proto",
+	Metadata: "google/ads/googleads/v9/services/campaign_label_service.proto",
 }

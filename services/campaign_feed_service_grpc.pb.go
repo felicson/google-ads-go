@@ -69,7 +69,7 @@ func NewCampaignFeedServiceClient(cc grpc.ClientConnInterface) CampaignFeedServi
 
 func (c *campaignFeedServiceClient) GetCampaignFeed(ctx context.Context, in *GetCampaignFeedRequest, opts ...grpc.CallOption) (*resources.CampaignFeed, error) {
 	out := new(resources.CampaignFeed)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignFeedService/GetCampaignFeed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CampaignFeedService/GetCampaignFeed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -78,7 +78,7 @@ func (c *campaignFeedServiceClient) GetCampaignFeed(ctx context.Context, in *Get
 
 func (c *campaignFeedServiceClient) MutateCampaignFeeds(ctx context.Context, in *MutateCampaignFeedsRequest, opts ...grpc.CallOption) (*MutateCampaignFeedsResponse, error) {
 	out := new(MutateCampaignFeedsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CampaignFeedService/MutateCampaignFeeds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CampaignFeedService/MutateCampaignFeeds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -163,7 +163,7 @@ func _CampaignFeedService_GetCampaignFeed_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CampaignFeedService/GetCampaignFeed",
+		FullMethod: "/google.ads.googleads.v9.services.CampaignFeedService/GetCampaignFeed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignFeedServiceServer).GetCampaignFeed(ctx, req.(*GetCampaignFeedRequest))
@@ -181,7 +181,7 @@ func _CampaignFeedService_MutateCampaignFeeds_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CampaignFeedService/MutateCampaignFeeds",
+		FullMethod: "/google.ads.googleads.v9.services.CampaignFeedService/MutateCampaignFeeds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignFeedServiceServer).MutateCampaignFeeds(ctx, req.(*MutateCampaignFeedsRequest))
@@ -193,7 +193,7 @@ func _CampaignFeedService_MutateCampaignFeeds_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CampaignFeedService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CampaignFeedService",
+	ServiceName: "google.ads.googleads.v9.services.CampaignFeedService",
 	HandlerType: (*CampaignFeedServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -206,5 +206,5 @@ var CampaignFeedService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/campaign_feed_service.proto",
+	Metadata: "google/ads/googleads/v9/services/campaign_feed_service.proto",
 }

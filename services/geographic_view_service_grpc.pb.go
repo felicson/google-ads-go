@@ -41,7 +41,7 @@ func NewGeographicViewServiceClient(cc grpc.ClientConnInterface) GeographicViewS
 
 func (c *geographicViewServiceClient) GetGeographicView(ctx context.Context, in *GetGeographicViewRequest, opts ...grpc.CallOption) (*resources.GeographicView, error) {
 	out := new(resources.GeographicView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.GeographicViewService/GetGeographicView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.GeographicViewService/GetGeographicView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _GeographicViewService_GetGeographicView_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.GeographicViewService/GetGeographicView",
+		FullMethod: "/google.ads.googleads.v9.services.GeographicViewService/GetGeographicView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GeographicViewServiceServer).GetGeographicView(ctx, req.(*GetGeographicViewRequest))
@@ -107,7 +107,7 @@ func _GeographicViewService_GetGeographicView_Handler(srv interface{}, ctx conte
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var GeographicViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.GeographicViewService",
+	ServiceName: "google.ads.googleads.v9.services.GeographicViewService",
 	HandlerType: (*GeographicViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var GeographicViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/geographic_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/geographic_view_service.proto",
 }

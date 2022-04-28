@@ -41,7 +41,7 @@ func NewCombinedAudienceServiceClient(cc grpc.ClientConnInterface) CombinedAudie
 
 func (c *combinedAudienceServiceClient) GetCombinedAudience(ctx context.Context, in *GetCombinedAudienceRequest, opts ...grpc.CallOption) (*resources.CombinedAudience, error) {
 	out := new(resources.CombinedAudience)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.CombinedAudienceService/GetCombinedAudience", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CombinedAudienceService/GetCombinedAudience", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _CombinedAudienceService_GetCombinedAudience_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.CombinedAudienceService/GetCombinedAudience",
+		FullMethod: "/google.ads.googleads.v9.services.CombinedAudienceService/GetCombinedAudience",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CombinedAudienceServiceServer).GetCombinedAudience(ctx, req.(*GetCombinedAudienceRequest))
@@ -108,7 +108,7 @@ func _CombinedAudienceService_GetCombinedAudience_Handler(srv interface{}, ctx c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var CombinedAudienceService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.CombinedAudienceService",
+	ServiceName: "google.ads.googleads.v9.services.CombinedAudienceService",
 	HandlerType: (*CombinedAudienceServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var CombinedAudienceService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/combined_audience_service.proto",
+	Metadata: "google/ads/googleads/v9/services/combined_audience_service.proto",
 }

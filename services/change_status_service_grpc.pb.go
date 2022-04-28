@@ -41,7 +41,7 @@ func NewChangeStatusServiceClient(cc grpc.ClientConnInterface) ChangeStatusServi
 
 func (c *changeStatusServiceClient) GetChangeStatus(ctx context.Context, in *GetChangeStatusRequest, opts ...grpc.CallOption) (*resources.ChangeStatus, error) {
 	out := new(resources.ChangeStatus)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ChangeStatusService/GetChangeStatus", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ChangeStatusService/GetChangeStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func _ChangeStatusService_GetChangeStatus_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.ChangeStatusService/GetChangeStatus",
+		FullMethod: "/google.ads.googleads.v9.services.ChangeStatusService/GetChangeStatus",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ChangeStatusServiceServer).GetChangeStatus(ctx, req.(*GetChangeStatusRequest))
@@ -107,7 +107,7 @@ func _ChangeStatusService_GetChangeStatus_Handler(srv interface{}, ctx context.C
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ChangeStatusService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.ChangeStatusService",
+	ServiceName: "google.ads.googleads.v9.services.ChangeStatusService",
 	HandlerType: (*ChangeStatusServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -116,5 +116,5 @@ var ChangeStatusService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/change_status_service.proto",
+	Metadata: "google/ads/googleads/v9/services/change_status_service.proto",
 }

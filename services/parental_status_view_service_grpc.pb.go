@@ -41,7 +41,7 @@ func NewParentalStatusViewServiceClient(cc grpc.ClientConnInterface) ParentalSta
 
 func (c *parentalStatusViewServiceClient) GetParentalStatusView(ctx context.Context, in *GetParentalStatusViewRequest, opts ...grpc.CallOption) (*resources.ParentalStatusView, error) {
 	out := new(resources.ParentalStatusView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ParentalStatusViewService/GetParentalStatusView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ParentalStatusViewService/GetParentalStatusView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _ParentalStatusViewService_GetParentalStatusView_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.ParentalStatusViewService/GetParentalStatusView",
+		FullMethod: "/google.ads.googleads.v9.services.ParentalStatusViewService/GetParentalStatusView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ParentalStatusViewServiceServer).GetParentalStatusView(ctx, req.(*GetParentalStatusViewRequest))
@@ -108,7 +108,7 @@ func _ParentalStatusViewService_GetParentalStatusView_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ParentalStatusViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.ParentalStatusViewService",
+	ServiceName: "google.ads.googleads.v9.services.ParentalStatusViewService",
 	HandlerType: (*ParentalStatusViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var ParentalStatusViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/parental_status_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/parental_status_view_service.proto",
 }

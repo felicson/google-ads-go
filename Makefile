@@ -1,4 +1,4 @@
-ADS_VERSION=v8
+ADS_VERSION=v9
 PROTO_ROOT_DIR=googleapis/
 PROTO_SRC_DIR=/google/ads/googleads/$(ADS_VERSION)/
 PROTO_OUT_DIR:=$(shell mktemp -d)
@@ -28,6 +28,7 @@ test:
 	echo "converting protos for version $(ADS_VERSION)"
 	for file in $(PROTO_ROOT_DIR)$(PROTO_SRC_DIR)/**/*.proto; do \
 		echo "converting proto $$(basename $$file)"; \
+		sed -i "s|experiment_arm\.proto|experiment_arm0.proto|g" $$file; \
 		protoc -I /usr/include --proto_path=$(PROTO_ROOT_DIR) $(PROTOC_GO_ARGS) $$file; \
 	done; \
 	for file in ${PROTO_OUT_DIR}$(PROTO_SRC_DIR)/**/*.pb.go; do \

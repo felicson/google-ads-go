@@ -62,7 +62,7 @@ func NewConversionActionServiceClient(cc grpc.ClientConnInterface) ConversionAct
 
 func (c *conversionActionServiceClient) GetConversionAction(ctx context.Context, in *GetConversionActionRequest, opts ...grpc.CallOption) (*resources.ConversionAction, error) {
 	out := new(resources.ConversionAction)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ConversionActionService/GetConversionAction", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ConversionActionService/GetConversionAction", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -71,7 +71,7 @@ func (c *conversionActionServiceClient) GetConversionAction(ctx context.Context,
 
 func (c *conversionActionServiceClient) MutateConversionActions(ctx context.Context, in *MutateConversionActionsRequest, opts ...grpc.CallOption) (*MutateConversionActionsResponse, error) {
 	out := new(MutateConversionActionsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.ConversionActionService/MutateConversionActions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ConversionActionService/MutateConversionActions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -150,7 +150,7 @@ func _ConversionActionService_GetConversionAction_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.ConversionActionService/GetConversionAction",
+		FullMethod: "/google.ads.googleads.v9.services.ConversionActionService/GetConversionAction",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ConversionActionServiceServer).GetConversionAction(ctx, req.(*GetConversionActionRequest))
@@ -168,7 +168,7 @@ func _ConversionActionService_MutateConversionActions_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.ConversionActionService/MutateConversionActions",
+		FullMethod: "/google.ads.googleads.v9.services.ConversionActionService/MutateConversionActions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ConversionActionServiceServer).MutateConversionActions(ctx, req.(*MutateConversionActionsRequest))
@@ -180,7 +180,7 @@ func _ConversionActionService_MutateConversionActions_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ConversionActionService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.ConversionActionService",
+	ServiceName: "google.ads.googleads.v9.services.ConversionActionService",
 	HandlerType: (*ConversionActionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -193,5 +193,5 @@ var ConversionActionService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/conversion_action_service.proto",
+	Metadata: "google/ads/googleads/v9/services/conversion_action_service.proto",
 }

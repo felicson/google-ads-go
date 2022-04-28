@@ -41,7 +41,7 @@ func NewAdGroupSimulationServiceClient(cc grpc.ClientConnInterface) AdGroupSimul
 
 func (c *adGroupSimulationServiceClient) GetAdGroupSimulation(ctx context.Context, in *GetAdGroupSimulationRequest, opts ...grpc.CallOption) (*resources.AdGroupSimulation, error) {
 	out := new(resources.AdGroupSimulation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupSimulationService/GetAdGroupSimulation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdGroupSimulationService/GetAdGroupSimulation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _AdGroupSimulationService_GetAdGroupSimulation_Handler(srv interface{}, ctx
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.AdGroupSimulationService/GetAdGroupSimulation",
+		FullMethod: "/google.ads.googleads.v9.services.AdGroupSimulationService/GetAdGroupSimulation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupSimulationServiceServer).GetAdGroupSimulation(ctx, req.(*GetAdGroupSimulationRequest))
@@ -108,7 +108,7 @@ func _AdGroupSimulationService_GetAdGroupSimulation_Handler(srv interface{}, ctx
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupSimulationService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.AdGroupSimulationService",
+	ServiceName: "google.ads.googleads.v9.services.AdGroupSimulationService",
 	HandlerType: (*AdGroupSimulationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var AdGroupSimulationService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/ad_group_simulation_service.proto",
+	Metadata: "google/ads/googleads/v9/services/ad_group_simulation_service.proto",
 }

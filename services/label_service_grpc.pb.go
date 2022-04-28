@@ -68,7 +68,7 @@ func NewLabelServiceClient(cc grpc.ClientConnInterface) LabelServiceClient {
 
 func (c *labelServiceClient) GetLabel(ctx context.Context, in *GetLabelRequest, opts ...grpc.CallOption) (*resources.Label, error) {
 	out := new(resources.Label)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.LabelService/GetLabel", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.LabelService/GetLabel", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,7 +77,7 @@ func (c *labelServiceClient) GetLabel(ctx context.Context, in *GetLabelRequest, 
 
 func (c *labelServiceClient) MutateLabels(ctx context.Context, in *MutateLabelsRequest, opts ...grpc.CallOption) (*MutateLabelsResponse, error) {
 	out := new(MutateLabelsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.LabelService/MutateLabels", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.LabelService/MutateLabels", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -161,7 +161,7 @@ func _LabelService_GetLabel_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.LabelService/GetLabel",
+		FullMethod: "/google.ads.googleads.v9.services.LabelService/GetLabel",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LabelServiceServer).GetLabel(ctx, req.(*GetLabelRequest))
@@ -179,7 +179,7 @@ func _LabelService_MutateLabels_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.LabelService/MutateLabels",
+		FullMethod: "/google.ads.googleads.v9.services.LabelService/MutateLabels",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LabelServiceServer).MutateLabels(ctx, req.(*MutateLabelsRequest))
@@ -191,7 +191,7 @@ func _LabelService_MutateLabels_Handler(srv interface{}, ctx context.Context, de
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LabelService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.LabelService",
+	ServiceName: "google.ads.googleads.v9.services.LabelService",
 	HandlerType: (*LabelServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -204,5 +204,5 @@ var LabelService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/label_service.proto",
+	Metadata: "google/ads/googleads/v9/services/label_service.proto",
 }

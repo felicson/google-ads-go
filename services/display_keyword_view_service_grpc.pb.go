@@ -41,7 +41,7 @@ func NewDisplayKeywordViewServiceClient(cc grpc.ClientConnInterface) DisplayKeyw
 
 func (c *displayKeywordViewServiceClient) GetDisplayKeywordView(ctx context.Context, in *GetDisplayKeywordViewRequest, opts ...grpc.CallOption) (*resources.DisplayKeywordView, error) {
 	out := new(resources.DisplayKeywordView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.DisplayKeywordViewService/GetDisplayKeywordView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.DisplayKeywordViewService/GetDisplayKeywordView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _DisplayKeywordViewService_GetDisplayKeywordView_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.DisplayKeywordViewService/GetDisplayKeywordView",
+		FullMethod: "/google.ads.googleads.v9.services.DisplayKeywordViewService/GetDisplayKeywordView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DisplayKeywordViewServiceServer).GetDisplayKeywordView(ctx, req.(*GetDisplayKeywordViewRequest))
@@ -108,7 +108,7 @@ func _DisplayKeywordViewService_GetDisplayKeywordView_Handler(srv interface{}, c
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var DisplayKeywordViewService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.DisplayKeywordViewService",
+	ServiceName: "google.ads.googleads.v9.services.DisplayKeywordViewService",
 	HandlerType: (*DisplayKeywordViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var DisplayKeywordViewService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/display_keyword_view_service.proto",
+	Metadata: "google/ads/googleads/v9/services/display_keyword_view_service.proto",
 }

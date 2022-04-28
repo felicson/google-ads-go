@@ -41,7 +41,7 @@ func NewAdGroupCriterionSimulationServiceClient(cc grpc.ClientConnInterface) AdG
 
 func (c *adGroupCriterionSimulationServiceClient) GetAdGroupCriterionSimulation(ctx context.Context, in *GetAdGroupCriterionSimulationRequest, opts ...grpc.CallOption) (*resources.AdGroupCriterionSimulation, error) {
 	out := new(resources.AdGroupCriterionSimulation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v8.services.AdGroupCriterionSimulationService/GetAdGroupCriterionSimulation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdGroupCriterionSimulationService/GetAdGroupCriterionSimulation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func _AdGroupCriterionSimulationService_GetAdGroupCriterionSimulation_Handler(sr
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v8.services.AdGroupCriterionSimulationService/GetAdGroupCriterionSimulation",
+		FullMethod: "/google.ads.googleads.v9.services.AdGroupCriterionSimulationService/GetAdGroupCriterionSimulation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupCriterionSimulationServiceServer).GetAdGroupCriterionSimulation(ctx, req.(*GetAdGroupCriterionSimulationRequest))
@@ -108,7 +108,7 @@ func _AdGroupCriterionSimulationService_GetAdGroupCriterionSimulation_Handler(sr
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AdGroupCriterionSimulationService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v8.services.AdGroupCriterionSimulationService",
+	ServiceName: "google.ads.googleads.v9.services.AdGroupCriterionSimulationService",
 	HandlerType: (*AdGroupCriterionSimulationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var AdGroupCriterionSimulationService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "google/ads/googleads/v8/services/ad_group_criterion_simulation_service.proto",
+	Metadata: "google/ads/googleads/v9/services/ad_group_criterion_simulation_service.proto",
 }
